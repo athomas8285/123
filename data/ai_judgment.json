@@ -1,0 +1,909 @@
+{
+  "matches": [
+    {
+      "id": "周四001",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：南非：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：墨西哥：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周四002",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：捷克：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：韩国：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "盘口看好主队，但系统预测客队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考 贴合度低，熔断警告"
+    },
+    {
+      "id": "周五003",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：波黑：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：加拿大：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "盘口看好主队，但系统预测客队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考 贴合度低，熔断警告"
+    },
+    {
+      "id": "周五004",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：巴拉圭：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：美国：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "盘口看好主队，但系统预测客队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考 贴合度低，熔断警告"
+    },
+    {
+      "id": "周六005",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：瑞士：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：卡塔尔：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周六006",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：摩洛哥：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：巴西：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周六007",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：苏格兰：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：海地：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周六008",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：土耳其：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：澳大利亚：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周日009",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.95,
+      "opponent_reason": "库拉索实力差距过大，打法可预测（死守）",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周日010",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.95,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周日011",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.95,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周日012",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.95,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周一013",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：佛得角：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：西班牙：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周一014",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：埃及：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：比利时：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周一015",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：乌拉圭：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：沙特阿拉伯：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周一016",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：新西兰：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：伊朗：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周二017",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：塞内加尔：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：法国：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周二018",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：挪威：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：伊拉克：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周二019",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：阿尔及利亚：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：阿根廷：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周二020",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：约旦：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：奥地利：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周三021",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：刚果(金)：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：葡萄牙：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周三022",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：克罗地亚：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：英格兰：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周三023",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：巴拿马：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：加纳：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周三024",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "主队视角：哥伦比亚：系数=0.90，对手伤停未知，阵容不确定，战意不明；客队视角：乌兹别克斯坦：系数=0.90，对手伤停未知，阵容不确定，战意不明",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周四025",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周四026",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周四027",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周四028",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好主队，但系统预测客队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考"
+    },
+    {
+      "id": "周五029",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周五030",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好客队，但系统预测主队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考"
+    },
+    {
+      "id": "周五031",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周五032",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好主队，但系统预测客队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考"
+    },
+    {
+      "id": "周六033",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周六034",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周六035",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周六036",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周日037",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周日038",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周日039",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周日040",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周一041",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周一042",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周一043",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好主队，但系统预测客队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考"
+    },
+    {
+      "id": "周一044",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周二045",
+      "home": "葡萄牙",
+      "away": "乌兹别克斯坦",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周二046",
+      "home": "英格兰",
+      "away": "加纳",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周二047",
+      "home": "巴拿马",
+      "away": "克罗地亚",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周二048",
+      "home": "哥伦比亚",
+      "away": "刚果(金)",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周三049",
+      "home": "瑞士",
+      "away": "加拿大",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周三050",
+      "home": "波黑",
+      "away": "卡塔尔",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周三051",
+      "home": "苏格兰",
+      "away": "巴西",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周三052",
+      "home": "摩洛哥",
+      "away": "海地",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周三053",
+      "home": "南非",
+      "away": "韩国",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周三054",
+      "home": "捷克",
+      "away": "墨西哥",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好客队，但系统预测主队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考"
+    },
+    {
+      "id": "周四055",
+      "home": "厄瓜多尔",
+      "away": "德国",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周四056",
+      "home": "库拉索",
+      "away": "科特迪瓦",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周四057",
+      "home": "突尼斯",
+      "away": "荷兰",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周四058",
+      "home": "日本",
+      "away": "瑞典",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好主队，但系统预测客队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考 贴合度低，熔断警告"
+    },
+    {
+      "id": "周四059",
+      "home": "巴拉圭",
+      "away": "澳大利亚",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好主队，但系统预测客队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考"
+    },
+    {
+      "id": "周四060",
+      "home": "土耳其",
+      "away": "美国",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 1.0,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好客队，但系统预测主队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考"
+    },
+    {
+      "id": "周一074",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "新比赛，对手数据待采集",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周一076",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "新比赛，对手数据待采集",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周日073",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "新比赛，对手数据待采集",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周六067",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "新比赛，对手数据待采集",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周六068",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "新比赛，对手数据待采集",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周六069",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "新比赛，对手数据待采集",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周六070",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "新比赛，对手数据待采集",
+      "trap_analysis": "盘口看好主队，但系统预测客队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考 贴合度低，熔断警告"
+    },
+    {
+      "id": "周六071",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "新比赛，对手数据待采集",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周六072",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "新比赛，对手数据待采集",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周六204",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "新比赛，对手数据待采集",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周六205",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "新比赛，对手数据待采集",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周六206",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "新比赛，对手数据待采集",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周六201",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "新比赛，对手数据待采集",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周六202",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "新比赛，对手数据待采集",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周六203",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.9,
+      "opponent_reason": "新比赛，对手数据待采集",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周五061",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周五062",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周五063",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好主队，但系统预测客队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考 贴合度低，熔断警告"
+    },
+    {
+      "id": "周五064",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周五065",
+      "s7_score": 2.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好主队，但系统预测客队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考 贴合度低，熔断警告"
+    },
+    {
+      "id": "周五066",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失；已淘汰球队战意不明",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周一075",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周二077",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周二078",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周二079",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好主队，但系统预测客队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考 贴合度低，熔断警告"
+    },
+    {
+      "id": "周三080",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周三081",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周三082",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周四083",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周四084",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好主队，但系统预测客队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考"
+    },
+    {
+      "id": "周四085",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周五086",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周五087",
+      "s7_score": 1.0,
+      "s7_reason": "SP缺失；伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周五088",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "暂无明显风险点"
+    },
+    {
+      "id": "周五201",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周六089",
+      "s7_score": 4.0,
+      "s7_reason": "近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好客队，但系统预测主队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考 贴合度低，熔断警告"
+    },
+    {
+      "id": "周六090",
+      "s7_score": 2.0,
+      "s7_reason": "SP缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    }
+  ]
+}

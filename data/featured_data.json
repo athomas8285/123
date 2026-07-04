@@ -1,0 +1,1832 @@
+{
+  "strategy": {
+    "base_stake": 1000,
+    "multipliers": [
+      1,
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "max_rounds": 6
+  },
+  "sequence": [
+    {
+      "date": "2026-06-11",
+      "round": 0,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周四001",
+          "match": "墨西哥 vs 南非",
+          "date": "2026-06-11",
+          "type": "方向",
+          "option": "让胜",
+          "odds": 2.07,
+          "mp": 0.5665,
+          "src_mp": 0.5665,
+          "fit": 3.5,
+          "rating": "C",
+          "comps": [
+            2.07
+          ]
+        },
+        "l2": {
+          "mid": "周四002",
+          "match": "韩国 vs 捷克",
+          "date": "2026-06-11",
+          "type": "方向打包",
+          "option": "让平/负",
+          "odds": 1.05,
+          "mp": 0.8628,
+          "src_mp": 0.8628,
+          "fit": 3.5,
+          "rating": "C",
+          "comps": [
+            4.05,
+            1.41
+          ]
+        },
+        "min_odds": 1.46,
+        "max_odds": 4.19,
+        "opt_odds": 2.17,
+        "raw_opt_odds": 2.1734999999999998,
+        "hitrate": 0.4601,
+        "ev": 1.3,
+        "min_fit": 3.5
+      },
+      "result": "hit",
+      "profit": 460.0,
+      "cumulative": 460.0,
+      "cumulative_invested": 1000
+    },
+    {
+      "date": "2026-06-12",
+      "round": 1,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周五003",
+          "match": "加拿大 vs 波黑",
+          "date": "2026-06-12",
+          "type": "方向打包",
+          "option": "让平/负",
+          "odds": 1.26,
+          "mp": 0.7685,
+          "src_mp": 0.7685,
+          "fit": 3.8,
+          "rating": "C",
+          "comps": [
+            3.3,
+            2.05
+          ]
+        },
+        "l2": {
+          "mid": "周五004",
+          "match": "美国 vs 巴拉圭",
+          "date": "2026-06-12",
+          "type": "方向",
+          "option": "让负",
+          "odds": 1.76,
+          "mp": 0.5376,
+          "src_mp": 0.5376,
+          "fit": 3.8,
+          "rating": "C",
+          "comps": [
+            1.76
+          ]
+        },
+        "min_odds": 1.8,
+        "max_odds": 2.9,
+        "opt_odds": 2.22,
+        "raw_opt_odds": 2.2176,
+        "hitrate": 0.4509,
+        "ev": 1.0615,
+        "min_fit": 3.8
+      },
+      "result": "miss",
+      "profit": -1000,
+      "cumulative": -540.0,
+      "cumulative_invested": 2000
+    },
+    {
+      "date": "2026-06-13",
+      "round": 0,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周六005",
+          "match": "卡塔尔 vs 瑞士",
+          "date": "2026-06-13",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.31,
+          "mp": 0.676,
+          "src_mp": 0.676,
+          "fit": 4.2,
+          "rating": "B",
+          "comps": [
+            1.98,
+            3.85
+          ]
+        },
+        "l2": {
+          "mid": "周六007",
+          "match": "海地 vs 苏格兰",
+          "date": "2026-06-13",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.53,
+          "mp": 0.4385,
+          "src_mp": 0.4385,
+          "fit": 4.7,
+          "rating": "B",
+          "comps": [
+            2.81,
+            3.35
+          ]
+        },
+        "min_odds": 1.39,
+        "max_odds": 3.22,
+        "opt_odds": 2.0,
+        "raw_opt_odds": 2.0043,
+        "hitrate": 0.4989,
+        "ev": 1.1514,
+        "min_fit": 4.2
+      },
+      "result": "hit",
+      "profit": 390.0,
+      "cumulative": -150.0,
+      "cumulative_invested": 3000
+    },
+    {
+      "date": "2026-06-14",
+      "round": 0,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周日010",
+          "match": "荷兰 vs 日本",
+          "date": "2026-06-14",
+          "type": "方向打包",
+          "option": "让平/负",
+          "odds": 1.19,
+          "mp": 0.6474,
+          "src_mp": 0.6474,
+          "fit": 4.2,
+          "rating": "B",
+          "comps": [
+            3.45,
+            1.81
+          ]
+        },
+        "l2": {
+          "mid": "周日012",
+          "match": "瑞典 vs 突尼斯",
+          "date": "2026-06-14",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.71,
+          "mp": 0.662,
+          "src_mp": 0.662,
+          "fit": 5.1,
+          "rating": "B",
+          "comps": [
+            3.55,
+            3.3
+          ]
+        },
+        "min_odds": 1.49,
+        "max_odds": 3.06,
+        "opt_odds": 2.03,
+        "raw_opt_odds": 2.0349,
+        "hitrate": 0.4914,
+        "ev": 1.1193,
+        "min_fit": 4.2
+      },
+      "result": "hit",
+      "profit": 490.0,
+      "cumulative": 340.0,
+      "cumulative_invested": 4000
+    },
+    {
+      "date": "2026-06-15",
+      "round": 1,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周一013",
+          "match": "西班牙 vs 佛得角",
+          "date": "2026-06-15",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.26,
+          "mp": 0.5528,
+          "src_mp": 0.5528,
+          "fit": 3.4,
+          "rating": "C",
+          "comps": [
+            1.85,
+            4.0
+          ]
+        },
+        "l2": {
+          "mid": "周一015",
+          "match": "沙特阿拉伯 vs 乌拉圭",
+          "date": "2026-06-15",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.56,
+          "mp": 0.5785,
+          "src_mp": 0.5785,
+          "fit": 3.8,
+          "rating": "C",
+          "comps": [
+            2.95,
+            3.3
+          ]
+        },
+        "min_odds": 1.36,
+        "max_odds": 3.3,
+        "opt_odds": 1.97,
+        "raw_opt_odds": 1.9656,
+        "hitrate": 0.5088,
+        "ev": 1.1865,
+        "min_fit": 3.4
+      },
+      "result": "miss",
+      "profit": -1000,
+      "cumulative": -660.0,
+      "cumulative_invested": 5000
+    },
+    {
+      "date": "2026-06-16",
+      "round": 0,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周二018",
+          "match": "伊拉克 vs 挪威",
+          "date": "2026-06-16",
+          "type": "方向打包",
+          "option": "让平/负",
+          "odds": 1.57,
+          "mp": 0.558,
+          "src_mp": 0.558,
+          "fit": 4.3,
+          "rating": "B",
+          "comps": [
+            3.89,
+            2.64
+          ]
+        },
+        "l2": {
+          "mid": "周二019",
+          "match": "阿根廷 vs 阿尔及利亚",
+          "date": "2026-06-16",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.26,
+          "mp": 0.694,
+          "src_mp": 0.694,
+          "fit": 2.9,
+          "rating": "C",
+          "comps": [
+            2.07,
+            3.25
+          ]
+        },
+        "min_odds": 1.37,
+        "max_odds": 3.16,
+        "opt_odds": 1.98,
+        "raw_opt_odds": 1.9782000000000002,
+        "hitrate": 0.5055,
+        "ev": 1.1442,
+        "min_fit": 2.9
+      },
+      "result": "hit",
+      "profit": 370.0,
+      "cumulative": -290.0,
+      "cumulative_invested": 6000
+    },
+    {
+      "date": "2026-06-17",
+      "round": 1,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周三022",
+          "match": "英格兰 vs 克罗地亚",
+          "date": "2026-06-17",
+          "type": "方向打包",
+          "option": "让平/负",
+          "odds": 1.27,
+          "mp": 0.68,
+          "src_mp": 0.68,
+          "fit": 5.1,
+          "rating": "B",
+          "comps": [
+            3.2,
+            2.1
+          ]
+        },
+        "l2": {
+          "mid": "周三024",
+          "match": "乌兹别克斯坦 vs 哥伦比亚",
+          "date": "2026-06-17",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.58,
+          "mp": 0.4895,
+          "src_mp": 0.4895,
+          "fit": 5.3,
+          "rating": "B",
+          "comps": [
+            3.02,
+            3.3
+          ]
+        },
+        "min_odds": 1.59,
+        "max_odds": 2.64,
+        "opt_odds": 2.01,
+        "raw_opt_odds": 2.0066,
+        "hitrate": 0.4984,
+        "ev": 1.0529,
+        "min_fit": 5.1
+      },
+      "result": "miss",
+      "profit": -1000,
+      "cumulative": -1290.0,
+      "cumulative_invested": 7000
+    },
+    {
+      "date": "2026-06-18",
+      "round": 2,
+      "stake": 1000,
+      "multiplier": 2,
+      "pick": {
+        "l1": {
+          "mid": "周四025",
+          "match": "捷克 vs 南非",
+          "date": "2026-06-18",
+          "type": "方向打包",
+          "option": "让平/负",
+          "odds": 1.2,
+          "mp": 0.4395,
+          "src_mp": 0.4395,
+          "fit": 5.2,
+          "rating": "B",
+          "comps": [
+            3.4,
+            1.86
+          ]
+        },
+        "l2": {
+          "mid": "周四027",
+          "match": "加拿大 vs 卡塔尔",
+          "date": "2026-06-18",
+          "type": "方向打包",
+          "option": "让平/负",
+          "odds": 1.68,
+          "mp": 0.619,
+          "src_mp": 0.619,
+          "fit": 5.4,
+          "rating": "B",
+          "comps": [
+            3.45,
+            3.28
+          ]
+        },
+        "min_odds": 1.53,
+        "max_odds": 2.93,
+        "opt_odds": 2.02,
+        "raw_opt_odds": 2.016,
+        "hitrate": 0.496,
+        "ev": 1.1056,
+        "min_fit": 5.2
+      },
+      "result": "miss",
+      "profit": -1000,
+      "cumulative": -2290.0,
+      "cumulative_invested": 8000
+    },
+    {
+      "date": "2026-06-19",
+      "round": 0,
+      "stake": 2000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周五031",
+          "match": "巴西 vs 海地",
+          "date": "2026-06-19",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.24,
+          "mp": 0.5815,
+          "src_mp": 0.5815,
+          "fit": 5.1,
+          "rating": "B",
+          "comps": [
+            1.8,
+            4.0
+          ]
+        },
+        "l2": {
+          "mid": "周五032",
+          "match": "土耳其 vs 巴拉圭",
+          "date": "2026-06-19",
+          "type": "方向",
+          "option": "让负",
+          "odds": 1.63,
+          "mp": 0.605,
+          "src_mp": 0.605,
+          "fit": 4.1,
+          "rating": "B",
+          "comps": [
+            1.63
+          ]
+        },
+        "min_odds": 1.47,
+        "max_odds": 3.26,
+        "opt_odds": 2.02,
+        "raw_opt_odds": 2.0212,
+        "hitrate": 0.4948,
+        "ev": 1.1694,
+        "min_fit": 4.1
+      },
+      "result": "hit",
+      "profit": 940.0,
+      "cumulative": -1350.0,
+      "cumulative_invested": 10000
+    },
+    {
+      "date": "2026-06-20",
+      "round": 1,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周六034",
+          "match": "德国 vs 科特迪瓦",
+          "date": "2026-06-20",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.32,
+          "mp": 0.6648,
+          "src_mp": 0.6648,
+          "fit": 3.2,
+          "rating": "C",
+          "comps": [
+            1.98,
+            3.93
+          ]
+        },
+        "l2": {
+          "mid": "周六036",
+          "match": "突尼斯 vs 日本",
+          "date": "2026-06-20",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.52,
+          "mp": 0.589,
+          "src_mp": 0.589,
+          "fit": 5.1,
+          "rating": "B",
+          "comps": [
+            2.65,
+            3.58
+          ]
+        },
+        "min_odds": 1.31,
+        "max_odds": 3.52,
+        "opt_odds": 2.01,
+        "raw_opt_odds": 2.0064,
+        "hitrate": 0.4984,
+        "ev": 1.2034,
+        "min_fit": 3.2
+      },
+      "result": "miss",
+      "profit": -1000,
+      "cumulative": -2350.0,
+      "cumulative_invested": 11000
+    },
+    {
+      "date": "2026-06-21",
+      "round": 0,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周日037",
+          "match": "西班牙 vs 沙特阿拉伯",
+          "date": "2026-06-21",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.21,
+          "mp": 0.4696,
+          "src_mp": 0.4696,
+          "fit": 3.7,
+          "rating": "C",
+          "comps": [
+            1.66,
+            4.45
+          ]
+        },
+        "l2": {
+          "mid": "周日038",
+          "match": "比利时 vs 伊朗",
+          "date": "2026-06-21",
+          "type": "方向打包",
+          "option": "让平/负",
+          "odds": 1.64,
+          "mp": 0.543,
+          "src_mp": 0.543,
+          "fit": 3.2,
+          "rating": "C",
+          "comps": [
+            3.72,
+            2.94
+          ]
+        },
+        "min_odds": 1.22,
+        "max_odds": 4.14,
+        "opt_odds": 1.98,
+        "raw_opt_odds": 1.9843999999999997,
+        "hitrate": 0.5039,
+        "ev": 1.3502,
+        "min_fit": 3.2
+      },
+      "result": "hit",
+      "profit": 220.0,
+      "cumulative": -2130.0,
+      "cumulative_invested": 12000
+    },
+    {
+      "date": "2026-06-22",
+      "round": 1,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周一041",
+          "match": "阿根廷 vs 奥地利",
+          "date": "2026-06-22",
+          "type": "方向打包",
+          "option": "让平/负",
+          "odds": 1.43,
+          "mp": 0.6944,
+          "src_mp": 0.6944,
+          "fit": 4.5,
+          "rating": "B",
+          "comps": [
+            3.48,
+            2.42
+          ]
+        },
+        "l2": {
+          "mid": "周一044",
+          "match": "约旦 vs 阿尔及利亚",
+          "date": "2026-06-22",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.4,
+          "mp": 0.4895,
+          "src_mp": 0.4895,
+          "fit": 4.2,
+          "rating": "B",
+          "comps": [
+            2.4,
+            3.35
+          ]
+        },
+        "min_odds": 1.45,
+        "max_odds": 2.91,
+        "opt_odds": 2.0,
+        "raw_opt_odds": 2.002,
+        "hitrate": 0.4995,
+        "ev": 1.0905,
+        "min_fit": 4.2
+      },
+      "result": "miss",
+      "profit": -1000,
+      "cumulative": -3130.0,
+      "cumulative_invested": 13000
+    },
+    {
+      "date": "2026-06-23",
+      "round": 0,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周二045",
+          "match": "葡萄牙 vs 乌兹别克斯坦",
+          "date": "2026-06-23",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.33,
+          "mp": 0.5415,
+          "src_mp": 0.5415,
+          "fit": 6.0,
+          "rating": "A",
+          "comps": [
+            1.98,
+            4.05
+          ]
+        },
+        "l2": {
+          "mid": "周二047",
+          "match": "巴拿马 vs 克罗地亚",
+          "date": "2026-06-23",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.53,
+          "mp": 0.45,
+          "src_mp": 0.45,
+          "fit": 7.9,
+          "rating": "A",
+          "comps": [
+            2.65,
+            3.6
+          ]
+        },
+        "min_odds": 1.31,
+        "max_odds": 3.65,
+        "opt_odds": 2.03,
+        "raw_opt_odds": 2.0349,
+        "hitrate": 0.4914,
+        "ev": 1.2179,
+        "min_fit": 6.0
+      },
+      "result": "hit",
+      "profit": 310.0,
+      "cumulative": -2820.0,
+      "cumulative_invested": 14000
+    },
+    {
+      "date": "2026-06-24",
+      "round": 0,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周三049",
+          "match": "瑞士 vs 加拿大",
+          "date": "2026-06-24",
+          "type": "方向打包",
+          "option": "让平/负",
+          "odds": 1.08,
+          "mp": 0.7072,
+          "src_mp": 0.7072,
+          "fit": 5.6,
+          "rating": "B",
+          "comps": [
+            4.05,
+            1.47
+          ]
+        },
+        "l2": {
+          "mid": "周三054",
+          "match": "捷克 vs 墨西哥",
+          "date": "2026-06-24",
+          "type": "方向打包",
+          "option": "让平/负",
+          "odds": 1.86,
+          "mp": 0.4172,
+          "src_mp": 0.4172,
+          "fit": 4.9,
+          "rating": "B",
+          "comps": [
+            3.6,
+            3.85
+          ]
+        },
+        "min_odds": 1.32,
+        "max_odds": 3.9,
+        "opt_odds": 2.01,
+        "raw_opt_odds": 2.0088000000000004,
+        "hitrate": 0.4978,
+        "ev": 1.2996,
+        "min_fit": 4.9
+      },
+      "result": "hit",
+      "profit": 320.0,
+      "cumulative": -2500.0,
+      "cumulative_invested": 15000
+    },
+    {
+      "date": "2026-06-25",
+      "round": 0,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周四055",
+          "match": "厄瓜多尔 vs 德国",
+          "date": "2026-06-25",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.2,
+          "mp": 0.638,
+          "src_mp": 0.638,
+          "fit": 4.5,
+          "rating": "B",
+          "comps": [
+            1.83,
+            3.5
+          ]
+        },
+        "l2": {
+          "mid": "周四060",
+          "match": "土耳其 vs 美国",
+          "date": "2026-06-25",
+          "type": "方向",
+          "option": "让胜",
+          "odds": 1.67,
+          "mp": 0.5605,
+          "src_mp": 0.5605,
+          "fit": 4.9,
+          "rating": "B",
+          "comps": [
+            1.67
+          ]
+        },
+        "min_odds": 1.53,
+        "max_odds": 2.92,
+        "opt_odds": 2.0,
+        "raw_opt_odds": 2.004,
+        "hitrate": 0.499,
+        "ev": 1.1104,
+        "min_fit": 4.5
+      },
+      "result": "hit",
+      "profit": 530.0,
+      "cumulative": -1970.0,
+      "cumulative_invested": 16000
+    },
+    {
+      "date": "2026-06-26",
+      "round": 0,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周五063",
+          "match": "佛得角 vs 沙特阿拉伯",
+          "date": "2026-06-26",
+          "type": "方向",
+          "option": "让负",
+          "odds": 1.48,
+          "mp": 0.8205,
+          "src_mp": 0.8205,
+          "fit": 3.5,
+          "rating": "C",
+          "comps": [
+            1.48
+          ]
+        },
+        "l2": {
+          "mid": "周五066",
+          "match": "新西兰 vs 比利时",
+          "date": "2026-06-26",
+          "type": "方向打包",
+          "option": "让平/负",
+          "odds": 1.35,
+          "mp": 0.587,
+          "src_mp": 0.587,
+          "fit": 4.8,
+          "rating": "B",
+          "comps": [
+            3.95,
+            2.05
+          ]
+        },
+        "min_odds": 1.52,
+        "max_odds": 2.92,
+        "opt_odds": 2.0,
+        "raw_opt_odds": 1.998,
+        "hitrate": 0.5005,
+        "ev": 1.1111,
+        "min_fit": 3.5
+      },
+      "result": "hit",
+      "profit": 520.0,
+      "cumulative": -1450.0,
+      "cumulative_invested": 17000
+    },
+    {
+      "date": "2026-06-27",
+      "round": 0,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周六068",
+          "match": "巴拿马 vs 英格兰",
+          "date": "2026-06-27",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.63,
+          "mp": 0.604,
+          "src_mp": 0.604,
+          "fit": 4.1,
+          "rating": "B",
+          "comps": [
+            2.7,
+            4.1
+          ]
+        },
+        "l2": {
+          "mid": "周六069",
+          "match": "哥伦比亚 vs 葡萄牙",
+          "date": "2026-06-27",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.22,
+          "mp": 0.6635,
+          "src_mp": 0.6635,
+          "fit": 4.9,
+          "rating": "B",
+          "comps": [
+            1.85,
+            3.62
+          ]
+        },
+        "min_odds": 1.25,
+        "max_odds": 3.71,
+        "opt_odds": 1.99,
+        "raw_opt_odds": 1.9886,
+        "hitrate": 0.5029,
+        "ev": 1.2469,
+        "min_fit": 4.1
+      },
+      "result": "hit",
+      "profit": 250.0,
+      "cumulative": -1200.0,
+      "cumulative_invested": 18000
+    },
+    {
+      "date": "2026-06-28",
+      "round": 1,
+      "stake": 0,
+      "multiplier": 0,
+      "pick": null,
+      "result": "no_pick",
+      "profit": 0,
+      "cumulative": -1200.0,
+      "note": "no qualified plan"
+    },
+    {
+      "date": "2026-06-29",
+      "round": 0,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周一076",
+          "match": "荷兰 vs 摩洛哥",
+          "date": "2026-06-29",
+          "type": "方向打包",
+          "option": "让平/负",
+          "odds": 1.1,
+          "mp": 0.6217,
+          "src_mp": 0.6217,
+          "fit": 4.2,
+          "rating": "B",
+          "comps": [
+            3.4,
+            1.63
+          ]
+        },
+        "l2": {
+          "mid": "周一075",
+          "match": "德国 vs 巴拉圭",
+          "date": "2026-06-29",
+          "type": "方向打包",
+          "option": "让平/负",
+          "odds": 1.86,
+          "mp": 0.6325,
+          "src_mp": 0.6325,
+          "fit": 4.1,
+          "rating": "B",
+          "comps": [
+            4.05,
+            3.44
+          ]
+        },
+        "min_odds": 1.4,
+        "max_odds": 3.44,
+        "opt_odds": 2.05,
+        "raw_opt_odds": 2.0460000000000003,
+        "hitrate": 0.4888,
+        "ev": 1.1838,
+        "min_fit": 4.1
+      },
+      "result": "hit",
+      "profit": 400.0,
+      "cumulative": -800.0,
+      "cumulative_invested": 19000
+    },
+    {
+      "date": "2026-06-30",
+      "round": 0,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周二077",
+          "match": "科特迪瓦 vs 挪威",
+          "date": "2026-06-30",
+          "type": "方向打包",
+          "option": "让平/负",
+          "odds": 1.76,
+          "mp": 0.59,
+          "src_mp": 0.59,
+          "fit": 4.0,
+          "rating": "B",
+          "comps": [
+            3.45,
+            3.6
+          ]
+        },
+        "l2": {
+          "mid": "周二078",
+          "match": "法国 vs 瑞典",
+          "date": "2026-06-30",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.14,
+          "mp": 0.552,
+          "src_mp": 0.552,
+          "fit": 4.3,
+          "rating": "B",
+          "comps": [
+            1.6,
+            3.95
+          ]
+        },
+        "min_odds": 1.38,
+        "max_odds": 3.56,
+        "opt_odds": 2.01,
+        "raw_opt_odds": 2.0063999999999997,
+        "hitrate": 0.4984,
+        "ev": 1.2298,
+        "min_fit": 4.0
+      },
+      "result": "hit",
+      "profit": 380.0,
+      "cumulative": -420.0,
+      "cumulative_invested": 20000
+    },
+    {
+      "date": "2026-07-01",
+      "round": 0,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周三081",
+          "match": "比利时 vs 塞内加尔",
+          "date": "2026-07-01",
+          "type": "方向",
+          "option": "让负",
+          "odds": 1.65,
+          "mp": 0.4128,
+          "src_mp": 0.4128,
+          "fit": 4.0,
+          "rating": "B",
+          "comps": [
+            1.65
+          ]
+        },
+        "l2": {
+          "mid": "周三082",
+          "match": "美国 vs 波黑",
+          "date": "2026-07-01",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.2,
+          "mp": 0.536,
+          "src_mp": 0.536,
+          "fit": 4.3,
+          "rating": "B",
+          "comps": [
+            1.77,
+            3.75
+          ]
+        },
+        "min_odds": 1.46,
+        "max_odds": 3.09,
+        "opt_odds": 1.98,
+        "raw_opt_odds": 1.9799999999999998,
+        "hitrate": 0.5051,
+        "ev": 1.15,
+        "min_fit": 4.0
+      },
+      "result": "hit",
+      "profit": 460.0,
+      "cumulative": 40.0,
+      "cumulative_invested": 21000
+    },
+    {
+      "date": "2026-07-02",
+      "round": 0,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周四083",
+          "match": "西班牙 vs 奥地利",
+          "date": "2026-07-02",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.17,
+          "mp": 0.5436,
+          "src_mp": 0.5436,
+          "fit": 4.0,
+          "rating": "C",
+          "comps": [
+            1.74,
+            3.58
+          ]
+        },
+        "l2": {
+          "mid": "周四085",
+          "match": "瑞士 vs 阿尔及利亚",
+          "date": "2026-07-02",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.73,
+          "mp": 0.6452,
+          "src_mp": 0.6452,
+          "fit": 4.4,
+          "rating": "B",
+          "comps": [
+            3.68,
+            3.25
+          ]
+        },
+        "min_odds": 1.41,
+        "max_odds": 3.29,
+        "opt_odds": 2.02,
+        "raw_opt_odds": 2.0241,
+        "hitrate": 0.494,
+        "ev": 1.1628,
+        "min_fit": 4.0
+      },
+      "result": "hit",
+      "profit": 410.0,
+      "cumulative": 450.0,
+      "cumulative_invested": 22000
+    },
+    {
+      "date": "2026-07-03",
+      "round": 1,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周五086",
+          "match": "澳大利亚 vs 埃及",
+          "date": "2026-07-03",
+          "type": "方向",
+          "option": "让胜",
+          "odds": 1.52,
+          "mp": 0.397,
+          "src_mp": 0.397,
+          "fit": 3.2,
+          "rating": "C",
+          "comps": [
+            1.52
+          ]
+        },
+        "l2": {
+          "mid": "周五087",
+          "match": "阿根廷 vs 佛得角",
+          "date": "2026-07-03",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.32,
+          "mp": 0.949,
+          "src_mp": 0.949,
+          "fit": 3.7,
+          "rating": "C",
+          "comps": [
+            2.1,
+            3.55
+          ]
+        },
+        "min_odds": 1.6,
+        "max_odds": 2.7,
+        "opt_odds": 2.01,
+        "raw_opt_odds": 2.0064,
+        "hitrate": 0.4984,
+        "ev": 1.0701,
+        "min_fit": 3.2
+      },
+      "result": "miss",
+      "profit": -1000,
+      "cumulative": -550.0,
+      "cumulative_invested": 23000
+    },
+    {
+      "date": "2026-07-04",
+      "round": 1,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周六089",
+          "match": "加拿大 vs 摩洛哥",
+          "date": "2026-07-04",
+          "type": "方向打包",
+          "option": "让平/负",
+          "odds": 1.46,
+          "mp": 0.425,
+          "src_mp": 0.425,
+          "fit": 3.1,
+          "rating": "C",
+          "comps": [
+            2.8,
+            3.05
+          ]
+        },
+        "l2": {
+          "mid": "周六090",
+          "match": "巴拉圭 vs 法国",
+          "date": "2026-07-04",
+          "type": "方向打包",
+          "option": "让胜/平",
+          "odds": 1.38,
+          "mp": 0.734,
+          "src_mp": 0.734,
+          "fit": 2.5,
+          "rating": "C",
+          "comps": [
+            2.35,
+            3.33
+          ]
+        },
+        "min_odds": 1.65,
+        "max_odds": 2.54,
+        "opt_odds": 2.01,
+        "raw_opt_odds": 2.0147999999999997,
+        "hitrate": 0.4963,
+        "ev": 1.0383,
+        "min_fit": 2.5
+      },
+      "result": "pending",
+      "profit": 0,
+      "cumulative": -550.0,
+      "cumulative_invested": 24000
+    }
+  ],
+  "current": {
+    "round": 2,
+    "next_stake": 1000,
+    "next_multiplier": 1,
+    "cumulative": -550.0,
+    "cumulative_invested": 24000
+  },
+  "matches": {
+    "周四001": {
+      "home": "墨西哥",
+      "away": "南非",
+      "actual_score": "2-0",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周四002": {
+      "home": "韩国",
+      "away": "捷克",
+      "actual_score": "2-1",
+      "half_full": "平胜",
+      "handicap": -1
+    },
+    "周五003": {
+      "home": "加拿大",
+      "away": "波黑",
+      "actual_score": "1-1",
+      "half_full": "负平",
+      "handicap": -1
+    },
+    "周五004": {
+      "home": "美国",
+      "away": "巴拉圭",
+      "actual_score": "4-1",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周六005": {
+      "home": "卡塔尔",
+      "away": "瑞士",
+      "actual_score": "1-1",
+      "half_full": "负平",
+      "handicap": 2
+    },
+    "周六006": {
+      "home": "巴西",
+      "away": "摩洛哥",
+      "actual_score": "1-1",
+      "half_full": "平平",
+      "handicap": -1
+    },
+    "周六007": {
+      "home": "海地",
+      "away": "苏格兰",
+      "actual_score": "0-1",
+      "half_full": "负负",
+      "handicap": 1
+    },
+    "周六008": {
+      "home": "澳大利亚",
+      "away": "土耳其",
+      "actual_score": "2-0",
+      "half_full": "胜胜",
+      "handicap": 1
+    },
+    "周日009": {
+      "home": "德国",
+      "away": "库拉索",
+      "actual_score": "7-1",
+      "half_full": "胜胜",
+      "handicap": -3
+    },
+    "周日010": {
+      "home": "荷兰",
+      "away": "日本",
+      "actual_score": "2-2",
+      "half_full": "平平",
+      "handicap": -1
+    },
+    "周日011": {
+      "home": "科特迪瓦",
+      "away": "厄瓜多尔",
+      "actual_score": "1-0",
+      "half_full": "平胜",
+      "handicap": 1
+    },
+    "周日012": {
+      "home": "瑞典",
+      "away": "突尼斯",
+      "actual_score": "5-1",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周一013": {
+      "home": "西班牙",
+      "away": "佛得角",
+      "actual_score": "0-0",
+      "half_full": "平平",
+      "handicap": -2
+    },
+    "周一014": {
+      "home": "比利时",
+      "away": "埃及",
+      "actual_score": "1-1",
+      "half_full": "负平",
+      "handicap": -1
+    },
+    "周一015": {
+      "home": "沙特阿拉伯",
+      "away": "乌拉圭",
+      "actual_score": "1-1",
+      "half_full": "胜平",
+      "handicap": 1
+    },
+    "周一016": {
+      "home": "伊朗",
+      "away": "新西兰",
+      "actual_score": "2-2",
+      "half_full": "平平",
+      "handicap": -1
+    },
+    "周二017": {
+      "home": "法国",
+      "away": "塞内加尔",
+      "actual_score": "3-1",
+      "half_full": "平胜",
+      "handicap": -1
+    },
+    "周二018": {
+      "home": "伊拉克",
+      "away": "挪威",
+      "actual_score": "1-4",
+      "half_full": "负负",
+      "handicap": 2
+    },
+    "周二019": {
+      "home": "阿根廷",
+      "away": "阿尔及利亚",
+      "actual_score": "3-0",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周二020": {
+      "home": "奥地利",
+      "away": "约旦",
+      "actual_score": "3-1",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周三021": {
+      "home": "葡萄牙",
+      "away": "刚果(金)",
+      "actual_score": "1-1",
+      "half_full": "平平",
+      "handicap": -2
+    },
+    "周三022": {
+      "home": "英格兰",
+      "away": "克罗地亚",
+      "actual_score": "4-2",
+      "half_full": "平胜",
+      "handicap": -1
+    },
+    "周三023": {
+      "home": "加纳",
+      "away": "巴拿马",
+      "actual_score": "1-0",
+      "half_full": "平胜",
+      "handicap": -1
+    },
+    "周三024": {
+      "home": "乌兹别克斯坦",
+      "away": "哥伦比亚",
+      "actual_score": "1-3",
+      "half_full": "负负",
+      "handicap": 1
+    },
+    "周四025": {
+      "home": "捷克",
+      "away": "南非",
+      "actual_score": "1-1",
+      "half_full": "胜平",
+      "handicap": -1
+    },
+    "周四026": {
+      "home": "瑞士",
+      "away": "波黑",
+      "actual_score": "4-1",
+      "half_full": "平胜",
+      "handicap": -1
+    },
+    "周四027": {
+      "home": "加拿大",
+      "away": "卡塔尔",
+      "actual_score": "6-0",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周四028": {
+      "home": "墨西哥",
+      "away": "韩国",
+      "actual_score": "1-0",
+      "half_full": "平胜",
+      "handicap": -1
+    },
+    "周五029": {
+      "home": "美国",
+      "away": "澳大利亚",
+      "actual_score": "2-0",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周五030": {
+      "home": "苏格兰",
+      "away": "摩洛哥",
+      "actual_score": "0-1",
+      "half_full": "负负",
+      "handicap": 1
+    },
+    "周五031": {
+      "home": "巴西",
+      "away": "海地",
+      "actual_score": "3-0",
+      "half_full": "胜胜",
+      "handicap": -2
+    },
+    "周五032": {
+      "home": "土耳其",
+      "away": "巴拉圭",
+      "actual_score": "0-1",
+      "half_full": "负负",
+      "handicap": -1
+    },
+    "周六033": {
+      "home": "荷兰",
+      "away": "瑞典",
+      "actual_score": "5-1",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周六034": {
+      "home": "德国",
+      "away": "科特迪瓦",
+      "actual_score": "2-1",
+      "half_full": "负胜",
+      "handicap": -1
+    },
+    "周六035": {
+      "home": "厄瓜多尔",
+      "away": "库拉索",
+      "actual_score": "0-0",
+      "half_full": "平平",
+      "handicap": -2
+    },
+    "周六036": {
+      "home": "突尼斯",
+      "away": "日本",
+      "actual_score": "0-4",
+      "half_full": "负负",
+      "handicap": 1
+    },
+    "周日037": {
+      "home": "西班牙",
+      "away": "沙特阿拉伯",
+      "actual_score": "4-0",
+      "half_full": "胜胜",
+      "handicap": -2
+    },
+    "周日038": {
+      "home": "比利时",
+      "away": "伊朗",
+      "actual_score": "0:0",
+      "half_full": "平平",
+      "handicap": -1
+    },
+    "周日039": {
+      "home": "乌拉圭",
+      "away": "佛得角",
+      "actual_score": "2:2",
+      "half_full": "胜平",
+      "handicap": -1
+    },
+    "周日040": {
+      "home": "新西兰",
+      "away": "埃及",
+      "actual_score": "1:3",
+      "half_full": "胜负",
+      "handicap": 1
+    },
+    "周一041": {
+      "home": "阿根廷",
+      "away": "奥地利",
+      "actual_score": "2:0",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周一042": {
+      "home": "法国",
+      "away": "伊拉克",
+      "actual_score": "3-0",
+      "half_full": "胜胜",
+      "handicap": -3
+    },
+    "周一043": {
+      "home": "挪威",
+      "away": "塞内加尔",
+      "actual_score": "3:2",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周一044": {
+      "home": "约旦",
+      "away": "阿尔及利亚",
+      "actual_score": "1:2",
+      "half_full": "胜负",
+      "handicap": 1
+    },
+    "周二045": {
+      "home": "葡萄牙",
+      "away": "乌兹别克斯坦",
+      "actual_score": "5-0",
+      "half_full": "胜胜",
+      "handicap": -2
+    },
+    "周二046": {
+      "home": "英格兰",
+      "away": "加纳",
+      "actual_score": "0-0",
+      "half_full": "平平",
+      "handicap": -2
+    },
+    "周二047": {
+      "home": "巴拿马",
+      "away": "克罗地亚",
+      "actual_score": "0-1",
+      "half_full": "平负",
+      "handicap": 1
+    },
+    "周二048": {
+      "home": "哥伦比亚",
+      "away": "刚果(金)",
+      "actual_score": "1-0",
+      "half_full": "平胜",
+      "handicap": -1
+    },
+    "周三049": {
+      "home": "瑞士",
+      "away": "加拿大",
+      "actual_score": "2:1",
+      "half_full": "平胜",
+      "handicap": -1
+    },
+    "周三050": {
+      "home": "波黑",
+      "away": "卡塔尔",
+      "actual_score": "3:1",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周三051": {
+      "home": "苏格兰",
+      "away": "巴西",
+      "actual_score": "0:3",
+      "half_full": "负负",
+      "handicap": 1
+    },
+    "周三052": {
+      "home": "摩洛哥",
+      "away": "海地",
+      "actual_score": "4:2",
+      "half_full": "平胜",
+      "handicap": -2
+    },
+    "周三053": {
+      "home": "南非",
+      "away": "韩国",
+      "actual_score": "1:0",
+      "half_full": "平胜",
+      "handicap": 1
+    },
+    "周三054": {
+      "home": "捷克",
+      "away": "墨西哥",
+      "actual_score": "0:3",
+      "half_full": "平负",
+      "handicap": 1
+    },
+    "周四055": {
+      "home": "厄瓜多尔",
+      "away": "德国",
+      "actual_score": "2:1",
+      "half_full": "平胜",
+      "handicap": 1
+    },
+    "周四056": {
+      "home": "库拉索",
+      "away": "科特迪瓦",
+      "actual_score": "0:2",
+      "half_full": "负负",
+      "handicap": 2
+    },
+    "周四057": {
+      "home": "突尼斯",
+      "away": "荷兰",
+      "actual_score": "1:3",
+      "half_full": "负负",
+      "handicap": 2
+    },
+    "周四058": {
+      "home": "日本",
+      "away": "瑞典",
+      "actual_score": "1:1",
+      "half_full": "平平",
+      "handicap": -1
+    },
+    "周四059": {
+      "home": "巴拉圭",
+      "away": "澳大利亚",
+      "actual_score": "0:0",
+      "half_full": "平平",
+      "handicap": -1
+    },
+    "周四060": {
+      "home": "土耳其",
+      "away": "美国",
+      "actual_score": "3:2",
+      "half_full": "胜胜",
+      "handicap": 1
+    },
+    "周五061": {
+      "home": "挪威",
+      "away": "法国",
+      "actual_score": "1:4",
+      "half_full": "负负",
+      "handicap": 1
+    },
+    "周五062": {
+      "home": "塞内加尔",
+      "away": "伊拉克",
+      "actual_score": "5:0",
+      "half_full": "胜胜",
+      "handicap": -2
+    },
+    "周五063": {
+      "home": "佛得角",
+      "away": "沙特阿拉伯",
+      "actual_score": "0:0",
+      "half_full": "平平",
+      "handicap": -1
+    },
+    "周五064": {
+      "home": "乌拉圭",
+      "away": "西班牙",
+      "actual_score": "0:1",
+      "half_full": "负负",
+      "handicap": 1
+    },
+    "周五065": {
+      "home": "埃及",
+      "away": "伊朗",
+      "actual_score": "1:1",
+      "half_full": "平平",
+      "handicap": -1
+    },
+    "周五066": {
+      "home": "新西兰",
+      "away": "比利时",
+      "actual_score": "1:5",
+      "half_full": "负负",
+      "handicap": 2
+    },
+    "周六067": {
+      "home": "克罗地亚",
+      "away": "加纳",
+      "actual_score": "2:1",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周六068": {
+      "home": "巴拿马",
+      "away": "英格兰",
+      "actual_score": "0:2",
+      "half_full": "平负",
+      "handicap": 2
+    },
+    "周六069": {
+      "home": "哥伦比亚",
+      "away": "葡萄牙",
+      "actual_score": "0:0",
+      "half_full": "平平",
+      "handicap": 1
+    },
+    "周六070": {
+      "home": "刚果(金)",
+      "away": "乌兹别克斯坦",
+      "actual_score": "3:1",
+      "half_full": "负胜",
+      "handicap": -1
+    },
+    "周六071": {
+      "home": "阿尔及利亚",
+      "away": "奥地利",
+      "actual_score": "3:3",
+      "half_full": "平平",
+      "handicap": 1
+    },
+    "周六072": {
+      "home": "约旦",
+      "away": "阿根廷",
+      "actual_score": "1:3",
+      "half_full": "负负",
+      "handicap": 2
+    },
+    "周日073": {
+      "home": "南非",
+      "away": "加拿大",
+      "actual_score": "0-1",
+      "half_full": "平负",
+      "handicap": 1
+    },
+    "周一074": {
+      "home": "巴西",
+      "away": "日本",
+      "actual_score": "2:1",
+      "half_full": "负胜",
+      "handicap": -1
+    },
+    "周一076": {
+      "home": "荷兰",
+      "away": "摩洛哥",
+      "actual_score": "1:1",
+      "half_full": "平平",
+      "handicap": -1
+    },
+    "周一075": {
+      "home": "德国",
+      "away": "巴拉圭",
+      "actual_score": "1:1",
+      "half_full": "负平",
+      "handicap": -1
+    },
+    "周二077": {
+      "home": "科特迪瓦",
+      "away": "挪威",
+      "actual_score": "1:2",
+      "half_full": "负负",
+      "handicap": 1
+    },
+    "周二078": {
+      "home": "法国",
+      "away": "瑞典",
+      "actual_score": "3:0",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周二079": {
+      "home": "墨西哥",
+      "away": "厄瓜多尔",
+      "actual_score": "2:0",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周三080": {
+      "home": "英格兰",
+      "away": "刚果(金)",
+      "actual_score": "2:1",
+      "half_full": "负胜",
+      "handicap": -1
+    },
+    "周三081": {
+      "home": "比利时",
+      "away": "塞内加尔",
+      "actual_score": "2:2",
+      "half_full": "负平",
+      "handicap": -1
+    },
+    "周三082": {
+      "home": "美国",
+      "away": "波黑",
+      "actual_score": "2:0",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周四083": {
+      "home": "西班牙",
+      "away": "奥地利",
+      "actual_score": "3:0",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周四084": {
+      "home": "葡萄牙",
+      "away": "克罗地亚",
+      "actual_score": "2:1",
+      "half_full": "平胜",
+      "handicap": -1
+    },
+    "周四085": {
+      "home": "瑞士",
+      "away": "阿尔及利亚",
+      "actual_score": "2:0",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周五086": {
+      "home": "澳大利亚",
+      "away": "埃及",
+      "actual_score": "1:1",
+      "half_full": "负平",
+      "handicap": 1
+    },
+    "周五087": {
+      "home": "阿根廷",
+      "away": "佛得角",
+      "actual_score": "1:1",
+      "half_full": "胜平",
+      "handicap": -2
+    },
+    "周五088": {
+      "home": "哥伦比亚",
+      "away": "加纳",
+      "actual_score": "1:0",
+      "half_full": "胜胜",
+      "handicap": -1
+    },
+    "周六089": {
+      "home": "加拿大",
+      "away": "摩洛哥",
+      "actual_score": "",
+      "half_full": "",
+      "handicap": 1
+    },
+    "周六090": {
+      "home": "巴拉圭",
+      "away": "法国",
+      "actual_score": "",
+      "half_full": "",
+      "handicap": 2
+    }
+  }
+}
