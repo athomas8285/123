@@ -1,4 +1,4 @@
-# Python
+﻿# Python
 __pycache__/
 *.pyc
 *.pyo
@@ -13,6 +13,11 @@ flask_output.log
 data/*.json
 data/**/*.json
 data/*.db
+data/
+_data/
+
+# Temp patch files
+_patch_*.py
 
 # Archive - old backups
 _archive/

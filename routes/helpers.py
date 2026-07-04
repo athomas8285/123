@@ -17,6 +17,9 @@ def db_get():
 def ensure_db():
     """Create database tables if they don't exist. Safe to call on every startup."""
     conn = sqlite3.connect(os.path.join(BASE, "framework.db"))
+    os.makedirs(APP_DATA, exist_ok=True)
+    os.makedirs(os.path.join(BASE, "data"), exist_ok=True)
+
     conn.executescript("""
     CREATE TABLE IF NOT EXISTS runs (
         id INTEGER PRIMARY KEY AUTOINCREMENT,

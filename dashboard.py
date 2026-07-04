@@ -1,13 +1,27 @@
-﻿from flask import Flask
+﻿"""Main Flask application entry point for gunicorn (dashboard:app)."""
+from flask import Flask
 from routes import register_blueprints, helpers
-import os
+import os, sys
 
 app = Flask(__name__, template_folder="templates")
 
-# Initialize database tables on startup (gunicorn imports this module)
-helpers.ensure_db()
+# Minimal health check — no DB dependency, survives import failures
+@app.route("/health")
+def health():
+    return {"status": "ok"}, 200
 
-register_blueprints(app)
+# Defensive startup: catch and log failures instead of hanging workers
+try:
+    helpers.ensure_db()
+    print("[boot] ensure_db() OK", flush=True)
+except Exception as e:
+    print(f"[boot] ensure_db() FAILED: {e}", flush=True)
+
+try:
+    register_blueprints(app)
+    print("[boot] blueprints registered OK", flush=True)
+except Exception as e:
+    print(f"[boot] register_blueprints() FAILED: {e}", flush=True)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5021))
