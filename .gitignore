@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.db-shm
+*.db-wal
+*.log
+flask_output.log
+
+# Data - all generated data
+data/*.json
+data/**/*.json
+data/*.db
+
+# Archive - old backups
+_archive/
+_merge_backup_*/
+
+# Claude system files
+.claude/
+
+# Environment
+.env
+.venv
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp/test files
+_temp_*.py
+_test_*.js
+_test_*.py
+_recover_*.py
+_scan_*.py
+_fix_*.py
+_replace_*.py
+_restore_*.py
+_rebuild_*.py
+
+# Conversation history
+*.jsonl
+
+# Temp dirs
+tmp/
+work/

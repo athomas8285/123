@@ -1,0 +1,472 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>管理后台 | V3.3.3-Core</title>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0f172a;color:#1f2937;display:flex;min-height:100vh}
+#sidebar{width:200px;min-width:200px;background:#fff;border-right:1px solid #e5e7eb;display:flex;flex-direction:column;transition:width .2s,min-width .2s;overflow:hidden;z-index:10;box-shadow:1px 0 3px rgba(0,0,0,.04);position:sticky;top:0;height:100vh}
+#sidebar.collapsed{width:52px;min-width:52px}
+.sidebar-header{padding:16px;border-bottom:1px solid #e5e7eb;display:flex;align-items:center;gap:10px;flex-shrink:0}
+.sidebar-header h2{font-size:16px;font-weight:700;white-space:nowrap;overflow:hidden}
+#collapse-btn{background:none;border:none;cursor:pointer;padding:4px;color:#9ca3af;flex-shrink:0}
+#collapse-btn:hover{color:#4b5563}
+#sidebar nav{flex:1;padding:8px;display:flex;flex-direction:column;gap:2px}
+.nav-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:6px;color:#6b7280;cursor:pointer;font-size:14px;border:none;background:none;width:100%;text-align:left;transition:background .12s,color .12s;white-space:nowrap}
+.nav-item:hover{background:#f3f4f6;color:#1f2937}
+.nav-item.active{background:#eff6ff;color:#2563eb;border-left:3px solid #2563eb;padding-left:9px}
+.nav-item i{flex-shrink:0;width:20px;height:20px}
+#sidebar.collapsed .nav-item{gap:0;justify-content:center;padding:10px}
+#sidebar.collapsed .nav-item span{display:none}
+#sidebar.collapsed .nav-item.active{border-left:none;padding-left:10px}
+.sidebar-footer{padding:12px;border-top:1px solid #e5e7eb;font-size:11px;color:#9ca3af}
+#sidebar.collapsed .sidebar-footer{display:none}
+.sidebar-footer .time{font-size:11px}
+main{flex:1;padding:24px 28px;min-width:0;background:#f3f4f6}
+.panel{display:none}
+.panel.active{display:block}
+.panel-title{font-size:20px;font-weight:600;margin-bottom:20px;color:#1f2937;display:flex;align-items:center;gap:10px}
+.panel-title i{color:#2563eb}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.stat-card{background:#fff;border-radius:8px;padding:16px;text-align:center;border:1px solid #e5e7eb}
+.stat-card .num{font-size:28px;font-weight:700;color:#1f2937}
+.stat-card .num.green{color:#16a34a}
+.stat-card .num.yellow{color:#d97706}
+.stat-card .num.red{color:#dc2626}
+.stat-card .label{font-size:12px;color:#6b7280;margin-top:4px}
+.section-head{font-size:14px;font-weight:600;color:#6b7280;margin:24px 0 12px;text-transform:uppercase;letter-spacing:.5px}
+.console-wrap{background:#fff;border-radius:8px;padding:16px;border:1px solid #e5e7eb}
+.task-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+.task-card{background:#f9fafb;border-radius:6px;padding:12px;text-align:center;cursor:pointer;transition:background .12s;border:1px solid #e5e7eb}
+.task-card:hover{background:#eff6ff}
+.task-num{font-size:22px;font-weight:700}
+.task-num.red{color:#dc2626}
+.task-num.yellow{color:#d97706}
+.task-num.green{color:#16a34a}
+.task-num.gray{color:#9ca3af}
+.task-label{font-size:12px;color:#6b7280;margin-top:2px}
+.console-preview{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.console-preview .cp-col{background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;padding:12px}
+.console-preview .cp-col h4{font-size:12px;font-weight:600;color:#374151;margin:0 0 8px}
+.console-preview .cp-row{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:11px;color:#6b7280;border-bottom:1px solid #f3f4f6}
+.console-preview .cp-row:last-child{border-bottom:none}
+.console-preview .cp-mid{font-family:monospace;font-size:10px;color:#9ca3af;min-width:54px}
+.console-preview .cp-teams{flex:1;color:#374151;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.console-preview .cp-time{font-size:10px;color:#9ca3af;white-space:nowrap}
+.console-preview .cp-empty{text-align:center;padding:12px;color:#9ca3af;font-size:11px}
+.console-actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.console-btn{display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:6px;border:1px solid #d1d5db;background:#fff;color:#374151;font-size:13px;cursor:pointer;transition:background .12s}
+.console-btn:hover{background:#f3f4f6}
+.console-btn.primary{background:#2563eb;color:#fff;border-color:#2563eb}
+.console-btn.primary:hover{background:#1d4ed8}
+.console-log{background:#1e293b;border-radius:6px;padding:12px;font-family:monospace;font-size:12px;color:#e2e8f0;max-height:200px;overflow-y:auto;line-height:1.6}
+.health-bar{display:flex;gap:16px;flex-wrap:wrap;font-size:13px}
+.health-bar .ok{color:#16a34a}
+.health-bar .warn{color:#d97706}
+.pred-strip{display:flex;flex-direction:column;gap:6px}
+.pred-item{display:flex;align-items:center;gap:12px;background:#fff;padding:8px 12px;border-radius:6px;border:1px solid #e5e7eb;font-size:14px}
+.pred-item .teams{flex:1;font-weight:500}
+.dir-badge{font-size:12px;padding:2px 8px;border-radius:4px;font-weight:600}
+.dir-badge.A{background:#dcfce7;color:#16a34a}
+.dir-badge.B{background:#fef3c7;color:#d97706}
+.dir-badge.C{background:#fee2e2;color:#dc2626}
+.pred-item .fit{font-size:12px;color:#6b7280}
+.chart-wrap{background:#fff;border-radius:8px;padding:16px;border:1px solid #e5e7eb;margin-top:12px}
+.flow-steps{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.flow-step{display:flex;align-items:center;gap:12px;padding:12px 16px;background:#fff;border-radius:8px;border:1px solid #e5e7eb;cursor:pointer;transition:all .12s}
+.flow-step:hover{box-shadow:0 2px 8px rgba(0,0,0,.06);border-color:#d1d5db}
+.flow-step .fs-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.flow-step .fs-icon.done{background:#dcfce7;color:#16a34a}
+.flow-step .fs-icon.pending{background:#fef3c7;color:#d97706}
+.flow-step .fs-icon.idle{background:#f3f4f6;color:#9ca3af}
+.flow-step .fs-body{flex:1}
+.flow-step .fs-title{font-size:13px;font-weight:600;color:#374151}
+.flow-step .fs-desc{font-size:11px;color:#9ca3af;margin-top:2px}
+.flow-step .fs-badge{font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;flex-shrink:0}
+.flow-step .fs-badge.action{background:#eff6ff;color:#2563eb}
+.flow-step .fs-badge.done{background:#dcfce7;color:#16a34a}
+.health-bar{display:flex;gap:12px;flex-wrap:wrap;padding:12px 16px;background:#fff;border-radius:8px;border:1px solid #e5e7eb;margin-top:12px;font-size:12px}
+.toolbar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.toolbar input{flex:1;min-width:200px;padding:8px 12px;border:1px solid #d1d5db;border-radius:6px;font-size:14px}
+.toolbar input:focus{outline:none;border-color:#2563eb}
+.pill{padding:6px 14px;border-radius:20px;border:1px solid #d1d5db;background:#fff;color:#6b7280;font-size:13px;cursor:pointer;transition:all .12s}
+.pill.on,.pill:hover{background:#2563eb;color:#fff;border-color:#2563eb}
+.match-group{margin-bottom:8px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden}
+.group-header{padding:10px 14px;background:#f9fafb;font-weight:600;font-size:14px;cursor:pointer;display:flex;align-items:center;gap:8px;user-select:none}
+.group-header .arrow{transition:transform .2s}
+.group-header.open .arrow{transform:rotate(90deg)}
+.group-header .count{font-weight:400;color:#9ca3af;font-size:12px;margin-left:auto}
+.group-body{display:none}
+.group-body.open{display:block}
+.group-body table{width:100%;border-collapse:collapse;font-size:13px}
+.group-body th{background:#f9fafb;padding:8px 12px;text-align:left;font-weight:600;color:#6b7280;border-bottom:1px solid #e5e7eb}
+.group-body td{padding:8px 12px;border-bottom:1px solid #f3f4f6}
+.group-body tr.row-done td:first-child{border-left:3px solid #16a34a}
+.group-body tr.row-pred td:first-child{border-left:3px solid #d97706}
+.group-body tr.row-wait td:first-child{border-left:3px solid #9ca3af}
+.pred-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.pred-card{background:#fff;border-radius:8px;padding:16px;border:1px solid #e5e7eb}
+.pred-card .pc-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.pred-card .pc-teams{font-size:15px;font-weight:600}
+.pred-card .pc-info{display:flex;gap:12px;font-size:13px;color:#6b7280}
+.pred-card .pc-score{font-size:14px;font-weight:600;margin-top:8px}
+.plan-content{display:flex;gap:12px}
+.rv-header{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:16px}
+.rv-stat{text-align:center}
+.rv-stat .rv-num{font-size:32px;font-weight:700}
+.rv-stat .rv-num.green{color:#16a34a}
+.rv-stat .rv-label{font-size:12px;color:#6b7280}
+.rv-list{display:flex;flex-direction:column;gap:8px}
+.rv-item{background:#fff;padding:10px 14px;border-radius:6px;border:1px solid #e5e7eb;display:flex;align-items:center;gap:12px;font-size:14px}
+.rv-item.hit{border-left:3px solid #16a34a}
+.rv-item.miss{border-left:3px solid #dc2626}
+.rv-item .rv-teams{flex:1}
+.sys-status{background:#fff;border-radius:8px;padding:16px;border:1px solid #e5e7eb;font-size:14px;line-height:1.8}
+.sys-status strong{color:#1f2937}
+.empty{text-align:center;padding:40px;color:#9ca3af}
+#loadingOverlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(15,23,42,.8);display:flex;align-items:center;justify-content:center;z-index:100;color:#fff;font-size:18px}
+@media(max-width:768px){
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .task-cards{grid-template-columns:repeat(2,1fr)}
+  main{padding:16px}
+}
+
+
+
+/* === Fundamental Analysis Cards === */
+.fa-date-group{margin-bottom:20px}
+.fa-date-label{font-size:13px;font-weight:600;color:#f59e0b;padding:8px 14px;margin-bottom:10px;background:rgba(245,158,11,.06);border-radius:6px;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none}
+.fa-date-label:hover{background:rgba(245,158,11,.1)}
+.fa-date-arrow{font-size:10px;color:#f59e0b;transition:transform .2s}
+.fa-date-label.collapsed .fa-date-arrow{transform:rotate(-90deg)}
+.fa-date-count{font-size:11px;color:#9ca3af;font-weight:400;margin-left:auto}
+.fa-date-body{display:block;overflow:hidden}
+.fa-date-label.collapsed + .fa-date-body{display:none}
+/* === Fundamental Analysis Cards (V4 style) === */
+.fa-card{background:#fff;border:1px solid #e5e7eb;border-radius:8px;margin-bottom:10px;cursor:pointer;transition:all .15s;overflow:hidden}
+.fa-card:hover{border-color:#2563eb33;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.fa-card.hit{border-left:3px solid #16a34a}
+.fa-card.miss{border-left:3px solid #dc2626}
+.fa-card.expanded{border-color:#2563eb66;box-shadow:0 2px 12px rgba(37,99,235,.1)}
+.fa-card-row{display:grid;grid-template-columns:50px 58px 42px 1fr 0.75fr 0.9fr 50px 0.7fr 42px 48px;align-items:center;padding:10px 14px;gap:6px;min-height:50px}
+.fa-card-row.has-result{grid-template-columns:50px 58px 42px 1fr 0.9fr 50px 0.85fr 52px}
+.fa-card-row.no-result{grid-template-columns:50px 58px 42px 1fr 0.9fr 50px 0.85fr 52px}
+.fa-c-num{font-family:"SF Mono",Consolas,monospace;font-size:12px;font-weight:600;color:#374151;text-align:center}
+.fa-c-time{font-family:"SF Mono",Consolas,monospace;font-size:11px;color:#6b7280;text-align:center}
+.fa-c-event{font-size:10px;color:#9ca3af;text-align:center;background:#f3f4f6;border-radius:4px;padding:2px 5px;white-space:nowrap}
+.fa-c-teams{display:flex;align-items:center;gap:5px;min-width:0}
+.fa-c-teams .t-h{font-size:13px;font-weight:600;color:#1f2937;text-align:right;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fa-c-teams .t-vs{font-size:10px;color:#d1d5db;flex-shrink:0}
+.fa-c-teams .t-a{font-size:13px;font-weight:600;color:#1f2937;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fa-c-odds{display:flex;align-items:center;gap:4px;min-width:0}
+.fa-c-odds .odds-rows{display:flex;flex-direction:column;gap:2px}
+.fa-c-odds .odds-row{display:flex;align-items:center;gap:4px;font-size:11px;line-height:1.6}
+.fa-c-odds .odds-row .or-label{font-size:9px;color:#94a3b8;width:30px;text-align:right;font-family:"SF Mono",Consolas,monospace;flex-shrink:0}
+.fa-c-odds .odds-row .og-item{font-size:10.5px;font-family:"SF Mono",Consolas,monospace;font-weight:600;color:#374151;padding:0 2px;text-align:center;min-width:18px}
+.fa-c-odds .odds-row .og-sp-h{color:#ef5350}
+.fa-c-odds .odds-row .og-sp-d{color:#2563eb}
+.fa-c-odds .odds-row .og-sp-a{color:#16a34a}
+.fa-c-odds .odds-empty{font-size:10px;color:#9ca3af;font-style:italic}
+.fa-c-result{font-size:13px;font-weight:700;color:#374151}
+.fa-c-dir{text-align:center}.fa-c-sp{display:flex;align-items:center;gap:2px;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:11px;font-weight:600}.fa-c-sp span{text-align:center;min-width:28px;padding:0 2px}.fa-c-sp span:first-child{color:#ef5350}.fa-c-sp span:nth-child(2){color:#2563eb}.fa-c-sp span:last-child{color:#16a34a}.fa-c-hh{display:flex;align-items:center;gap:2px;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:10px;font-weight:600}.fa-c-hh span{text-align:center;min-width:24px;padding:0 2px}.fa-c-hh .hcp{color:#f59e0b;min-width:20px}.fa-c-hh span:nth-child(2){color:#ef5350}.fa-c-hh span:nth-child(3){color:#2563eb}.fa-c-hh span:nth-child(4){color:#16a34a}.fa-exp-box{background:#f9fafb;border-radius:6px;padding:10px 14px;margin-top:8px;font-size:12px;line-height:1.6}.fa-exp-box .fa-exp-box-title{font-weight:600;color:#374151;margin-bottom:6px}.fa-exp-box .fa-exp-box-row{display:flex;gap:4px 12px;flex-wrap:wrap;color:#6b7280}.fa-exp-box .fa-exp-box-val{color:#1f2937;font-weight:500}
+.fa-dir-badge{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:4px}
+.fa-dir-badge.win{background:#dcfce7;color:#16a34a}
+.fa-dir-badge.loss{background:#fee2e2;color:#dc2626}
+.fa-c-backup{display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px;background:#f3f4f6;color:#6b7280;margin-left:4px}
+.fa-c-fit-wrap{display:flex;align-items:center;gap:4px;justify-content:center}
+.fa-c-fit{font-size:13px;font-weight:600;color:#374151;font-family:"SF Mono",Consolas,monospace}
+.fa-c-predicting{font-size:12px;font-weight:600;color:#6b7280}
+.fa-c-result{display:flex;align-items:center;gap:5px;justify-content:center;white-space:nowrap;flex-wrap:wrap}
+.fa-c-score{font-size:15px;font-weight:800;color:#d97706;font-family:"SF Mono",Consolas,monospace}
+.fa-c-half{font-size:10.5px;color:#6b7280;font-weight:600}
+.fa-c-hit{font-size:11px;font-weight:600;padding:1px 7px;border-radius:3px}
+.fa-c-hit.hit{background:#dcfce7;color:#16a34a}
+.fa-c-hit.miss{background:#fee2e2;color:#dc2626}
+.fa-c-expand{text-align:center;font-size:11px;color:#9ca3af;transition:transform .3s;cursor:pointer}
+.fa-c-sp-missing{font-size:11px;font-weight:600;color:#dc2626;display:flex;align-items:center;gap:3px;justify-content:center;white-space:nowrap}
+.fa-exp-result{display:flex;gap:12px;flex-wrap:wrap;color:#6b7280;font-size:12px;margin-top:4px}
+.fa-exp-result .er-item{display:flex;align-items:center;gap:6px}
+.fa-exp-result .er-label{color:#9ca3af;font-size:11px}
+.fa-exp-result .er-value{font-weight:600;color:#1f2937;font-family:SF Mono,Consolas,monospace}
+.fa-exp-result .er-score{font-size:18px;font-weight:800;color:#d97706;font-family:SF Mono,Consolas,monospace}
+.fa-exp-result .er-hit{font-size:11px;font-weight:600;padding:1px 7px;border-radius:3px}
+.fa-exp-result .er-hit.hit{background:#dcfce7;color:#16a34a}
+.fa-exp-result .er-hit.miss{background:#fee2e2;color:#dc2626}
+.fa-card.expanded .fa-c-expand{transform:rotate(180deg)}
+.fa-c-wait{grid-column:1/-1;text-align:center;color:#9ca3af;font-size:13px;padding:8px 0}
+.fa-expand{display:none;border-top:1px solid #e5e7eb;padding:10px 14px;background:#f9fafb}
+.fa-card.expanded .fa-expand{display:block}
+.fa-exp-pills{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.fa-exp-pill{display:flex;align-items:center;gap:4px;background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:4px 10px;font-size:12px;color:#374151}
+.fa-exp-pill .pil-icon{font-size:13px}
+.fa-exp-pill .pil-label{color:#9ca3af;font-size:10px}
+.fa-exp-pill .pil-value{font-weight:600;color:#1f2937}
+.fa-exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.fa-exp-chart{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:8px 10px}
+.fa-exp-chart .ch-title{font-size:11px;font-weight:600;color:#374151;margin-bottom:4px}
+.fa-exp-chart .ch-sub{font-size:10px;color:#9ca3af;margin-bottom:4px;display:flex;gap:8px}
+.fa-exp-chart .ch-sub .delta{color:#2563eb;font-weight:600}
+.fa-exp-chart .ch-sub .doi{color:#6b7280}
+.chart-svg-wrap{width:100%;overflow:hidden;display:flex;justify-content:center}
+.chart-svg-wrap svg{display:block;width:100%;max-width:260px;height:auto}
+.fa-exp-reasoning{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:10px 12px;margin-top:8px}
+.fa-exp-reasoning .reasoning-head{font-size:12px;font-weight:600;color:#374151;margin-bottom:6px}
+.fa-exp-reasoning .reasoning-body{font-size:12px;color:#6b7280;line-height:1.6}
+.fa-exp-reasoning .reasoning-body p{margin:0}
+.fa-exp-chart .ch-svg{display:flex;justify-content:center;overflow:hidden}
+.fa-exp-analysis{display:flex;flex-direction:column;gap:5px}
+.fa-analysis-item{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:5px 9px}
+.fa-analysis-item .ai-head{display:flex;align-items:center;gap:5px;margin-bottom:2px}
+.fa-analysis-item .ai-icon{font-size:12px}
+.fa-analysis-item .ai-label{font-size:10px;font-weight:600;color:#6b7280}
+.fa-analysis-item .ai-body{font-size:12px;font-weight:600;color:#1f2937}
+.fa-analysis-item .ai-body-muted{font-size:11px;color:#6b7280;line-height:1.4}
+.fa-exp-bg-grid{display:grid;grid-template-columns:1.2fr 1fr 0.8fr;gap:8px;margin-bottom:10px}
+.fa-exp-bg-card{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:8px 10px;min-width:0}
+.fa-exp-bg-card .bg-title{font-size:11px;font-weight:600;color:#374151;margin-bottom:4px}
+.fa-exp-bg-card .bg-body{font-size:11px;color:#6b7280;line-height:1.5}
+.fa-exp-bg-card .bg-body .standings-line{display:block;padding:1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fa-exp-narrative{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:8px 12px}
+.fa-exp-narrative .narr-title{font-size:12px;font-weight:600;color:#1f2937;margin-bottom:4px}
+.fa-exp-narrative .narr-body{font-size:12px;color:#374151;line-height:1.6}
+.fa-bar-wrap{display:flex;gap:6px;justify-content:center;align-items:flex-end;height:56px}
+.fa-bar{width:36px;text-align:center}
+.fa-bar-fill{border-radius:4px 4px 0 0;transition:height .3s}
+.fa-bar-fill.phy{background:linear-gradient(180deg,#2563eb,#3b82f6)}
+.fa-bar-fill.mkt{background:linear-gradient(180deg,#d97706,#f59e0b)}
+.fa-bar-label{font-size:10px;color:#6b7280;margin-top:4px}
+.fa-bar-val{font-size:10px;font-weight:600;color:#1f2937}
+.fa-bar-legend{display:flex;gap:12px;justify-content:center;font-size:10px;color:#9ca3af;margin-top:6px}
+.fa-bar-legend span{display:flex;align-items:center;gap:4px}
+.fa-bar-legend .sw{width:10px;height:10px;border-radius:2px;display:inline-block}
+
+
+
+
+.cp-col-wide{flex:1}
+.cp-row-card{flex-wrap:wrap;gap:6px;min-height:36px;align-items:center}
+.cp-status{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600;white-space:nowrap}
+.cp-status.done{background:#dcfce7;color:#16a34a}
+.cp-status.wait{background:#fef3c7;color:#d97706}
+.cp-status.wait.clickable{cursor:pointer;border:1px dashed #d97706}
+.cp-status.wait.clickable:hover{background:#fde68a}
+.cp-inputs{display:flex;gap:4px;align-items:center;margin-left:auto}
+.cp-inp-score,.cp-inp-hf{border:1px solid #d1d5db;border-radius:4px;padding:3px 6px;font-size:11px;font-family:inherit;width:auto}
+.cp-inp-score:focus,.cp-inp-hf:focus{outline:none;border-color:#2563eb}
+.cp-btn-save{background:#2563eb;color:#fff;border:none;border-radius:4px;padding:3px 8px;font-size:11px;cursor:pointer}
+.cp-btn-save:hover{background:#1d4ed8}
+.cp-btn-save:disabled{opacity:.5;cursor:not-allowed}
+
+.result-modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.65);z-index:9999;display:flex;align-items:center;justify-content:center;animation:fadeIn .2s}
+.result-modal{background:var(--surface,#0f172a);border:1px solid var(--bd,rgba(255,255,255,.08));border-radius:12px;width:90%;max-width:520px;max-height:80vh;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.result-modal-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--bd,rgba(255,255,255,.06))}
+.result-modal-head h3{font-size:16px;font-weight:700;color:var(--t1,#e2e8f0);display:flex;align-items:center;gap:8px}
+.result-modal-body{padding:12px 20px;max-height:50vh;overflow-y:auto}
+.result-modal-body table{width:100%;border-collapse:collapse;font-size:12px}
+.result-modal-body td{padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.03);color:var(--t2,#94a3b8)}
+.result-modal-body td:first-child{color:var(--t1,#e2e8f0);font-weight:500;white-space:nowrap}
+.result-modal-body .rm-score{color:var(--cyan,#00e5ff);font-weight:700;font-family:var(--mono,monospace)}
+.result-modal-body .rm-hf{color:var(--gold,#fbbf24);font-size:11px}
+.result-modal-foot{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-top:1px solid var(--bd,rgba(255,255,255,.06));gap:12px}
+.result-modal-foot .rm-summary{font-size:12px;color:var(--t3,#64748b)}
+.result-modal-foot button{padding:8px 24px;border:none;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;background:var(--cyan,#00e5ff);color:#000;transition:opacity .2s}
+.result-modal-foot button:hover{opacity:.85}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+
+.data-modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.65);z-index:9999;display:flex;align-items:center;justify-content:center;animation:fadeIn .2s}
+.data-modal{background:var(--surface,#0f172a);border:1px solid var(--bd,rgba(255,255,255,.08));border-radius:12px;width:90%;max-width:640px;max-height:80vh;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.data-modal-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--bd,rgba(255,255,255,.06))}
+.data-modal-head h3{font-size:16px;font-weight:700;color:var(--t1,#e2e8f0)}
+.data-modal-body{padding:12px 20px;max-height:55vh;overflow-y:auto;color:#cbd5e1;font-size:13px}
+.data-modal-foot{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-top:1px solid var(--bd,rgba(255,255,255,.06));gap:12px}
+.data-modal-foot .dm-summary{font-size:12px;color:var(--t3,#64748b)}
+.data-modal-foot button{padding:8px 24px;border:none;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer}
+.data-modal-foot .btn-confirm{background:var(--cyan,#00e5ff);color:#000}
+.data-modal-foot .btn-cancel{background:var(--t3,#64748b);color:#fff}
+.data-modal-foot button:hover{opacity:.85}
+.data-match-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);cursor:pointer}
+.data-match-row:hover{background:rgba(255,255,255,.02)}
+.data-match-row input[type=checkbox]{accent-color:var(--cyan,#00e5ff);width:16px;height:16px;cursor:pointer}
+.data-match-row .dm-mid{font-family:monospace;font-size:11px;color:var(--cyan,#00e5ff);min-width:60px}
+.data-match-row .dm-teams{flex:1;font-size:13px;color:var(--t1,#e2e8f0)}
+.data-match-row .dm-time{font-size:11px;color:var(--t3,#64748b)}
+.data-match-row .dm-tag{font-size:10px;padding:2px 6px;border-radius:4px;background:rgba(250,204,21,.15);color:#facc15}
+.data-match-row.data-select-all{border-top:1px solid rgba(255,255,255,.1);margin-top:4px;padding-top:10px}
+.data-result-grid{margin-bottom:12px}
+.data-result-grid h4{font-size:14px;font-weight:700;color:#00e5ff;margin:12px 0 8px;padding-bottom:4px;border-bottom:1px solid rgba(255,255,255,.1)}
+.data-result-panels{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px}
+.data-result-panels .dr-item{font-size:12px;padding:4px 0;display:flex;align-items:center;gap:6px;color:#e2e8f0}
+.dr-ok{color:#22c55e;font-weight:600}
+.dr-fail{color:#ef4444;font-weight:600}
+.dr-skip{color:#f59e0b;font-weight:600}
+.dr-warn{color:#9ca3af}
+
+
+/* Narrative capsules (renderNarrativeCapsules) */
+.narr-section{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:8px 12px;margin-bottom:6px}
+.narr-section:last-child{margin-bottom:0}
+.narr-pills{display:flex;flex-wrap:wrap;gap:4px}
+.narr-pill{display:inline-block;font-size:11px;padding:2px 8px;background:#f3f4f6;border-radius:4px;color:#374151}
+.narr-pill-wide{display:block;font-size:11px;padding:3px 8px;background:#fef3c7;border-radius:4px;color:#92400e;text-align:center}
+</style>
+</head>
+<body>
+<div id="sidebar">
+  <div class="sidebar-header">
+    <h2>V3.3.3</h2>
+    <button id="collapse-btn"><i data-lucide="panel-left-close" width="18" height="18"></i></button>
+  </div>
+  <nav>
+    <button class="nav-item active" data-panel="overview"><i data-lucide="layout-dashboard" width="20" height="20"></i><span>总览</span></button>
+    <button class="nav-item" data-panel="console"><i data-lucide="terminal" width="20" height="20"></i><span>控制台</span></button>
+    <button class="nav-item" data-panel="matches"><i data-lucide="list-filter" width="20" height="20"></i><span>比赛</span></button>
+<button class="nav-item" data-panel="fundamental"><i data-lucide="file-text" width="20" height="20"></i><span>基本面分析</span></button>
+    <button class="nav-item" data-panel="plans"><i data-lucide="target" width="20" height="20"></i><span>计划池</span></button>
+    <button class="nav-item" data-panel="featured"><i data-lucide="star" width="20" height="20"></i><span>精选计划单</span></button>
+    <button class="nav-item" data-panel="review"><i data-lucide="bar-chart-3" width="20" height="20"></i><span>复盘</span></button>
+    <button class="nav-item" data-panel="system"><i data-lucide="settings" width="20" height="20"></i><span>系统</span></button>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="time" id="sidebar-time"></div>
+    <div id="sidebar-update"></div>
+  </div>
+</div>
+<main>
+  <section class="panel active" id="panel-overview">
+    <div class="panel-title"><i data-lucide="layout-dashboard" width="24" height="24"></i>总览</div>
+    <div class="stats-grid" id="ov-stats"></div>
+    <div class="section-head">数据健康</div>
+    <div class="health-bar" id="ov-health"></div>
+    <div class="section-head"><i data-lucide="list-checks" width="18" height="18"></i> 每日操作流程</div>
+    <div class="flow-steps" id="ov-flow"></div>
+  </section>
+  <section class="panel" id="panel-console">
+    <div class="panel-title"><i data-lucide="terminal" width="24" height="24"></i>控制台</div>
+    <div class="console-wrap">
+      <div class="task-cards" id="console-tasks"></div>
+      <div class="console-preview" id="console-preview"></div>
+      <div class="console-actions">
+        <button class="console-btn primary" id="btn-fetch-results"><i data-lucide="search" width="16" height="16"></i> 一键查询赛果</button>
+        <button class="console-btn" id="btn-manual-entry"><i data-lucide="edit-3" width="16" height="16"></i> 手动录入</button>
+        <button class="console-btn" id="btn-fetch-jczq"><i data-lucide="download" width="16" height="16"></i> 获取竞彩网比赛</button>
+        <button class="console-btn" id="btn-fetch-data"><i data-lucide="database" width="16" height="16"></i> 获取比赛数据</button>
+        <button class="console-btn" id="btn-refresh-odds"><i data-lucide="refresh-cw" width="16" height="16"></i> 更新赔率</button>
+        <button class="console-btn" id="btn-select-predict"><i data-lucide="play" width="16" height="16"></i> 运行预测</button>
+        <button class="console-btn" id="btn-gen-plan"><i data-lucide="target" width="16" height="16"></i> 生成计划池</button>
+      </div>
+      <div class="console-log" id="console-log"></div>
+    </div>
+  </section>
+  <section class="panel" id="panel-matches">
+    <div class="panel-title"><i data-lucide="list-filter" width="24" height="24"></i>比赛</div>
+    <div class="toolbar">
+      <input type="text" id="match-search" placeholder="搜索编号、球队..." oninput="filterMatches()">
+      <button class="pill on" data-filter="all" onclick="currentMatchFilter='all';document.querySelectorAll('#match-toolbar .pill').forEach(p=>p.classList.remove('on'));this.classList.add('on');filterMatches()">全部</button>
+      <button class="pill" data-filter="done" onclick="currentMatchFilter='done';document.querySelectorAll('#match-toolbar .pill').forEach(p=>p.classList.remove('on'));this.classList.add('on');filterMatches()">已赛果</button>
+      <button class="pill" data-filter="pred" onclick="currentMatchFilter='pred';document.querySelectorAll('#match-toolbar .pill').forEach(p=>p.classList.remove('on'));this.classList.add('on');filterMatches()">预测中</button>
+      <button class="pill" data-filter="wait" onclick="currentMatchFilter='wait';document.querySelectorAll('#match-toolbar .pill').forEach(p=>p.classList.remove('on'));this.classList.add('on');filterMatches()">待预测</button>
+      <button class="pill" data-filter="hit" onclick="currentMatchFilter='hit';document.querySelectorAll('#match-toolbar .pill').forEach(p=>p.classList.remove('on'));this.classList.add('on');filterMatches()">命中</button>
+      <button class="pill" data-filter="miss" onclick="currentMatchFilter='miss';document.querySelectorAll('#match-toolbar .pill').forEach(p=>p.classList.remove('on'));this.classList.add('on');filterMatches()">未命中</button>
+    </div>
+    <div id="match-groups"></div>
+  </section>
+  <section class="panel" id="panel-fundamental">
+    <div class="panel-title"><i data-lucide="file-text" width="24" height="24"></i>基本面分析</div>
+    <div id="fundamental-content"></div>
+  </section>
+<section class="panel" id="panel-plans">
+    <div class="panel-title"><i data-lucide="target" width="24" height="24"></i>计划池</div>
+    <div class="plan-content" id="plan-content"></div>
+  </section>
+  <section class="panel" id="panel-featured">
+    <div class="panel-title"><i data-lucide="star" width="24" height="24"></i>精选计划单</div>
+    <iframe id="featured-iframe" src="/api/dashboard/featured" style="width:100%;height:calc(100vh - 140px);border:none"></iframe>
+  </section>
+  <section class="panel" id="panel-review">
+    <div class="panel-title"><i data-lucide="bar-chart-3" width="24" height="24"></i>复盘</div>
+    <div class="rv-header">
+      <div class="rv-stat"><div class="rv-num" id="rv-total">-</div><div class="rv-label">总计</div></div>
+      <div class="rv-stat"><div class="rv-num green" id="rv-hits">-</div><div class="rv-label">命中</div></div>
+      <div class="rv-stat"><div class="rv-num" id="rv-hitrate">-%</div><div class="rv-label">命中率</div></div>
+      <div class="rv-stat" id="rv-ratings"></div>
+    </div>
+    <div class="rv-list" id="rv-list"></div>
+  </section>
+  <section class="panel" id="panel-system">
+    <div class="panel-title"><i data-lucide="settings" width="24" height="24"></i>系统</div>
+    <div class="sys-status" id="sys-status"></div>
+  </section>
+</main>
+
+<div class="result-modal-overlay" id="result-modal" style="display:none">
+  <div class="result-modal">
+    <div class="result-modal-head">
+      <h3 id="rm-heading">&#9989; 结果</h3>
+    </div>
+    <div class="result-modal-body">
+      <table><tbody id="rm-body"></tbody></table>
+    </div>
+    <div class="result-modal-foot">
+      <span class="rm-summary" id="rm-count"></span>
+      <button type="button" id="rm-close">确定</button>
+    </div>
+  </div>
+</div>
+
+<!-- Fetch Data Modal -->
+<div class="result-modal-overlay" id="fetch-data-modal" style="display:none">
+  <div class="result-modal">
+    <div class="result-modal-head">
+      <h3>&#128268; 获取数据</h3>
+    </div>
+    <div class="result-modal-body">
+      <table><tbody id="fetch-data-list"></tbody></table>
+    </div>
+    <div class="result-modal-foot">
+      <span class="rm-summary"><label><input type="checkbox" id="fd-select-all" checked> 全选/取消</label></span>
+      <div>
+        <button type="button" id="fd-cancel">取消</button>
+        <button type="button" id="fd-submit" style="margin-left:8px;background:var(--cyan,#00e5ff);color:#000">确认采集</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="data-modal-overlay" id="fetchDataModal" style="display:none">
+  <div class="data-modal">
+    <div class="data-modal-head">
+      <h3>📊 选择要采集数据的比赛</h3>
+      <span style="font-size:12px;color:var(--t3,#64748b);cursor:pointer" onclick="document.getElementById('fetchDataModal').style.display='none'">✕</span>
+    </div>
+    <div class="data-modal-body" id="fetchDataModalBody"></div>
+    <div class="data-modal-foot">
+      <span class="dm-summary" id="fetchDataSummary"></span>
+      <button class="btn-cancel" onclick="document.getElementById('fetchDataModal').style.display='none'">取消</button>
+      <button class="btn-confirm" id="btn-confirm-fetch" onclick="submitFetchData()">开始采集</button>
+    </div>
+  </div>
+</div>
+
+<div class="data-modal-overlay" id="dataResultModal" style="display:none">
+  <div class="data-modal">
+    <div class="data-modal-head">
+      <h3>📊 数据采集结果</h3>
+    </div>
+    <div class="data-modal-body" id="dataResultModalBody"></div>
+    <div class="data-modal-foot">
+      <span class="dm-summary" id="dataResultSummary"></span>
+      <button class="btn-confirm" onclick="closeDataResultModal()">确定</button>
+    </div>
+  </div>
+</div>
+
+<div id="loadingOverlay">加载中...</div>
+<script type="module" src="/static/dashboard.js"></script>
+</body>
+</html>
+
+
