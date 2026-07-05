@@ -94,7 +94,7 @@ async function loadConsole() {
       ph += '<span class="cp-mid">'+fmt(p.match_id)+'</span>';
       ph += '<span class="cp-teams">'+fmt(p.home)+' vs '+fmt(p.away)+'</span>';
       var _hasData = window._dataCollectedIds && window._dataCollectedIds[p.match_id];
-      ph += '<span class="cp-status ' + (_hasData ? 'done' : 'wait') + '" style="' + (_hasData ? 'background:#dbeafe;color:#2563eb' : '') + '" data-mid="'+p.match_id+'">' + (_hasData ? '✓ 已采集' : '等待预测') + '</span>';
+      ph += '<span class="cp-status ' + (_hasData ? 'done' : 'wait') + '" style="margin-left:auto;' + (_hasData ? 'background:#dbeafe;color:#2563eb' : '') + '" data-mid="'+p.match_id+'">' + (_hasData ? '✓ 已采集' : '等待预测') + '</span>';
       ph += '</div>';
     }
     ph += '</div>';
