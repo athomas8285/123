@@ -1664,6 +1664,36 @@
       "slack_away": 0,
       "altitude_home": 0,
       "altitude_away": 0
+    },
+    {
+      "id": "周二095",
+      "injury_home": 0,
+      "injury_away": 0,
+      "injury_home_boost": 0,
+      "injury_away_boost": 0,
+      "motivation_home": 0,
+      "motivation_away": 0,
+      "pressure_home": 0,
+      "pressure_away": 0,
+      "slack_home": 0,
+      "slack_away": 0,
+      "altitude_home": 0,
+      "altitude_away": 0
+    },
+    {
+      "id": "周二096",
+      "injury_home": 0,
+      "injury_away": 0,
+      "injury_home_boost": 0,
+      "injury_away_boost": 0,
+      "motivation_home": 0,
+      "motivation_away": 0,
+      "pressure_home": 0,
+      "pressure_away": 0,
+      "slack_home": 0,
+      "slack_away": 0,
+      "altitude_home": 0,
+      "altitude_away": 0
     }
   ]
 }

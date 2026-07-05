@@ -904,6 +904,24 @@
       "opponent_reason": "",
       "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
       "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周日091",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周日092",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
     }
   ]
 }

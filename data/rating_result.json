@@ -1165,7 +1165,10 @@
       "downgrade_count": 0,
       "meltdown": true,
       "scenario_type": "低返还率赛事",
-      "direction_warning": false
+      "direction_warning": false,
+      "actual_score": "0:3",
+      "half_full": "平负",
+      "hit": 0
     },
     {
       "id": "周六090",
@@ -1180,7 +1183,10 @@
       "downgrade_count": 0,
       "meltdown": true,
       "scenario_type": "稳定型",
-      "direction_warning": true
+      "direction_warning": true,
+      "actual_score": "0:1",
+      "half_full": "平负",
+      "hit": 1
     },
     {
       "id": "周四001",
@@ -1613,6 +1619,34 @@
       "actual_score": "0-1",
       "half_full": "平负",
       "hit": 1
+    },
+    {
+      "id": "周日091",
+      "home": "巴西",
+      "away": "挪威",
+      "event": "世界杯",
+      "time": "2026-07-06 04:00:00",
+      "direction": "胜",
+      "fit_score": 2.81,
+      "rating": "C",
+      "downgrade_count": 0,
+      "meltdown": true,
+      "scenario_type": "低返还率赛事",
+      "direction_warning": false
+    },
+    {
+      "id": "周日092",
+      "home": "墨西哥",
+      "away": "英格兰",
+      "event": "世界杯",
+      "time": "2026-07-06 08:00:00",
+      "direction": "负",
+      "fit_score": 2.3200000000000003,
+      "rating": "C",
+      "downgrade_count": 0,
+      "meltdown": true,
+      "scenario_type": "低返还率赛事",
+      "direction_warning": false
     }
   ]
 }

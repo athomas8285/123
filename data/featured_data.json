@@ -1140,7 +1140,7 @@
     },
     {
       "date": "2026-07-04",
-      "round": 1,
+      "round": 0,
       "stake": 1000,
       "multiplier": 1,
       "pick": {
@@ -1184,18 +1184,69 @@
         "ev": 1.0383,
         "min_fit": 2.5
       },
+      "result": "hit",
+      "profit": 650.0,
+      "cumulative": 100.0,
+      "cumulative_invested": 24000
+    },
+    {
+      "date": "2026-07-05",
+      "round": 0,
+      "stake": 1000,
+      "multiplier": 1,
+      "pick": {
+        "l1": {
+          "mid": "周日091",
+          "match": "巴西 vs 挪威",
+          "date": "2026-07-05",
+          "type": "半全场打包",
+          "option": "主不败",
+          "odds": 1.61,
+          "mp": 0.6198,
+          "src_mp": 0.6198,
+          "fit": 2.8,
+          "rating": "C",
+          "comps": [
+            4.55,
+            2.5
+          ]
+        },
+        "l2": {
+          "mid": "周日092",
+          "match": "墨西哥 vs 英格兰",
+          "date": "2026-07-05",
+          "type": "方向打包",
+          "option": "负/平",
+          "odds": 1.22,
+          "mp": 0.867,
+          "src_mp": 0.867,
+          "fit": 2.3,
+          "rating": "C",
+          "comps": [
+            2.11,
+            2.9
+          ]
+        },
+        "min_odds": 1.32,
+        "max_odds": 3.3,
+        "opt_odds": 1.96,
+        "raw_opt_odds": 1.9642000000000002,
+        "hitrate": 0.5091,
+        "ev": 1.1754,
+        "min_fit": 2.3
+      },
       "result": "pending",
       "profit": 0,
-      "cumulative": -550.0,
-      "cumulative_invested": 24000
+      "cumulative": 100.0,
+      "cumulative_invested": 25000
     }
   ],
   "current": {
-    "round": 2,
+    "round": 1,
     "next_stake": 1000,
     "next_multiplier": 1,
-    "cumulative": -550.0,
-    "cumulative_invested": 24000
+    "cumulative": 100.0,
+    "cumulative_invested": 25000
   },
   "matches": {
     "周四001": {
@@ -1817,16 +1868,30 @@
     "周六089": {
       "home": "加拿大",
       "away": "摩洛哥",
-      "actual_score": "",
-      "half_full": "",
+      "actual_score": "0:3",
+      "half_full": "平负",
       "handicap": 1
     },
     "周六090": {
       "home": "巴拉圭",
       "away": "法国",
+      "actual_score": "0:1",
+      "half_full": "平负",
+      "handicap": 2
+    },
+    "周日091": {
+      "home": "巴西",
+      "away": "挪威",
       "actual_score": "",
       "half_full": "",
-      "handicap": 2
+      "handicap": 0
+    },
+    "周日092": {
+      "home": "墨西哥",
+      "away": "英格兰",
+      "actual_score": "",
+      "half_full": "",
+      "handicap": 0
     }
   }
 }

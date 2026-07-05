@@ -90,8 +90,9 @@ def insert_match(run_id, m):
             s7_score, s7_reason, trap_analysis, key_risk,
             wc_group, jc_sp_home, jc_sp_draw, jc_sp_away,
             ah_home, ah_draw, ah_away, match_date,
+            jc_hhad_win, jc_hhad_draw, jc_hhad_lose,
             actual_score, half_time_score, half_full, hit, diagnosis, created_at, result_updated_at
-        ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+        ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
     """, (
         run_id, m["match_id"], m["home"], m["away"],
         m.get("event"), m.get("match_time"),
@@ -115,6 +116,7 @@ def insert_match(run_id, m):
         m.get("trap_analysis"), m.get("key_risk"),
         m.get("wc_group"), m.get("jc_sp_home"), m.get("jc_sp_draw"), m.get("jc_sp_away"),
         m.get("ah_home"), m.get("ah_draw"), m.get("ah_away"), m.get("match_date"),
+        m.get("jc_hhad_win"), m.get("jc_hhad_draw"), m.get("jc_hhad_lose"),
         m.get("actual_score"), m.get("half_time_score"),
         m.get("half_full"), m.get("hit"), m.get("diagnosis"),
         None, None
