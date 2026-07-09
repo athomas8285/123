@@ -1,7 +1,7 @@
 ﻿// V3.3.3-Core Dashboard - Modular entry point
 import { overview } from "./panels/overview.js";
 import { loadConsole, showFetchDataModal, submitFetchData, showDataResultModal, showResultModal, closeDataResultModal, closeResultModal, showFetchJczqModal, refreshConsoleAfterFetch } from "./panels/console.js";
-import { loadMatches, loadPrediction, navigateToMatches, filterMatches } from "./panels/matches.js";
+import { loadMatches, navigateToMatches, filterMatches } from "./panels/matches.js";
 import { loadFundamental, toggleFaDateGroup, toggleFaCard } from "./panels/fundamental.js";
 import { loadPlans } from "./panels/plans.js";
 import { loadReview } from "./panels/review.js";
@@ -31,7 +31,7 @@ window.enc = enc;
 // ===== Panel loaders =====
 const loaders = {
   overview, console: loadConsole, matches: loadMatches,
-  prediction: loadPrediction, fundamental: loadFundamental,
+  fundamental: loadFundamental,
   plans: loadPlans, featured: function(){
     var fIframe = document.getElementById('featured-iframe');
     if (fIframe) fIframe.src = '/api/dashboard/featured?_t=' + Date.now();

@@ -9189,6 +9189,46 @@
             "mid": "周日092",
             "match": "墨西哥 vs 英格兰",
             "date": "2026-07-05",
+            "type": "方向",
+            "option": "让胜",
+            "odds": 1.57,
+            "mp": 0.3625,
+            "src_mp": 0.3625,
+            "fit": 2.3,
+            "rating": "C",
+            "comps": [
+              1.57
+            ]
+          },
+          "min_odds": 1.66,
+          "max_odds": 2.35,
+          "opt_odds": 1.95,
+          "raw_opt_odds": 1.9468,
+          "hitrate": 0.5137,
+          "ev": 1.0323,
+          "min_fit": 2.3
+        },
+        {
+          "l1": {
+            "mid": "周日091",
+            "match": "巴西 vs 挪威",
+            "date": "2026-07-05",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.24,
+            "mp": 0.6976,
+            "src_mp": 0.6976,
+            "fit": 2.8,
+            "rating": "C",
+            "comps": [
+              3.0,
+              2.12
+            ]
+          },
+          "l2": {
+            "mid": "周日092",
+            "match": "墨西哥 vs 英格兰",
+            "date": "2026-07-05",
             "type": "方向打包",
             "option": "胜/平",
             "odds": 1.53,
@@ -9324,7 +9364,9 @@
             "comps": [
               3.35,
               5.15
-            ]
+            ],
+            "display_option": "客胜",
+            "display_odds": 2.11
           },
           "min_odds": 1.78,
           "max_odds": 3.86,
@@ -9332,6 +9374,86 @@
           "raw_opt_odds": 2.5172,
           "hitrate": 0.3973,
           "ev": 1.1199,
+          "min_fit": 2.3
+        },
+        {
+          "l1": {
+            "mid": "周日091",
+            "match": "巴西 vs 挪威",
+            "date": "2026-07-05",
+            "type": "半全场打包",
+            "option": "主不败",
+            "odds": 1.61,
+            "mp": 0.6198,
+            "src_mp": 0.6198,
+            "fit": 2.8,
+            "rating": "C",
+            "comps": [
+              4.55,
+              2.5
+            ]
+          },
+          "l2": {
+            "mid": "周日092",
+            "match": "墨西哥 vs 英格兰",
+            "date": "2026-07-05",
+            "type": "方向",
+            "option": "让胜",
+            "odds": 1.57,
+            "mp": 0.3625,
+            "src_mp": 0.3625,
+            "fit": 2.3,
+            "rating": "C",
+            "comps": [
+              1.57
+            ]
+          },
+          "min_odds": 1.96,
+          "max_odds": 3.57,
+          "opt_odds": 2.53,
+          "raw_opt_odds": 2.5277000000000003,
+          "hitrate": 0.3956,
+          "ev": 1.0947,
+          "min_fit": 2.3
+        },
+        {
+          "l1": {
+            "mid": "周日091",
+            "match": "巴西 vs 挪威",
+            "date": "2026-07-05",
+            "type": "方向",
+            "option": "让负",
+            "odds": 2.12,
+            "mp": 0.4896,
+            "src_mp": 0.4896,
+            "fit": 2.8,
+            "rating": "C",
+            "comps": [
+              2.12
+            ]
+          },
+          "l2": {
+            "mid": "周日092",
+            "match": "墨西哥 vs 英格兰",
+            "date": "2026-07-05",
+            "type": "方向打包",
+            "option": "负/平",
+            "odds": 1.22,
+            "mp": 0.867,
+            "src_mp": 0.867,
+            "fit": 2.3,
+            "rating": "C",
+            "comps": [
+              2.11,
+              2.9
+            ]
+          },
+          "min_odds": 2.24,
+          "max_odds": 3.07,
+          "opt_odds": 2.59,
+          "raw_opt_odds": 2.5864000000000003,
+          "hitrate": 0.3866,
+          "ev": 1.0266,
           "min_fit": 2.3
         },
         {
@@ -9373,87 +9495,1174 @@
           "hitrate": 0.3822,
           "ev": 1.0323,
           "min_fit": 2.3
-        },
+        }
+      ]
+    },
+    {
+      "date": "2026-07-06",
+      "match_ids": [
+        "周一093",
+        "周一094"
+      ],
+      "plan_2": [
         {
           "l1": {
-            "mid": "周日091",
-            "match": "巴西 vs 挪威",
-            "date": "2026-07-05",
-            "type": "半全场",
-            "option": "胜胜",
-            "odds": 2.5,
-            "mp": 0.4,
-            "src_mp": 0.4,
-            "fit": 2.8,
+            "mid": "周一093",
+            "match": "葡萄牙 vs 西班牙",
+            "date": "2026-07-06",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.73,
+            "mp": 0.3787,
+            "src_mp": 0.3787,
+            "fit": 3.6,
             "rating": "C",
             "comps": [
-              2.5
+              3.25,
+              3.72
             ]
           },
           "l2": {
-            "mid": "周日092",
-            "match": "墨西哥 vs 英格兰",
-            "date": "2026-07-05",
+            "mid": "周一094",
+            "match": "美国 vs 比利时",
+            "date": "2026-07-06",
+            "type": "方向打包",
+            "option": "胜/平",
+            "odds": 1.3,
+            "mp": 0.4805,
+            "src_mp": 0.4805,
+            "fit": 3.5,
+            "rating": "C",
+            "comps": [
+              2.1,
+              3.4
+            ]
+          },
+          "min_odds": 1.71,
+          "max_odds": 3.16,
+          "opt_odds": 2.25,
+          "raw_opt_odds": 2.249,
+          "hitrate": 0.4446,
+          "ev": 1.0823,
+          "min_fit": 3.5
+        },
+        {
+          "l1": {
+            "mid": "周一093",
+            "match": "葡萄牙 vs 西班牙",
+            "date": "2026-07-06",
+            "type": "方向打包",
+            "option": "胜/平",
+            "odds": 1.76,
+            "mp": 0.6213,
+            "src_mp": 0.6213,
+            "fit": 3.6,
+            "rating": "C",
+            "comps": [
+              3.68,
+              3.38
+            ]
+          },
+          "l2": {
+            "mid": "周一094",
+            "match": "美国 vs 比利时",
+            "date": "2026-07-06",
+            "type": "方向打包",
+            "option": "胜/平",
+            "odds": 1.3,
+            "mp": 0.4805,
+            "src_mp": 0.4805,
+            "fit": 3.5,
+            "rating": "C",
+            "comps": [
+              2.1,
+              3.4
+            ]
+          },
+          "min_odds": 1.77,
+          "max_odds": 3.13,
+          "opt_odds": 2.29,
+          "raw_opt_odds": 2.2880000000000003,
+          "hitrate": 0.4371,
+          "ev": 1.0714,
+          "min_fit": 3.5
+        },
+        {
+          "l1": {
+            "mid": "周一093",
+            "match": "葡萄牙 vs 西班牙",
+            "date": "2026-07-06",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.73,
+            "mp": 0.3787,
+            "src_mp": 0.3787,
+            "fit": 3.6,
+            "rating": "C",
+            "comps": [
+              3.25,
+              3.72
+            ]
+          },
+          "l2": {
+            "mid": "周一094",
+            "match": "美国 vs 比利时",
+            "date": "2026-07-06",
+            "type": "方向",
+            "option": "让胜",
+            "odds": 1.33,
+            "mp": 0.4805,
+            "src_mp": 0.4805,
+            "fit": 3.5,
+            "rating": "C",
+            "comps": [
+              1.33
+            ]
+          },
+          "min_odds": 2.16,
+          "max_odds": 2.47,
+          "opt_odds": 2.3,
+          "raw_opt_odds": 2.3009,
+          "hitrate": 0.4346,
+          "ev": 1.0072,
+          "min_fit": 3.5
+        }
+      ],
+      "plan_3": [
+        {
+          "l1": {
+            "mid": "周一093",
+            "match": "葡萄牙 vs 西班牙",
+            "date": "2026-07-06",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.73,
+            "mp": 0.3787,
+            "src_mp": 0.3787,
+            "fit": 3.6,
+            "rating": "C",
+            "comps": [
+              3.25,
+              3.72
+            ]
+          },
+          "l2": {
+            "mid": "周一094",
+            "match": "美国 vs 比利时",
+            "date": "2026-07-06",
+            "type": "方向打包",
+            "option": "负/平",
+            "odds": 1.53,
+            "mp": 0.757,
+            "src_mp": 0.757,
+            "fit": 3.5,
+            "rating": "C",
+            "comps": [
+              2.79,
+              3.4
+            ]
+          },
+          "min_odds": 2.27,
+          "max_odds": 3.16,
+          "opt_odds": 2.65,
+          "raw_opt_odds": 2.6469,
+          "hitrate": 0.3778,
+          "ev": 1.0255,
+          "min_fit": 3.5
+        },
+        {
+          "l1": {
+            "mid": "周一093",
+            "match": "葡萄牙 vs 西班牙",
+            "date": "2026-07-06",
+            "type": "方向打包",
+            "option": "胜/平",
+            "odds": 1.76,
+            "mp": 0.6213,
+            "src_mp": 0.6213,
+            "fit": 3.6,
+            "rating": "C",
+            "comps": [
+              3.68,
+              3.38
+            ]
+          },
+          "l2": {
+            "mid": "周一094",
+            "match": "美国 vs 比利时",
+            "date": "2026-07-06",
+            "type": "方向打包",
+            "option": "负/平",
+            "odds": 1.53,
+            "mp": 0.757,
+            "src_mp": 0.757,
+            "fit": 3.5,
+            "rating": "C",
+            "comps": [
+              2.79,
+              3.4
+            ]
+          },
+          "min_odds": 2.36,
+          "max_odds": 3.13,
+          "opt_odds": 2.69,
+          "raw_opt_odds": 2.6928,
+          "hitrate": 0.3714,
+          "ev": 1.0186,
+          "min_fit": 3.5
+        },
+        {
+          "l1": {
+            "mid": "周一093",
+            "match": "葡萄牙 vs 西班牙",
+            "date": "2026-07-06",
+            "type": "方向",
+            "option": "让胜",
+            "odds": 1.81,
+            "mp": 0.6213,
+            "src_mp": 0.6213,
+            "fit": 3.6,
+            "rating": "C",
+            "comps": [
+              1.81
+            ]
+          },
+          "l2": {
+            "mid": "周一094",
+            "match": "美国 vs 比利时",
+            "date": "2026-07-06",
+            "type": "方向打包",
+            "option": "负/平",
+            "odds": 1.53,
+            "mp": 0.757,
+            "src_mp": 0.757,
+            "fit": 3.5,
+            "rating": "C",
+            "comps": [
+              2.79,
+              3.4
+            ]
+          },
+          "min_odds": 2.52,
+          "max_odds": 3.08,
+          "opt_odds": 2.77,
+          "raw_opt_odds": 2.7693000000000003,
+          "hitrate": 0.3611,
+          "ev": 1.0114,
+          "min_fit": 3.5
+        },
+        {
+          "l1": {
+            "mid": "周一093",
+            "match": "葡萄牙 vs 西班牙",
+            "date": "2026-07-06",
             "type": "方向打包",
             "option": "让胜/平",
-            "odds": 1.07,
-            "mp": 0.593,
-            "src_mp": 0.593,
-            "fit": 2.3,
+            "odds": 1.16,
+            "mp": 0.801,
+            "src_mp": 0.801,
+            "fit": 3.6,
+            "rating": "C",
+            "comps": [
+              1.81,
+              3.25
+            ]
+          },
+          "l2": {
+            "mid": "周一094",
+            "match": "美国 vs 比利时",
+            "date": "2026-07-06",
+            "type": "半全场打包",
+            "option": "客不败",
+            "odds": 2.61,
+            "mp": 0.3837,
+            "src_mp": 0.3837,
+            "fit": 3.5,
+            "rating": "C",
+            "comps": [
+              6.5,
+              4.35
+            ]
+          },
+          "min_odds": 1.97,
+          "max_odds": 5.28,
+          "opt_odds": 3.03,
+          "raw_opt_odds": 3.0275999999999996,
+          "hitrate": 0.3303,
+          "ev": 1.1973,
+          "min_fit": 3.5
+        },
+        {
+          "l1": {
+            "mid": "周一093",
+            "match": "葡萄牙 vs 西班牙",
+            "date": "2026-07-06",
+            "type": "方向打包",
+            "option": "负/平",
+            "odds": 1.17,
+            "mp": 0.6247,
+            "src_mp": 0.6247,
+            "fit": 3.6,
+            "rating": "C",
+            "comps": [
+              1.78,
+              3.38
+            ]
+          },
+          "l2": {
+            "mid": "周一094",
+            "match": "美国 vs 比利时",
+            "date": "2026-07-06",
+            "type": "半全场打包",
+            "option": "客不败",
+            "odds": 2.61,
+            "mp": 0.3837,
+            "src_mp": 0.3837,
+            "fit": 3.5,
+            "rating": "C",
+            "comps": [
+              6.5,
+              4.35
+            ]
+          },
+          "min_odds": 1.94,
+          "max_odds": 5.49,
+          "opt_odds": 3.05,
+          "raw_opt_odds": 3.0536999999999996,
+          "hitrate": 0.3275,
+          "ev": 1.2163,
+          "min_fit": 3.5
+        }
+      ]
+    },
+    {
+      "date": "2026-07-07",
+      "match_ids": [
+        "周二095",
+        "周二096"
+      ],
+      "plan_2": [
+        {
+          "l1": {
+            "mid": "周二095",
+            "match": "阿根廷 vs 埃及",
+            "date": "2026-07-07",
+            "type": "方向",
+            "option": "让胜",
+            "odds": 1.78,
+            "mp": 0.4548,
+            "src_mp": 0.4548,
+            "fit": 3.2,
+            "rating": "C",
+            "comps": [
+              1.78
+            ]
+          },
+          "l2": {
+            "mid": "周二096",
+            "match": "瑞士 vs 哥伦比亚",
+            "date": "2026-07-07",
+            "type": "方向打包",
+            "option": "让胜/平",
+            "odds": 1.08,
+            "mp": 0.789,
+            "src_mp": 0.789,
+            "fit": 3.6,
             "rating": "C",
             "comps": [
               1.57,
-              3.35
+              3.42
             ]
           },
-          "min_odds": 1.96,
-          "max_odds": 4.19,
-          "opt_odds": 2.68,
-          "raw_opt_odds": 2.6750000000000003,
-          "hitrate": 0.3738,
-          "ev": 1.1495,
-          "min_fit": 2.3
+          "min_odds": 1.4,
+          "max_odds": 3.04,
+          "opt_odds": 1.92,
+          "raw_opt_odds": 1.9224,
+          "hitrate": 0.5202,
+          "ev": 1.1551,
+          "min_fit": 3.2
         },
         {
           "l1": {
-            "mid": "周日091",
-            "match": "巴西 vs 挪威",
-            "date": "2026-07-05",
-            "type": "方向打包",
-            "option": "让平/负",
-            "odds": 1.24,
-            "mp": 0.6976,
-            "src_mp": 0.6976,
-            "fit": 2.8,
+            "mid": "周二095",
+            "match": "阿根廷 vs 埃及",
+            "date": "2026-07-07",
+            "type": "方向",
+            "option": "主胜",
+            "odds": 1.22,
+            "mp": 0.6836,
+            "src_mp": 0.6836,
+            "fit": 3.2,
             "rating": "C",
             "comps": [
-              3.0,
-              2.12
+              1.22
             ]
           },
           "l2": {
-            "mid": "周日092",
-            "match": "墨西哥 vs 英格兰",
-            "date": "2026-07-05",
-            "type": "半全场打包",
-            "option": "客不败",
-            "odds": 2.22,
-            "mp": 0.45,
-            "src_mp": 0.45,
-            "fit": 2.3,
+            "mid": "周二096",
+            "match": "瑞士 vs 哥伦比亚",
+            "date": "2026-07-07",
+            "type": "方向",
+            "option": "让胜",
+            "odds": 1.57,
+            "mp": 0.594,
+            "src_mp": 0.594,
+            "fit": 3.6,
             "rating": "C",
             "comps": [
-              4.0,
-              5.0
+              1.57
             ]
           },
-          "min_odds": 2.12,
-          "max_odds": 3.75,
+          "min_odds": 1.92,
+          "max_odds": 1.92,
+          "opt_odds": 1.92,
+          "raw_opt_odds": 1.9154,
+          "hitrate": 0.5221,
+          "ev": 1.0,
+          "min_fit": 3.2
+        },
+        {
+          "l1": {
+            "mid": "周二095",
+            "match": "阿根廷 vs 埃及",
+            "date": "2026-07-07",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.77,
+            "mp": 0.5452,
+            "src_mp": 0.5452,
+            "fit": 3.2,
+            "rating": "C",
+            "comps": [
+              3.65,
+              3.42
+            ]
+          },
+          "l2": {
+            "mid": "周二096",
+            "match": "瑞士 vs 哥伦比亚",
+            "date": "2026-07-07",
+            "type": "方向打包",
+            "option": "让胜/平",
+            "odds": 1.08,
+            "mp": 0.789,
+            "src_mp": 0.789,
+            "fit": 3.6,
+            "rating": "C",
+            "comps": [
+              1.57,
+              3.42
+            ]
+          },
+          "min_odds": 1.34,
+          "max_odds": 3.12,
+          "opt_odds": 1.91,
+          "raw_opt_odds": 1.9116000000000002,
+          "hitrate": 0.5231,
+          "ev": 1.1674,
+          "min_fit": 3.2
+        },
+        {
+          "l1": {
+            "mid": "周二095",
+            "match": "阿根廷 vs 埃及",
+            "date": "2026-07-07",
+            "type": "半全场",
+            "option": "胜胜",
+            "odds": 1.75,
+            "mp": 0.5714,
+            "src_mp": 0.5714,
+            "fit": 3.2,
+            "rating": "C",
+            "comps": [
+              1.75
+            ]
+          },
+          "l2": {
+            "mid": "周二096",
+            "match": "瑞士 vs 哥伦比亚",
+            "date": "2026-07-07",
+            "type": "方向打包",
+            "option": "负/平",
+            "odds": 1.23,
+            "mp": 0.6485,
+            "src_mp": 0.6485,
+            "fit": 3.6,
+            "rating": "C",
+            "comps": [
+              2.1,
+              2.95
+            ]
+          },
+          "min_odds": 1.84,
+          "max_odds": 2.58,
+          "opt_odds": 2.15,
+          "raw_opt_odds": 2.1525,
+          "hitrate": 0.4646,
+          "ev": 1.0264,
+          "min_fit": 3.2
+        },
+        {
+          "l1": {
+            "mid": "周二095",
+            "match": "阿根廷 vs 埃及",
+            "date": "2026-07-07",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.77,
+            "mp": 0.5452,
+            "src_mp": 0.5452,
+            "fit": 3.2,
+            "rating": "C",
+            "comps": [
+              3.65,
+              3.42
+            ]
+          },
+          "l2": {
+            "mid": "周二096",
+            "match": "瑞士 vs 哥伦比亚",
+            "date": "2026-07-07",
+            "type": "方向打包",
+            "option": "负/平",
+            "odds": 1.23,
+            "mp": 0.6485,
+            "src_mp": 0.6485,
+            "fit": 3.6,
+            "rating": "C",
+            "comps": [
+              2.1,
+              2.95
+            ]
+          },
+          "min_odds": 1.8,
+          "max_odds": 2.69,
+          "opt_odds": 2.18,
+          "raw_opt_odds": 2.1771,
+          "hitrate": 0.4593,
+          "ev": 1.0306,
+          "min_fit": 3.2
+        }
+      ],
+      "plan_3": [
+        {
+          "l1": {
+            "mid": "周二095",
+            "match": "阿根廷 vs 埃及",
+            "date": "2026-07-07",
+            "type": "半全场",
+            "option": "胜胜",
+            "odds": 1.75,
+            "mp": 0.5714,
+            "src_mp": 0.5714,
+            "fit": 3.2,
+            "rating": "C",
+            "comps": [
+              1.75
+            ]
+          },
+          "l2": {
+            "mid": "周二096",
+            "match": "瑞士 vs 哥伦比亚",
+            "date": "2026-07-07",
+            "type": "方向打包",
+            "option": "胜/平",
+            "odds": 1.53,
+            "mp": 0.594,
+            "src_mp": 0.594,
+            "fit": 3.6,
+            "rating": "C",
+            "comps": [
+              3.18,
+              2.95
+            ]
+          },
+          "min_odds": 2.58,
+          "max_odds": 2.78,
+          "opt_odds": 2.68,
+          "raw_opt_odds": 2.6775,
+          "hitrate": 0.3735,
+          "ev": 1.0016,
+          "min_fit": 3.2
+        },
+        {
+          "l1": {
+            "mid": "周二095",
+            "match": "阿根廷 vs 埃及",
+            "date": "2026-07-07",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.77,
+            "mp": 0.5452,
+            "src_mp": 0.5452,
+            "fit": 3.2,
+            "rating": "C",
+            "comps": [
+              3.65,
+              3.42
+            ]
+          },
+          "l2": {
+            "mid": "周二096",
+            "match": "瑞士 vs 哥伦比亚",
+            "date": "2026-07-07",
+            "type": "方向打包",
+            "option": "胜/平",
+            "odds": 1.53,
+            "mp": 0.594,
+            "src_mp": 0.594,
+            "fit": 3.6,
+            "rating": "C",
+            "comps": [
+              3.18,
+              2.95
+            ]
+          },
+          "min_odds": 2.52,
+          "max_odds": 2.9,
+          "opt_odds": 2.71,
+          "raw_opt_odds": 2.7081,
+          "hitrate": 0.3693,
+          "ev": 1.0014,
+          "min_fit": 3.2
+        },
+        {
+          "l1": {
+            "mid": "周二095",
+            "match": "阿根廷 vs 埃及",
+            "date": "2026-07-07",
+            "type": "方向",
+            "option": "让胜",
+            "odds": 1.78,
+            "mp": 0.4548,
+            "src_mp": 0.4548,
+            "fit": 3.2,
+            "rating": "C",
+            "comps": [
+              1.78
+            ]
+          },
+          "l2": {
+            "mid": "周二096",
+            "match": "瑞士 vs 哥伦比亚",
+            "date": "2026-07-07",
+            "type": "方向打包",
+            "option": "胜/平",
+            "odds": 1.53,
+            "mp": 0.594,
+            "src_mp": 0.594,
+            "fit": 3.6,
+            "rating": "C",
+            "comps": [
+              3.18,
+              2.95
+            ]
+          },
+          "min_odds": 2.63,
+          "max_odds": 2.83,
+          "opt_odds": 2.72,
+          "raw_opt_odds": 2.7234000000000003,
+          "hitrate": 0.3672,
+          "ev": 1.0016,
+          "min_fit": 3.2
+        },
+        {
+          "l1": {
+            "mid": "周二095",
+            "match": "阿根廷 vs 埃及",
+            "date": "2026-07-07",
+            "type": "半全场",
+            "option": "胜胜",
+            "odds": 1.75,
+            "mp": 0.5714,
+            "src_mp": 0.5714,
+            "fit": 3.2,
+            "rating": "C",
+            "comps": [
+              1.75
+            ]
+          },
+          "l2": {
+            "mid": "周二096",
+            "match": "瑞士 vs 哥伦比亚",
+            "date": "2026-07-07",
+            "type": "方向",
+            "option": "让胜",
+            "odds": 1.57,
+            "mp": 0.594,
+            "src_mp": 0.594,
+            "fit": 3.6,
+            "rating": "C",
+            "comps": [
+              1.57
+            ]
+          },
+          "min_odds": 2.75,
+          "max_odds": 2.75,
           "opt_odds": 2.75,
-          "raw_opt_odds": 2.7528,
-          "hitrate": 0.3633,
-          "ev": 1.0662,
-          "min_fit": 2.3
+          "raw_opt_odds": 2.7475,
+          "hitrate": 0.364,
+          "ev": 1.0,
+          "min_fit": 3.2
+        },
+        {
+          "l1": {
+            "mid": "周二095",
+            "match": "阿根廷 vs 埃及",
+            "date": "2026-07-07",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.77,
+            "mp": 0.5452,
+            "src_mp": 0.5452,
+            "fit": 3.2,
+            "rating": "C",
+            "comps": [
+              3.65,
+              3.42
+            ]
+          },
+          "l2": {
+            "mid": "周二096",
+            "match": "瑞士 vs 哥伦比亚",
+            "date": "2026-07-07",
+            "type": "方向",
+            "option": "让胜",
+            "odds": 1.57,
+            "mp": 0.594,
+            "src_mp": 0.594,
+            "fit": 3.6,
+            "rating": "C",
+            "comps": [
+              1.57
+            ]
+          },
+          "min_odds": 2.68,
+          "max_odds": 2.87,
+          "opt_odds": 2.78,
+          "raw_opt_odds": 2.7789,
+          "hitrate": 0.3599,
+          "ev": 0.9986,
+          "min_fit": 3.2
+        }
+      ]
+    },
+    {
+      "date": "2026-07-09",
+      "match_ids": [
+        "周四097",
+        "周四201",
+        "周四202",
+        "周四203"
+      ],
+      "plan_2": [
+        {
+          "l1": {
+            "mid": "周四201",
+            "match": "伏伊伏丁那 vs 费伦茨瓦罗斯",
+            "date": "2026-07-09",
+            "type": "方向打包",
+            "option": "让胜/平",
+            "odds": 1.13,
+            "mp": 1.0,
+            "src_mp": 1.0,
+            "fit": 1.0,
+            "rating": "C",
+            "comps": [
+              1.65,
+              3.57
+            ]
+          },
+          "l2": {
+            "mid": "周四202",
+            "match": "索菲亚中央陆军 vs 德里城",
+            "date": "2026-07-09",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.82,
+            "mp": 1.0,
+            "src_mp": 1.0,
+            "fit": 1.0,
+            "rating": "C",
+            "comps": [
+              3.55,
+              3.75
+            ]
+          },
+          "min_odds": 1.46,
+          "max_odds": 3.35,
+          "opt_odds": 2.06,
+          "raw_opt_odds": 2.0566,
+          "hitrate": 0.4862,
+          "ev": 1.1697,
+          "min_fit": 1.0
+        },
+        {
+          "l1": {
+            "mid": "周四097",
+            "match": "法国 vs 摩洛哥",
+            "date": "2026-07-09",
+            "type": "方向打包",
+            "option": "让胜/平",
+            "odds": 1.37,
+            "mp": 0.6434,
+            "src_mp": 0.6434,
+            "fit": 2.6,
+            "rating": "C",
+            "comps": [
+              2.48,
+              3.05
+            ]
+          },
+          "l2": {
+            "mid": "周四203",
+            "match": "斯普利特海杜克 vs 日利纳",
+            "date": "2026-07-09",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.53,
+            "mp": 1.0,
+            "src_mp": 1.0,
+            "fit": 1.0,
+            "rating": "C",
+            "comps": [
+              3.25,
+              2.9
+            ]
+          },
+          "min_odds": 1.8,
+          "max_odds": 2.48,
+          "opt_odds": 2.1,
+          "raw_opt_odds": 2.0961000000000003,
+          "hitrate": 0.4771,
+          "ev": 1.02,
+          "min_fit": 1.0
+        },
+        {
+          "l1": {
+            "mid": "周四097",
+            "match": "法国 vs 摩洛哥",
+            "date": "2026-07-09",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.38,
+            "mp": 0.5784,
+            "src_mp": 0.5784,
+            "fit": 2.6,
+            "rating": "C",
+            "comps": [
+              3.05,
+              2.51
+            ]
+          },
+          "l2": {
+            "mid": "周四203",
+            "match": "斯普利特海杜克 vs 日利纳",
+            "date": "2026-07-09",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.53,
+            "mp": 1.0,
+            "src_mp": 1.0,
+            "fit": 1.0,
+            "rating": "C",
+            "comps": [
+              3.25,
+              2.9
+            ]
+          },
+          "min_odds": 1.82,
+          "max_odds": 2.48,
+          "opt_odds": 2.11,
+          "raw_opt_odds": 2.1113999999999997,
+          "hitrate": 0.4736,
+          "ev": 1.0178,
+          "min_fit": 1.0
+        },
+        {
+          "l1": {
+            "mid": "周四097",
+            "match": "法国 vs 摩洛哥",
+            "date": "2026-07-09",
+            "type": "半全场打包",
+            "option": "主不败",
+            "odds": 1.4,
+            "mp": 0.7136,
+            "src_mp": 0.7136,
+            "fit": 2.6,
+            "rating": "C",
+            "comps": [
+              2.22,
+              3.8
+            ]
+          },
+          "l2": {
+            "mid": "周四203",
+            "match": "斯普利特海杜克 vs 日利纳",
+            "date": "2026-07-09",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.53,
+            "mp": 1.0,
+            "src_mp": 1.0,
+            "fit": 1.0,
+            "rating": "C",
+            "comps": [
+              3.25,
+              2.9
+            ]
+          },
+          "min_odds": 1.61,
+          "max_odds": 3.09,
+          "opt_odds": 2.14,
+          "raw_opt_odds": 2.142,
+          "hitrate": 0.4669,
+          "ev": 1.0964,
+          "min_fit": 1.0
+        },
+        {
+          "l1": {
+            "mid": "周四097",
+            "match": "法国 vs 摩洛哥",
+            "date": "2026-07-09",
+            "type": "方向",
+            "option": "主胜",
+            "odds": 1.4,
+            "mp": 0.6433,
+            "src_mp": 0.6433,
+            "fit": 2.6,
+            "rating": "C",
+            "comps": [
+              1.4
+            ]
+          },
+          "l2": {
+            "mid": "周四203",
+            "match": "斯普利特海杜克 vs 日利纳",
+            "date": "2026-07-09",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.53,
+            "mp": 1.0,
+            "src_mp": 1.0,
+            "fit": 1.0,
+            "rating": "C",
+            "comps": [
+              3.25,
+              2.9
+            ]
+          },
+          "min_odds": 2.03,
+          "max_odds": 2.27,
+          "opt_odds": 2.14,
+          "raw_opt_odds": 2.142,
+          "hitrate": 0.4669,
+          "ev": 1.0049,
+          "min_fit": 1.0
+        }
+      ],
+      "plan_3": [
+        {
+          "l1": {
+            "mid": "周四097",
+            "match": "法国 vs 摩洛哥",
+            "date": "2026-07-09",
+            "type": "半全场",
+            "option": "胜胜",
+            "odds": 2.22,
+            "mp": 0.4505,
+            "src_mp": 0.4505,
+            "fit": 2.6,
+            "rating": "C",
+            "comps": [
+              2.22
+            ]
+          },
+          "l2": {
+            "mid": "周四201",
+            "match": "伏伊伏丁那 vs 费伦茨瓦罗斯",
+            "date": "2026-07-09",
+            "type": "方向打包",
+            "option": "让胜/平",
+            "odds": 1.13,
+            "mp": 1.0,
+            "src_mp": 1.0,
+            "fit": 1.0,
+            "rating": "C",
+            "comps": [
+              1.65,
+              3.57
+            ]
+          },
+          "min_odds": 1.83,
+          "max_odds": 3.96,
+          "opt_odds": 2.51,
+          "raw_opt_odds": 2.5086,
+          "hitrate": 0.3986,
+          "ev": 1.1549,
+          "min_fit": 1.0
+        },
+        {
+          "l1": {
+            "mid": "周四097",
+            "match": "法国 vs 摩洛哥",
+            "date": "2026-07-09",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.38,
+            "mp": 0.5784,
+            "src_mp": 0.5784,
+            "fit": 2.6,
+            "rating": "C",
+            "comps": [
+              3.05,
+              2.51
+            ]
+          },
+          "l2": {
+            "mid": "周四202",
+            "match": "索菲亚中央陆军 vs 德里城",
+            "date": "2026-07-09",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.82,
+            "mp": 1.0,
+            "src_mp": 1.0,
+            "fit": 1.0,
+            "rating": "C",
+            "comps": [
+              3.55,
+              3.75
+            ]
+          },
+          "min_odds": 2.23,
+          "max_odds": 2.86,
+          "opt_odds": 2.51,
+          "raw_opt_odds": 2.5116,
+          "hitrate": 0.3982,
+          "ev": 1.0127,
+          "min_fit": 1.0
+        },
+        {
+          "l1": {
+            "mid": "周四201",
+            "match": "伏伊伏丁那 vs 费伦茨瓦罗斯",
+            "date": "2026-07-09",
+            "type": "方向",
+            "option": "让胜",
+            "odds": 1.65,
+            "mp": 1.0,
+            "src_mp": 1.0,
+            "fit": 1.0,
+            "rating": "C",
+            "comps": [
+              1.65
+            ]
+          },
+          "l2": {
+            "mid": "周四203",
+            "match": "斯普利特海杜克 vs 日利纳",
+            "date": "2026-07-09",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.53,
+            "mp": 1.0,
+            "src_mp": 1.0,
+            "fit": 1.0,
+            "rating": "C",
+            "comps": [
+              3.25,
+              2.9
+            ]
+          },
+          "min_odds": 2.39,
+          "max_odds": 2.68,
+          "opt_odds": 2.52,
+          "raw_opt_odds": 2.5244999999999997,
+          "hitrate": 0.3961,
+          "ev": 1.0049,
+          "min_fit": 1.0
+        },
+        {
+          "l1": {
+            "mid": "周四097",
+            "match": "法国 vs 摩洛哥",
+            "date": "2026-07-09",
+            "type": "半全场打包",
+            "option": "主不败",
+            "odds": 1.4,
+            "mp": 0.7136,
+            "src_mp": 0.7136,
+            "fit": 2.6,
+            "rating": "C",
+            "comps": [
+              2.22,
+              3.8
+            ]
+          },
+          "l2": {
+            "mid": "周四202",
+            "match": "索菲亚中央陆军 vs 德里城",
+            "date": "2026-07-09",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.82,
+            "mp": 1.0,
+            "src_mp": 1.0,
+            "fit": 1.0,
+            "rating": "C",
+            "comps": [
+              3.55,
+              3.75
+            ]
+          },
+          "min_odds": 1.97,
+          "max_odds": 3.56,
+          "opt_odds": 2.55,
+          "raw_opt_odds": 2.548,
+          "hitrate": 0.3925,
+          "ev": 1.0857,
+          "min_fit": 1.0
+        },
+        {
+          "l1": {
+            "mid": "周四097",
+            "match": "法国 vs 摩洛哥",
+            "date": "2026-07-09",
+            "type": "方向",
+            "option": "主胜",
+            "odds": 1.4,
+            "mp": 0.6433,
+            "src_mp": 0.6433,
+            "fit": 2.6,
+            "rating": "C",
+            "comps": [
+              1.4
+            ]
+          },
+          "l2": {
+            "mid": "周四202",
+            "match": "索菲亚中央陆军 vs 德里城",
+            "date": "2026-07-09",
+            "type": "方向打包",
+            "option": "让平/负",
+            "odds": 1.82,
+            "mp": 1.0,
+            "src_mp": 1.0,
+            "fit": 1.0,
+            "rating": "C",
+            "comps": [
+              3.55,
+              3.75
+            ]
+          },
+          "min_odds": 2.48,
+          "max_odds": 2.62,
+          "opt_odds": 2.55,
+          "raw_opt_odds": 2.548,
+          "hitrate": 0.3925,
+          "ev": 1.0027,
+          "min_fit": 1.0
         }
       ]
     }
@@ -10546,10 +11755,10 @@
       "direction": "胜",
       "rating": "C",
       "fit": 2.81,
-      "actual_score": "",
-      "half_full": "",
-      "hit": null,
-      "handicap": 0
+      "actual_score": "1:2",
+      "half_full": "平负",
+      "hit": false,
+      "handicap": -1
     },
     "周日092": {
       "home": "墨西哥",
@@ -10558,6 +11767,102 @@
       "direction": "负",
       "rating": "C",
       "fit": 2.3200000000000003,
+      "actual_score": "2:3",
+      "half_full": "负负",
+      "hit": true,
+      "handicap": 1
+    },
+    "周一093": {
+      "home": "葡萄牙",
+      "away": "西班牙",
+      "date": "2026-07-06",
+      "direction": "让胜",
+      "rating": "C",
+      "fit": 3.56,
+      "actual_score": "0:1",
+      "half_full": "平负",
+      "hit": false,
+      "handicap": 1
+    },
+    "周一094": {
+      "home": "美国",
+      "away": "比利时",
+      "date": "2026-07-06",
+      "direction": "负",
+      "rating": "C",
+      "fit": 3.49,
+      "actual_score": "1:4",
+      "half_full": "负负",
+      "hit": true,
+      "handicap": 1
+    },
+    "周二095": {
+      "home": "阿根廷",
+      "away": "埃及",
+      "date": "2026-07-07",
+      "direction": "胜",
+      "rating": "C",
+      "fit": 3.23,
+      "actual_score": "3:2",
+      "half_full": "负胜",
+      "hit": true,
+      "handicap": -1
+    },
+    "周二096": {
+      "home": "瑞士",
+      "away": "哥伦比亚",
+      "date": "2026-07-07",
+      "direction": "让胜",
+      "rating": "C",
+      "fit": 3.56,
+      "actual_score": "0:0",
+      "half_full": "平平",
+      "hit": true,
+      "handicap": 1
+    },
+    "周四097": {
+      "home": "法国",
+      "away": "摩洛哥",
+      "date": "2026-07-09",
+      "direction": "胜",
+      "rating": "C",
+      "fit": 2.6300000000000003,
+      "actual_score": "",
+      "half_full": "",
+      "hit": null,
+      "handicap": 0
+    },
+    "周四201": {
+      "home": "伏伊伏丁那",
+      "away": "费伦茨瓦罗斯",
+      "date": "2026-07-09",
+      "direction": "让胜",
+      "rating": "C",
+      "fit": 1.01,
+      "actual_score": "",
+      "half_full": "",
+      "hit": null,
+      "handicap": 0
+    },
+    "周四202": {
+      "home": "索菲亚中央陆军",
+      "away": "德里城",
+      "date": "2026-07-09",
+      "direction": "让负",
+      "rating": "C",
+      "fit": 1.01,
+      "actual_score": "",
+      "half_full": "",
+      "hit": null,
+      "handicap": 0
+    },
+    "周四203": {
+      "home": "斯普利特海杜克",
+      "away": "日利纳",
+      "date": "2026-07-09",
+      "direction": "让负",
+      "rating": "C",
+      "fit": 1.01,
       "actual_score": "",
       "half_full": "",
       "hit": null,
@@ -17172,6 +18477,21 @@
       "mid": "周日091",
       "match": "巴西 vs 挪威",
       "date": "2026-07-05",
+      "type": "方向",
+      "option": "让负",
+      "odds": 2.12,
+      "mp": 0.4896,
+      "src_mp": 0.4896,
+      "fit": 2.8,
+      "rating": "C",
+      "comps": [
+        2.12
+      ]
+    },
+    {
+      "mid": "周日091",
+      "match": "巴西 vs 挪威",
+      "date": "2026-07-05",
       "type": "方向打包",
       "option": "胜/平",
       "odds": 1.09,
@@ -17214,7 +18534,9 @@
       "comps": [
         3.08,
         3.0
-      ]
+      ],
+      "display_option": "主胜",
+      "display_odds": 1.55
     },
     {
       "mid": "周日091",
@@ -17313,6 +18635,21 @@
       "match": "墨西哥 vs 英格兰",
       "date": "2026-07-05",
       "type": "方向",
+      "option": "让胜",
+      "odds": 1.57,
+      "mp": 0.3625,
+      "src_mp": 0.3625,
+      "fit": 2.3,
+      "rating": "C",
+      "comps": [
+        1.57
+      ]
+    },
+    {
+      "mid": "周日092",
+      "match": "墨西哥 vs 英格兰",
+      "date": "2026-07-05",
+      "type": "方向",
       "option": "让平",
       "odds": 3.35,
       "mp": 0.2305,
@@ -17400,7 +18737,9 @@
       "comps": [
         3.35,
         5.15
-      ]
+      ],
+      "display_option": "客胜",
+      "display_odds": 2.11
     },
     {
       "mid": "周日092",
@@ -17446,6 +18785,1105 @@
       "comps": [
         4.0,
         5.0
+      ]
+    },
+    {
+      "mid": "周一093",
+      "match": "葡萄牙 vs 西班牙",
+      "date": "2026-07-06",
+      "type": "方向",
+      "option": "主胜",
+      "odds": 3.68,
+      "mp": 0.3753,
+      "src_mp": 0.3753,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        3.68
+      ]
+    },
+    {
+      "mid": "周一093",
+      "match": "葡萄牙 vs 西班牙",
+      "date": "2026-07-06",
+      "type": "方向",
+      "option": "平局",
+      "odds": 3.38,
+      "mp": 0.246,
+      "src_mp": 0.246,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        3.38
+      ]
+    },
+    {
+      "mid": "周一093",
+      "match": "葡萄牙 vs 西班牙",
+      "date": "2026-07-06",
+      "type": "方向",
+      "option": "让胜",
+      "odds": 1.81,
+      "mp": 0.6213,
+      "src_mp": 0.6213,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        1.81
+      ]
+    },
+    {
+      "mid": "周一093",
+      "match": "葡萄牙 vs 西班牙",
+      "date": "2026-07-06",
+      "type": "方向",
+      "option": "让平",
+      "odds": 3.25,
+      "mp": 0.1797,
+      "src_mp": 0.1797,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        3.25
+      ]
+    },
+    {
+      "mid": "周一093",
+      "match": "葡萄牙 vs 西班牙",
+      "date": "2026-07-06",
+      "type": "方向打包",
+      "option": "胜/平",
+      "odds": 1.76,
+      "mp": 0.6213,
+      "src_mp": 0.6213,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        3.68,
+        3.38
+      ]
+    },
+    {
+      "mid": "周一093",
+      "match": "葡萄牙 vs 西班牙",
+      "date": "2026-07-06",
+      "type": "方向打包",
+      "option": "负/平",
+      "odds": 1.17,
+      "mp": 0.6247,
+      "src_mp": 0.6247,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        1.78,
+        3.38
+      ]
+    },
+    {
+      "mid": "周一093",
+      "match": "葡萄牙 vs 西班牙",
+      "date": "2026-07-06",
+      "type": "方向打包",
+      "option": "让胜/平",
+      "odds": 1.16,
+      "mp": 0.801,
+      "src_mp": 0.801,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        1.81,
+        3.25
+      ]
+    },
+    {
+      "mid": "周一093",
+      "match": "葡萄牙 vs 西班牙",
+      "date": "2026-07-06",
+      "type": "方向打包",
+      "option": "让平/负",
+      "odds": 1.73,
+      "mp": 0.3787,
+      "src_mp": 0.3787,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        3.25,
+        3.72
+      ]
+    },
+    {
+      "mid": "周一093",
+      "match": "葡萄牙 vs 西班牙",
+      "date": "2026-07-06",
+      "type": "半全场",
+      "option": "平胜",
+      "odds": 9.05,
+      "mp": 0.1105,
+      "src_mp": 0.1105,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        9.05
+      ]
+    },
+    {
+      "mid": "周一093",
+      "match": "葡萄牙 vs 西班牙",
+      "date": "2026-07-06",
+      "type": "半全场",
+      "option": "平负",
+      "odds": 4.8,
+      "mp": 0.2083,
+      "src_mp": 0.2083,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        4.8
+      ]
+    },
+    {
+      "mid": "周一094",
+      "match": "美国 vs 比利时",
+      "date": "2026-07-06",
+      "type": "方向",
+      "option": "平局",
+      "odds": 3.4,
+      "mp": 0.2375,
+      "src_mp": 0.2375,
+      "fit": 3.5,
+      "rating": "C",
+      "comps": [
+        3.4
+      ]
+    },
+    {
+      "mid": "周一094",
+      "match": "美国 vs 比利时",
+      "date": "2026-07-06",
+      "type": "方向",
+      "option": "客胜",
+      "odds": 2.79,
+      "mp": 0.5195,
+      "src_mp": 0.5195,
+      "fit": 3.5,
+      "rating": "C",
+      "comps": [
+        2.79
+      ]
+    },
+    {
+      "mid": "周一094",
+      "match": "美国 vs 比利时",
+      "date": "2026-07-06",
+      "type": "方向",
+      "option": "让胜",
+      "odds": 1.33,
+      "mp": 0.4805,
+      "src_mp": 0.4805,
+      "fit": 3.5,
+      "rating": "C",
+      "comps": [
+        1.33
+      ]
+    },
+    {
+      "mid": "周一094",
+      "match": "美国 vs 比利时",
+      "date": "2026-07-06",
+      "type": "方向",
+      "option": "让平",
+      "odds": 4.75,
+      "mp": 0.208,
+      "src_mp": 0.208,
+      "fit": 3.5,
+      "rating": "C",
+      "comps": [
+        4.75
+      ]
+    },
+    {
+      "mid": "周一094",
+      "match": "美国 vs 比利时",
+      "date": "2026-07-06",
+      "type": "方向",
+      "option": "让负",
+      "odds": 6.0,
+      "mp": 0.3115,
+      "src_mp": 0.3115,
+      "fit": 3.5,
+      "rating": "C",
+      "comps": [
+        6.0
+      ]
+    },
+    {
+      "mid": "周一094",
+      "match": "美国 vs 比利时",
+      "date": "2026-07-06",
+      "type": "方向打包",
+      "option": "胜/平",
+      "odds": 1.3,
+      "mp": 0.4805,
+      "src_mp": 0.4805,
+      "fit": 3.5,
+      "rating": "C",
+      "comps": [
+        2.1,
+        3.4
+      ]
+    },
+    {
+      "mid": "周一094",
+      "match": "美国 vs 比利时",
+      "date": "2026-07-06",
+      "type": "方向打包",
+      "option": "负/平",
+      "odds": 1.53,
+      "mp": 0.757,
+      "src_mp": 0.757,
+      "fit": 3.5,
+      "rating": "C",
+      "comps": [
+        2.79,
+        3.4
+      ]
+    },
+    {
+      "mid": "周一094",
+      "match": "美国 vs 比利时",
+      "date": "2026-07-06",
+      "type": "方向打包",
+      "option": "让胜/平",
+      "odds": 1.04,
+      "mp": 0.6885,
+      "src_mp": 0.6885,
+      "fit": 3.5,
+      "rating": "C",
+      "comps": [
+        1.33,
+        4.75
+      ]
+    },
+    {
+      "mid": "周一094",
+      "match": "美国 vs 比利时",
+      "date": "2026-07-06",
+      "type": "方向打包",
+      "option": "让平/负",
+      "odds": 2.65,
+      "mp": 0.5195,
+      "src_mp": 0.5195,
+      "fit": 3.5,
+      "rating": "C",
+      "comps": [
+        4.75,
+        6.0
+      ],
+      "display_option": "客胜",
+      "display_odds": 2.79
+    },
+    {
+      "mid": "周一094",
+      "match": "美国 vs 比利时",
+      "date": "2026-07-06",
+      "type": "半全场",
+      "option": "平负",
+      "odds": 6.5,
+      "mp": 0.1538,
+      "src_mp": 0.1538,
+      "fit": 3.5,
+      "rating": "C",
+      "comps": [
+        6.5
+      ]
+    },
+    {
+      "mid": "周一094",
+      "match": "美国 vs 比利时",
+      "date": "2026-07-06",
+      "type": "半全场",
+      "option": "负负",
+      "odds": 4.35,
+      "mp": 0.2299,
+      "src_mp": 0.2299,
+      "fit": 3.5,
+      "rating": "C",
+      "comps": [
+        4.35
+      ]
+    },
+    {
+      "mid": "周一094",
+      "match": "美国 vs 比利时",
+      "date": "2026-07-06",
+      "type": "半全场打包",
+      "option": "客不败",
+      "odds": 2.61,
+      "mp": 0.3837,
+      "src_mp": 0.3837,
+      "fit": 3.5,
+      "rating": "C",
+      "comps": [
+        6.5,
+        4.35
+      ]
+    },
+    {
+      "mid": "周二095",
+      "match": "阿根廷 vs 埃及",
+      "date": "2026-07-07",
+      "type": "方向",
+      "option": "主胜",
+      "odds": 1.22,
+      "mp": 0.6836,
+      "src_mp": 0.6836,
+      "fit": 3.2,
+      "rating": "C",
+      "comps": [
+        1.22
+      ]
+    },
+    {
+      "mid": "周二095",
+      "match": "阿根廷 vs 埃及",
+      "date": "2026-07-07",
+      "type": "方向",
+      "option": "平局",
+      "odds": 4.72,
+      "mp": 0.2104,
+      "src_mp": 0.2104,
+      "fit": 3.2,
+      "rating": "C",
+      "comps": [
+        4.72
+      ]
+    },
+    {
+      "mid": "周二095",
+      "match": "阿根廷 vs 埃及",
+      "date": "2026-07-07",
+      "type": "方向",
+      "option": "让胜",
+      "odds": 1.78,
+      "mp": 0.4548,
+      "src_mp": 0.4548,
+      "fit": 3.2,
+      "rating": "C",
+      "comps": [
+        1.78
+      ]
+    },
+    {
+      "mid": "周二095",
+      "match": "阿根廷 vs 埃及",
+      "date": "2026-07-07",
+      "type": "方向",
+      "option": "让平",
+      "odds": 3.65,
+      "mp": 0.2288,
+      "src_mp": 0.2288,
+      "fit": 3.2,
+      "rating": "C",
+      "comps": [
+        3.65
+      ]
+    },
+    {
+      "mid": "周二095",
+      "match": "阿根廷 vs 埃及",
+      "date": "2026-07-07",
+      "type": "方向",
+      "option": "让负",
+      "odds": 3.42,
+      "mp": 0.3164,
+      "src_mp": 0.3164,
+      "fit": 3.2,
+      "rating": "C",
+      "comps": [
+        3.42
+      ]
+    },
+    {
+      "mid": "周二095",
+      "match": "阿根廷 vs 埃及",
+      "date": "2026-07-07",
+      "type": "方向打包",
+      "option": "负/平",
+      "odds": 3.23,
+      "mp": 0.3164,
+      "src_mp": 0.3164,
+      "fit": 3.2,
+      "rating": "C",
+      "comps": [
+        10.25,
+        4.72
+      ]
+    },
+    {
+      "mid": "周二095",
+      "match": "阿根廷 vs 埃及",
+      "date": "2026-07-07",
+      "type": "方向打包",
+      "option": "让胜/平",
+      "odds": 1.2,
+      "mp": 0.6836,
+      "src_mp": 0.6836,
+      "fit": 3.2,
+      "rating": "C",
+      "comps": [
+        1.78,
+        3.65
+      ],
+      "display_option": "主胜",
+      "display_odds": 1.22
+    },
+    {
+      "mid": "周二095",
+      "match": "阿根廷 vs 埃及",
+      "date": "2026-07-07",
+      "type": "方向打包",
+      "option": "让平/负",
+      "odds": 1.77,
+      "mp": 0.5452,
+      "src_mp": 0.5452,
+      "fit": 3.2,
+      "rating": "C",
+      "comps": [
+        3.65,
+        3.42
+      ]
+    },
+    {
+      "mid": "周二095",
+      "match": "阿根廷 vs 埃及",
+      "date": "2026-07-07",
+      "type": "半全场",
+      "option": "胜胜",
+      "odds": 1.75,
+      "mp": 0.5714,
+      "src_mp": 0.5714,
+      "fit": 3.2,
+      "rating": "C",
+      "comps": [
+        1.75
+      ]
+    },
+    {
+      "mid": "周二095",
+      "match": "阿根廷 vs 埃及",
+      "date": "2026-07-07",
+      "type": "半全场",
+      "option": "平胜",
+      "odds": 3.55,
+      "mp": 0.2817,
+      "src_mp": 0.2817,
+      "fit": 3.2,
+      "rating": "C",
+      "comps": [
+        3.55
+      ]
+    },
+    {
+      "mid": "周二095",
+      "match": "阿根廷 vs 埃及",
+      "date": "2026-07-07",
+      "type": "半全场打包",
+      "option": "主不败",
+      "odds": 1.17,
+      "mp": 0.8531,
+      "src_mp": 0.8531,
+      "fit": 3.2,
+      "rating": "C",
+      "comps": [
+        1.75,
+        3.55
+      ]
+    },
+    {
+      "mid": "周二096",
+      "match": "瑞士 vs 哥伦比亚",
+      "date": "2026-07-07",
+      "type": "方向",
+      "option": "主胜",
+      "odds": 3.18,
+      "mp": 0.3515,
+      "src_mp": 0.3515,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        3.18
+      ]
+    },
+    {
+      "mid": "周二096",
+      "match": "瑞士 vs 哥伦比亚",
+      "date": "2026-07-07",
+      "type": "方向",
+      "option": "平局",
+      "odds": 2.95,
+      "mp": 0.2425,
+      "src_mp": 0.2425,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        2.95
+      ]
+    },
+    {
+      "mid": "周二096",
+      "match": "瑞士 vs 哥伦比亚",
+      "date": "2026-07-07",
+      "type": "方向",
+      "option": "让胜",
+      "odds": 1.57,
+      "mp": 0.594,
+      "src_mp": 0.594,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        1.57
+      ]
+    },
+    {
+      "mid": "周二096",
+      "match": "瑞士 vs 哥伦比亚",
+      "date": "2026-07-07",
+      "type": "方向",
+      "option": "让平",
+      "odds": 3.42,
+      "mp": 0.195,
+      "src_mp": 0.195,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        3.42
+      ]
+    },
+    {
+      "mid": "周二096",
+      "match": "瑞士 vs 哥伦比亚",
+      "date": "2026-07-07",
+      "type": "方向打包",
+      "option": "胜/平",
+      "odds": 1.53,
+      "mp": 0.594,
+      "src_mp": 0.594,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        3.18,
+        2.95
+      ]
+    },
+    {
+      "mid": "周二096",
+      "match": "瑞士 vs 哥伦比亚",
+      "date": "2026-07-07",
+      "type": "方向打包",
+      "option": "负/平",
+      "odds": 1.23,
+      "mp": 0.6485,
+      "src_mp": 0.6485,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        2.1,
+        2.95
+      ]
+    },
+    {
+      "mid": "周二096",
+      "match": "瑞士 vs 哥伦比亚",
+      "date": "2026-07-07",
+      "type": "方向打包",
+      "option": "让胜/平",
+      "odds": 1.08,
+      "mp": 0.789,
+      "src_mp": 0.789,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        1.57,
+        3.42
+      ]
+    },
+    {
+      "mid": "周二096",
+      "match": "瑞士 vs 哥伦比亚",
+      "date": "2026-07-07",
+      "type": "方向打包",
+      "option": "让平/负",
+      "odds": 2.03,
+      "mp": 0.406,
+      "src_mp": 0.406,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        3.42,
+        5.0
+      ]
+    },
+    {
+      "mid": "周二096",
+      "match": "瑞士 vs 哥伦比亚",
+      "date": "2026-07-07",
+      "type": "半全场",
+      "option": "平负",
+      "odds": 4.85,
+      "mp": 0.2062,
+      "src_mp": 0.2062,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        4.85
+      ]
+    },
+    {
+      "mid": "周二096",
+      "match": "瑞士 vs 哥伦比亚",
+      "date": "2026-07-07",
+      "type": "半全场",
+      "option": "平胜",
+      "odds": 7.5,
+      "mp": 0.1333,
+      "src_mp": 0.1333,
+      "fit": 3.6,
+      "rating": "C",
+      "comps": [
+        7.5
+      ]
+    },
+    {
+      "mid": "周四097",
+      "match": "法国 vs 摩洛哥",
+      "date": "2026-07-09",
+      "type": "方向",
+      "option": "主胜",
+      "odds": 1.4,
+      "mp": 0.6433,
+      "src_mp": 0.6433,
+      "fit": 2.6,
+      "rating": "C",
+      "comps": [
+        1.4
+      ]
+    },
+    {
+      "mid": "周四097",
+      "match": "法国 vs 摩洛哥",
+      "date": "2026-07-09",
+      "type": "方向",
+      "option": "平局",
+      "odds": 3.83,
+      "mp": 0.2123,
+      "src_mp": 0.2123,
+      "fit": 2.6,
+      "rating": "C",
+      "comps": [
+        3.83
+      ]
+    },
+    {
+      "mid": "周四097",
+      "match": "法国 vs 摩洛哥",
+      "date": "2026-07-09",
+      "type": "方向",
+      "option": "让胜",
+      "odds": 2.48,
+      "mp": 0.4217,
+      "src_mp": 0.4217,
+      "fit": 2.6,
+      "rating": "C",
+      "comps": [
+        2.48
+      ]
+    },
+    {
+      "mid": "周四097",
+      "match": "法国 vs 摩洛哥",
+      "date": "2026-07-09",
+      "type": "方向",
+      "option": "让平",
+      "odds": 3.05,
+      "mp": 0.2217,
+      "src_mp": 0.2217,
+      "fit": 2.6,
+      "rating": "C",
+      "comps": [
+        3.05
+      ]
+    },
+    {
+      "mid": "周四097",
+      "match": "法国 vs 摩洛哥",
+      "date": "2026-07-09",
+      "type": "方向打包",
+      "option": "胜/平",
+      "odds": 1.03,
+      "mp": 0.8556,
+      "src_mp": 0.8556,
+      "fit": 2.6,
+      "rating": "C",
+      "comps": [
+        1.4,
+        3.83
+      ]
+    },
+    {
+      "mid": "周四097",
+      "match": "法国 vs 摩洛哥",
+      "date": "2026-07-09",
+      "type": "方向打包",
+      "option": "负/平",
+      "odds": 2.41,
+      "mp": 0.3566,
+      "src_mp": 0.3566,
+      "fit": 2.6,
+      "rating": "C",
+      "comps": [
+        6.5,
+        3.83
+      ]
+    },
+    {
+      "mid": "周四097",
+      "match": "法国 vs 摩洛哥",
+      "date": "2026-07-09",
+      "type": "方向打包",
+      "option": "让胜/平",
+      "odds": 1.37,
+      "mp": 0.6434,
+      "src_mp": 0.6434,
+      "fit": 2.6,
+      "rating": "C",
+      "comps": [
+        2.48,
+        3.05
+      ]
+    },
+    {
+      "mid": "周四097",
+      "match": "法国 vs 摩洛哥",
+      "date": "2026-07-09",
+      "type": "方向打包",
+      "option": "让平/负",
+      "odds": 1.38,
+      "mp": 0.5784,
+      "src_mp": 0.5784,
+      "fit": 2.6,
+      "rating": "C",
+      "comps": [
+        3.05,
+        2.51
+      ]
+    },
+    {
+      "mid": "周四097",
+      "match": "法国 vs 摩洛哥",
+      "date": "2026-07-09",
+      "type": "半全场",
+      "option": "胜胜",
+      "odds": 2.22,
+      "mp": 0.4505,
+      "src_mp": 0.4505,
+      "fit": 2.6,
+      "rating": "C",
+      "comps": [
+        2.22
+      ]
+    },
+    {
+      "mid": "周四097",
+      "match": "法国 vs 摩洛哥",
+      "date": "2026-07-09",
+      "type": "半全场",
+      "option": "平胜",
+      "odds": 3.8,
+      "mp": 0.2632,
+      "src_mp": 0.2632,
+      "fit": 2.6,
+      "rating": "C",
+      "comps": [
+        3.8
+      ]
+    },
+    {
+      "mid": "周四097",
+      "match": "法国 vs 摩洛哥",
+      "date": "2026-07-09",
+      "type": "半全场打包",
+      "option": "主不败",
+      "odds": 1.4,
+      "mp": 0.7136,
+      "src_mp": 0.7136,
+      "fit": 2.6,
+      "rating": "C",
+      "comps": [
+        2.22,
+        3.8
+      ]
+    },
+    {
+      "mid": "周四201",
+      "match": "伏伊伏丁那 vs 费伦茨瓦罗斯",
+      "date": "2026-07-09",
+      "type": "方向",
+      "option": "平局",
+      "odds": 3.3,
+      "mp": 1.0,
+      "src_mp": 1.0,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        3.3
+      ]
+    },
+    {
+      "mid": "周四201",
+      "match": "伏伊伏丁那 vs 费伦茨瓦罗斯",
+      "date": "2026-07-09",
+      "type": "方向",
+      "option": "让胜",
+      "odds": 1.65,
+      "mp": 1.0,
+      "src_mp": 1.0,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        1.65
+      ]
+    },
+    {
+      "mid": "周四201",
+      "match": "伏伊伏丁那 vs 费伦茨瓦罗斯",
+      "date": "2026-07-09",
+      "type": "方向打包",
+      "option": "胜/平",
+      "odds": 1.61,
+      "mp": 1.0,
+      "src_mp": 1.0,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        3.15,
+        3.3
+      ]
+    },
+    {
+      "mid": "周四201",
+      "match": "伏伊伏丁那 vs 费伦茨瓦罗斯",
+      "date": "2026-07-09",
+      "type": "方向打包",
+      "option": "负/平",
+      "odds": 1.23,
+      "mp": 1.0,
+      "src_mp": 1.0,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        1.97,
+        3.3
+      ]
+    },
+    {
+      "mid": "周四201",
+      "match": "伏伊伏丁那 vs 费伦茨瓦罗斯",
+      "date": "2026-07-09",
+      "type": "方向打包",
+      "option": "让胜/平",
+      "odds": 1.13,
+      "mp": 1.0,
+      "src_mp": 1.0,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        1.65,
+        3.57
+      ]
+    },
+    {
+      "mid": "周四201",
+      "match": "伏伊伏丁那 vs 费伦茨瓦罗斯",
+      "date": "2026-07-09",
+      "type": "半全场",
+      "option": "平平",
+      "odds": 6.0,
+      "mp": 0.1667,
+      "src_mp": 0.1667,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        6.0
+      ]
+    },
+    {
+      "mid": "周四202",
+      "match": "索菲亚中央陆军 vs 德里城",
+      "date": "2026-07-09",
+      "type": "方向",
+      "option": "平局",
+      "odds": 5.25,
+      "mp": 1.0,
+      "src_mp": 1.0,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        5.25
+      ]
+    },
+    {
+      "mid": "周四202",
+      "match": "索菲亚中央陆军 vs 德里城",
+      "date": "2026-07-09",
+      "type": "方向",
+      "option": "让负",
+      "odds": 3.75,
+      "mp": 1.0,
+      "src_mp": 1.0,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        3.75
+      ]
+    },
+    {
+      "mid": "周四202",
+      "match": "索菲亚中央陆军 vs 德里城",
+      "date": "2026-07-09",
+      "type": "方向打包",
+      "option": "负/平",
+      "odds": 3.55,
+      "mp": 1.0,
+      "src_mp": 1.0,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        11.0,
+        5.25
+      ]
+    },
+    {
+      "mid": "周四202",
+      "match": "索菲亚中央陆军 vs 德里城",
+      "date": "2026-07-09",
+      "type": "方向打包",
+      "option": "让平/负",
+      "odds": 1.82,
+      "mp": 1.0,
+      "src_mp": 1.0,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        3.55,
+        3.75
+      ]
+    },
+    {
+      "mid": "周四202",
+      "match": "索菲亚中央陆军 vs 德里城",
+      "date": "2026-07-09",
+      "type": "半全场",
+      "option": "平平",
+      "odds": 7.5,
+      "mp": 0.1333,
+      "src_mp": 0.1333,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        7.5
+      ]
+    },
+    {
+      "mid": "周四203",
+      "match": "斯普利特海杜克 vs 日利纳",
+      "date": "2026-07-09",
+      "type": "方向",
+      "option": "平局",
+      "odds": 4.5,
+      "mp": 1.0,
+      "src_mp": 1.0,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        4.5
+      ]
+    },
+    {
+      "mid": "周四203",
+      "match": "斯普利特海杜克 vs 日利纳",
+      "date": "2026-07-09",
+      "type": "方向",
+      "option": "让负",
+      "odds": 2.9,
+      "mp": 1.0,
+      "src_mp": 1.0,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        2.9
+      ]
+    },
+    {
+      "mid": "周四203",
+      "match": "斯普利特海杜克 vs 日利纳",
+      "date": "2026-07-09",
+      "type": "方向打包",
+      "option": "胜/平",
+      "odds": 1.01,
+      "mp": 1.0,
+      "src_mp": 1.0,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        1.3,
+        4.5
+      ]
+    },
+    {
+      "mid": "周四203",
+      "match": "斯普利特海杜克 vs 日利纳",
+      "date": "2026-07-09",
+      "type": "方向打包",
+      "option": "负/平",
+      "odds": 2.78,
+      "mp": 1.0,
+      "src_mp": 1.0,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        7.25,
+        4.5
+      ]
+    },
+    {
+      "mid": "周四203",
+      "match": "斯普利特海杜克 vs 日利纳",
+      "date": "2026-07-09",
+      "type": "方向打包",
+      "option": "让平/负",
+      "odds": 1.53,
+      "mp": 1.0,
+      "src_mp": 1.0,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        3.25,
+        2.9
+      ]
+    },
+    {
+      "mid": "周四203",
+      "match": "斯普利特海杜克 vs 日利纳",
+      "date": "2026-07-09",
+      "type": "半全场",
+      "option": "平平",
+      "odds": 6.9,
+      "mp": 0.1449,
+      "src_mp": 0.1449,
+      "fit": 1.0,
+      "rating": "C",
+      "comps": [
+        6.9
       ]
     }
   ],

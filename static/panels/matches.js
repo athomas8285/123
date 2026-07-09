@@ -77,37 +77,17 @@ function renderMatchGroups(groups) {
 async function loadMatches() {
   const r = await fetch("/api/dashboard/matches_grouped").then(d => d.json());
   window.allMatchesFlat = [];
-  window.allMatchGroups = r.groups || [];
-  for (const g of allMatchGroups) {
-    for (const m of g.matches) { allMatchesFlat.push(m); }
-  }
-  filterMatches();
-}
-
-async function loadPrediction() {
-  const r = await fetch("/api/dashboard/matches_grouped").then(d => d.json());
-  let html = "";
+  window.allMatchGroups = [];
   for (const g of (r.groups || [])) {
-    for (const m of g.matches) {
-      if (!m.direction) continue;
-      html += '<div class="pred-card"><div class="pc-header"><div class="pc-teams">' + fmt(m.home) + ' vs ' + fmt(m.away) + '</div>' + dirBadgeHTML("", m.direction) + '</div>';
-      html += '<div class="pc-info"><span>' + fmt(m.match_id) + '</span></div>';
-      if (m.actual_score) html += '<div class="pc-score">\u8d5b\u679c: ' + m.actual_score + '</div>';
-      html += '</div>';
+    const filtered = g.matches.filter(function(m) {
+      return (m.direction && m.direction !== "");
+    });
+    if (filtered.length > 0) {
+      allMatchGroups.push({ sale_date: g.sale_date, matches: filtered });
+      for (const m of filtered) { allMatchesFlat.push(m); }
     }
   }
-  document.getElementById("pred-cards").innerHTML = html || '<div class="empty">\u6682\u65e0\u9884\u6d4b\u6570\u636e</div>';
-  lucide.createIcons();
-  // stat-card click to navigate
-  var statCards = document.querySelectorAll("#ov-stats .stat-card");
-  for (var si = 0; si < statCards.length; si++) {
-    (function(card) {
-      card.style.cursor = "pointer";
-      card.addEventListener("click", function() {
-        if (card.dataset.filter) navigateToMatches(card.dataset.filter);
-      });
-    })(statCards[si]);
-  }
+  filterMatches();
 }
 
 function navigateToMatches(filter) {
@@ -120,4 +100,4 @@ function navigateToMatches(filter) {
   if (nav) nav.click();
 }
 
-export { loadMatches, loadPrediction, navigateToMatches, filterMatches };
+export { loadMatches, navigateToMatches, filterMatches };

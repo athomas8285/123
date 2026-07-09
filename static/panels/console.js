@@ -51,8 +51,7 @@ async function loadConsole() {
   // Render function (reusable after manual save)
   window._renderPreview = function() {
     var nr = window._consoleNeedR, np = window._consoleNeedP;
-    var manualOn = document.getElementById("console-preview").classList.contains("manual-mode");
-    var ph = '<div class="cp-col cp-col-wide"><h4>需补赛果 ('+nr.length+')</h4>';
+    var ph = '<div class="cp-col cp-col-wide"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><h4 style="margin:0">需补赛果 ('+nr.length+')</h4><label style="font-weight:normal;font-size:12px;cursor:pointer;margin-left:8px"><input type="checkbox" class="cp-chk-all-nr" onchange="var c=this.checked;document.querySelectorAll(\'.cp-chk-nr\').forEach(function(cb){cb.checked=c})"> 全选</label><button id="btn-cancel-predict" class="console-btn" style="margin-left:auto;padding:4px 12px;font-size:12px">取消预测</button></div>';
     if (nr.length===0) ph += '<div class="cp-empty">无</div>';
         else for (var j=0;j<nr.length;j++) {
       var mr=nr[j]; var t=mr.match_time?mr.match_time.substring(5,16):"";
@@ -61,7 +60,8 @@ async function loadConsole() {
       var spAllMissing = (mr.jc_sp_home == null && mr.jc_sp_draw == null && mr.jc_sp_away == null);
       var hcpVal = mr.jc_handicap;
       var hcpStr = (hcpVal != null && hcpVal !== "") ? (hcpVal > 0 ? '+'+hcpVal : String(hcpVal)) : '';
-      ph += '<div class="cp-row cp-row-card" data-mid="'+mr.match_id+'" style="cursor:pointer;flex-wrap:wrap">';
+      ph += '<div class="cp-row cp-row-card" data-mid="'+mr.match_id+'" style="cursor:pointer;flex-wrap:wrap" onclick="var cb=this.querySelector(\'.cp-chk-nr\');if(cb)cb.checked=!cb.checked;var c=cb.checked;if(this.classList.contains(\'cp-row-selected\')&&!c)this.classList.remove(\'cp-row-selected\');else if(c)this.classList.add(\'cp-row-selected\')">';
+      ph += '<input type="checkbox" class="cp-chk-nr" data-mid="'+mr.match_id+'" style="margin-right:4px;cursor:pointer" onclick="event.stopPropagation()">';
       ph += '<span class="cp-mid">'+fmt(mr.match_id)+'</span>';
       ph += '<span class="cp-teams">'+fmt(mr.home)+' vs '+fmt(mr.away)+'</span>';
       ph += '<div style="display:flex;align-items:center;gap:8px;font-size:11px;line-height:1.6;flex-wrap:wrap">';
@@ -80,16 +80,13 @@ async function loadConsole() {
       ph += '<span class="cp-time">'+t+'</span>';
       ph += badge;
       ph += '</div>';
-      if (manualOn) {
-        ph += '<span class="cp-inputs"><input class="cp-inp-score" data-mid="'+mr.match_id+'" placeholder="比分 如3:1" size="8"> <input class="cp-inp-hf" data-mid="'+mr.match_id+'" placeholder="半全如胜胜" size="6"> <button class="cp-btn-save" data-mid="'+mr.match_id+'">Save</button></span>';
-      }
       ph += '</div>';
     }
-    ph += '</div><div class="cp-col cp-col-wide"><h4>待预测 ('+np.length+') <label class="cp-sel-all" style="font-weight:normal;font-size:12px;margin-left:8px;cursor:pointer"><input type="checkbox" class="cp-chk-all" onchange="var c=this.checked;document.querySelectorAll(\'.cp-chk-pend\').forEach(function(cb){cb.checked=c})"> 全选</label></h4>';
+    ph += '</div><div class="cp-col cp-col-wide"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><h4 style="margin:0">待预测 ('+np.length+')</h4><label style="font-weight:normal;font-size:12px;cursor:pointer"><input type="checkbox" class="cp-chk-all" onchange="var c=this.checked;document.querySelectorAll(\'.cp-chk-pend\').forEach(function(cb){cb.checked=c})"> 全选</label><button id="btn-clear-data" class="console-btn" style="margin-left:auto;padding:4px 12px;font-size:12px">清除数据</button><button id="btn-delete-match" class="console-btn" style="padding:4px 12px;font-size:12px">删除比赛</button></div>';
     if (np.length===0) ph += '<div class="cp-empty">无</div>';
     else for (var k=0;k<np.length;k++) {
       var p=np[k];
-      ph += '<div class="cp-row cp-row-card" data-mid="'+p.match_id+'" style="cursor:pointer">';
+      ph += '<div class="cp-row cp-row-card" data-mid="'+p.match_id+'" style="cursor:pointer" onclick="var cb=this.querySelector(\'.cp-chk-pend\');if(cb)cb.checked=!cb.checked">';
       ph += '<input type="checkbox" class="cp-chk-pend" data-mid="'+p.match_id+'" style="margin-right:6px;cursor:pointer" onclick="event.stopPropagation()"' + (window._dataCollectedIds && window._dataCollectedIds[p.match_id] ? ' checked' : '') + '>';
       ph += '<span class="cp-mid">'+fmt(p.match_id)+'</span>';
       ph += '<span class="cp-teams">'+fmt(p.home)+' vs '+fmt(p.away)+'</span>';
@@ -100,72 +97,119 @@ async function loadConsole() {
     ph += '</div>';
     document.getElementById("console-preview").innerHTML = ph;
 
-    // Bind save buttons
-    var saveBtns = document.querySelectorAll(".cp-btn-save");
-    for (var si=0; si<saveBtns.length; si++) {
-      saveBtns[si].onclick = async function() {
-        var mid = this.dataset.mid;
-        var inpScore = document.querySelector('.cp-inp-score[data-mid="'+mid+'"]');
-        var inpHf = document.querySelector('.cp-inp-hf[data-mid="'+mid+'"]');
-        var score = inpScore ? inpScore.value.trim() : "";
-        var hf = inpHf ? inpHf.value.trim() : "";
-        if (!score) { alert("请输入比分"); return; }
-        this.disabled = true; this.textContent = "...";
-        try {
-          var rr = await fetch("/api/dashboard/action/save_manual_result", {
-            method: "POST", headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({match_id: mid, actual_score: score, half_full: hf})
-          }).then(function(d){return d.json();});
-          logMsg(rr.msg || (rr.ok ? "Saved" : "Failed"), rr.ok ? "#16a34a" : "#dc2626");
-          if (rr.ok) {
-            window._consoleNeedR = window._consoleNeedR.filter(function(m){return m.match_id !== mid;});
-            window._renderPreview();
-            // ★ 失效其他面板缓存
-            if (window.panelLoaded) {
-              window.panelLoaded.matches = false;
-              window.panelLoaded.fundamental = false;
-              window.panelLoaded.featured = false;
-              window.panelLoaded.plans = false;
+    // Bind control buttons (rebound every render because HTML is recreated)
+    var cancelBtn = document.getElementById("btn-cancel-predict");
+    if (cancelBtn) cancelBtn.onclick = async function() {
+      var checked = document.querySelectorAll(".cp-chk-nr:checked");
+      if (checked.length === 0) { logMsg("请勾选需要取消预测的比赛", "#dc2626"); return; }
+      if (!confirm("确认取消 " + checked.length + " 场比赛的预测？")) return;
+      var ids = []; for (var ci=0; ci<checked.length; ci++) { ids.push(checked[ci].dataset.mid); }
+      logMsg("正在取消 " + ids.length + " 场比赛的预测...", "#2563eb");
+      try {
+        var r = await fetch("/api/dashboard/action/cancel_prediction", {
+          method: "POST", headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({match_ids: ids})
+        }).then(function(d){return d.json();});
+        logMsg(r.msg || "完成", r.ok ? "#16a34a" : "#dc2626");
+        if (r.ok) {
+          window.prevData = await fetch("/api/dashboard/matches_grouped").then(function(rr){return rr.json();});
+          window._consoleNeedR = []; window._consoleNeedP = [];
+          for (var gi=0; gi<(prevData.groups||[]).length; gi++) {
+            var gms = prevData.groups[gi].matches;
+            for (var mi=0; mi<gms.length; mi++) {
+              var mm = gms[mi];
+              if (mm.actual_score) continue;
+              if (mm.direction && mm.match_time) { window._consoleNeedR.push(mm); }
+              else if (!mm.direction) { window._consoleNeedP.push(mm); }
             }
-            logMsg("赛果已同步，切换导航查看", "#16a34a");
+          }
+          window.overviewData = await fetch("/api/dashboard/overview").then(function(rr){return rr.json();});
+          var r2 = overviewData, s2 = r2.stats;
+          document.getElementById("console-tasks").innerHTML =
+            '<div class="task-card" data-nav="matches" data-filter="pred"><div class="task-num red">' + r2.missing_results + '</div><div class="task-label">需补赛果</div></div>' +
+            '<div class="task-card" data-nav="matches" data-filter="wait"><div class="task-num yellow">' + (s2.total - s2.predicted) + '</div><div class="task-label">待预测</div></div>' +
+            '<div class="task-card" data-nav="matches" data-filter="done"><div class="task-num green">' + s2.scored + '</div><div class="task-label">可复盘</div></div>' +
+            '<div class="task-card" data-nav="plans"><div class="task-num gray">' + (r2.plan_info ? r2.plan_info.plan_count : "—") + '</div><div class="task-label">计划单</div></div>';
+          document.querySelectorAll("#console-tasks .task-card").forEach(function(card) {
+            card.addEventListener("click", function() {
+              if (card.dataset.filter) { navigateToMatches(card.dataset.filter); }
+              else { var ni = document.querySelector('.nav-item[data-panel="' + card.dataset.nav + '"]'); if (ni) ni.click(); }
+            });
+          });
+          if (window._renderPreview) window._renderPreview();
+          if (window.panelLoaded) {
+            window.panelLoaded.matches = false; window.panelLoaded.fundamental = false;
+            window.panelLoaded.plans = false; window.panelLoaded.featured = false;
+          }
+          var pIframe = document.querySelector('#panel-plans iframe');
+          if (pIframe) pIframe.src = '/static/plan.html?_t=' + Date.now();
+          var fIframe = document.getElementById('featured-iframe');
+          if (fIframe) fIframe.src = '/api/dashboard/featured?_t=' + Date.now();
+          // Auto-regenerate plan data after cancel/del
+          try { await fetch("/api/dashboard/action/gen_plan"); } catch(e) {}
+          logMsg("相关面板已同步，切换导航查看", "#16a34a");
+        }
+      } catch(e) { logMsg("取消预测失败: " + e.message, "#dc2626"); }
+    };
+    var delBtn = document.getElementById("btn-delete-match");
+    if (delBtn) delBtn.onclick = async function() {
+      var checked = document.querySelectorAll(".cp-chk-pend:checked");
+      if (checked.length === 0) { logMsg("请勾选需要删除的比赛", "#dc2626"); return; }
+      if (!confirm("确认删除 " + checked.length + " 场比赛？此操作不可恢复")) return;
+      var ids = []; for (var ci=0; ci<checked.length; ci++) { ids.push(checked[ci].dataset.mid); }
+      logMsg("正在删除 " + ids.length + " 场比赛...", "#2563eb");
+      try {
+        var r = await fetch("/api/dashboard/action/delete_matches", {
+          method: "POST", headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({match_ids: ids})
+        }).then(function(d){return d.json();});
+        logMsg(r.msg || "完成", r.ok ? "#16a34a" : "#dc2626");
+        if (r.ok) {
+          window.prevData = await fetch("/api/dashboard/matches_grouped").then(function(rr){return rr.json();});
+          window._consoleNeedP = [];
+          for (var gi=0; gi<(prevData.groups||[]).length; gi++) {
+            var gms = prevData.groups[gi].matches;
+            for (var mi=0; mi<gms.length; mi++) {
+              var mm = gms[mi];
+              if (!mm.actual_score && !mm.direction) { window._consoleNeedP.push(mm); }
+            }
+          }
+          window.overviewData = await fetch("/api/dashboard/overview").then(function(rr){return rr.json();});
+          var r2 = overviewData, s2 = r2.stats;
+          document.getElementById("console-tasks").innerHTML =
+            '<div class="task-card" data-nav="matches" data-filter="pred"><div class="task-num red">' + r2.missing_results + '</div><div class="task-label">需补赛果</div></div>' +
+            '<div class="task-card" data-nav="matches" data-filter="wait"><div class="task-num yellow">' + (s2.total - s2.predicted) + '</div><div class="task-label">待预测</div></div>' +
+            '<div class="task-card" data-nav="matches" data-filter="done"><div class="task-num green">' + s2.scored + '</div><div class="task-label">可复盘</div></div>' +
+            '<div class="task-card" data-nav="plans"><div class="task-num gray">' + (r2.plan_info ? r2.plan_info.plan_count : "—") + '</div><div class="task-label">计划单</div></div>';
+          document.querySelectorAll("#console-tasks .task-card").forEach(function(card) {
+            card.addEventListener("click", function() {
+              if (card.dataset.filter) { navigateToMatches(card.dataset.filter); }
+              else { var ni = document.querySelector('.nav-item[data-panel="' + card.dataset.nav + '"]'); if (ni) ni.click(); }
+            });
+          });
+          if (window._renderPreview) window._renderPreview();
+          if (window.panelLoaded) { window.panelLoaded.matches = false; window.panelLoaded.fundamental = false; window.panelLoaded.overview = false; }
+          try { await fetch("/api/dashboard/action/gen_plan"); } catch(e) {}
+          logMsg("相关面板已同步，切换导航查看", "#16a34a");
+        }
+      } catch(e) { logMsg("删除失败: " + e.message, "#dc2626"); }
+    };
+    var clrBtn = document.getElementById("btn-clear-data");
+    if (clrBtn) clrBtn.onclick = async function() {
+      var checked = document.querySelectorAll(".cp-chk-pend:checked");
+      if (checked.length === 0) { logMsg("请勾选需要清除数据的比赛", "#dc2626"); return; }
+      if (!confirm("确认清除 " + checked.length + " 场比赛的采集数据？")) return;
+      var count = 0;
+      for (var ci=0; ci<checked.length; ci++) {
+        var mid = checked[ci].dataset.mid;
+        if (window._dataCollectedIds && window._dataCollectedIds[mid]) {
+          window._dataCollectedIds[mid] = false; count++;
+        }
+      }
+      logMsg("已清除 " + count + " 场比赛的采集数据", "#16a34a");
+      if (window._renderPreview) window._renderPreview();
+    };
 
-    var needResultRows = document.querySelectorAll(".cp-row-card[data-mid]");
-    for (var ri=0; ri<needResultRows.length; ri++) {
-      needResultRows[ri].onclick = function() {
-        var mid = this.dataset.mid;
-        var fundNav = document.querySelector('.nav-item[data-panel="fundamental"]');
-        if (fundNav) fundNav.click();
-        setTimeout(function() {
-          var card = document.querySelector('.fa-card[data-mid="'+mid+'"]');
-          if (card) {
-            card.scrollIntoView({behavior: "smooth", block: "center"});
-            if (window.toggleFaCard) window.toggleFaCard(card);
-          }
-        }, 800);
-      };
-    }
-          }
-        } catch(e) { logMsg("Save error: " + e, "#dc2626"); }
-        this.disabled = false; this.textContent = "Save";
-      };
-    }
-
-    // Bind "Wait predict" clickable badges
-    var needPredictRows = document.querySelectorAll(".cp-row-card[data-mid]");
-    for (var ri=0; ri<needPredictRows.length; ri++) {
-      needPredictRows[ri].onclick = function() {
-        var mid = this.dataset.mid;
-        var fundNav = document.querySelector('.nav-item[data-panel="fundamental"]');
-        if (fundNav) fundNav.click();
-        setTimeout(function() {
-          var card = document.querySelector('.fa-card[data-mid="'+mid+'"]');
-          if (card) {
-            card.scrollIntoView({behavior: "smooth", block: "center"});
-            if (window.toggleFaCard) window.toggleFaCard(card);
-          }
-        }, 800);
-      };
-    }
   };
   window._renderPreview();
 
@@ -242,6 +286,8 @@ async function loadConsole() {
         if (planIframe) planIframe.src = '/static/plan.html?_t=' + Date.now();
         var featIframe = document.getElementById('featured-iframe');
         if (featIframe) featIframe.src = '/api/dashboard/featured?_t=' + Date.now();
+        // ★ 重新生成计划数据
+        try { await fetch("/api/dashboard/action/gen_plan"); } catch(e) {}
         logMsg("全面板数据已同步，切换导航查看", "#16a34a");
       }
     } catch(e) { logMsg("查询失败: " + e.message, "#dc2626"); }
@@ -249,15 +295,7 @@ async function loadConsole() {
     btn.innerHTML = origHTML;
     lucide.createIcons();
   };
-document.getElementById("btn-manual-entry").onclick = () => {
-    var preview = document.getElementById("console-preview");
-    var isOn = preview.classList.toggle("manual-mode");
-    this.innerHTML = isOn ? '<i data-lucide="check" width="16" height="16"></i> Exit manual' : '<i data-lucide="edit-3" width="16" height="16"></i> Manual entry';
-    logMsg(isOn ? "手动录入模式 ON" : "手动录入模式 OFF", isOn ? "#2563eb" : "#6b7280");
-    if (window._renderPreview) window._renderPreview();
-    lucide.createIcons();
-  }
-  document.getElementById("btn-fetch-jczq").onclick = async () => {
+document.getElementById("btn-fetch-jczq").onclick = async () => {
     logMsg("正在从竞彩网获取比赛...", "#2563eb");
     try {
       const d = await fetch("/api/dashboard/action/fetch_jczq").then(r => r.json());
@@ -314,6 +352,21 @@ document.getElementById("btn-manual-entry").onclick = () => {
       }).then(r => r.json());
       if (d.logs) d.logs.forEach(function(l) { logMsg(l, l.indexOf("失败")>=0 || l.indexOf("异常")>=0 ? "#dc2626" : "#6b7280"); });
       logMsg(d.msg || "赔率刷新完成", d.ok ? "#16a34a" : "#dc2626");
+      // Re-fetch preview data so console shows updated odds
+      try {
+        var refreshData = await fetch("/api/dashboard/matches_grouped").then(function(rr){return rr.json();});
+        window._consoleNeedR = []; window._consoleNeedP = [];
+        for (var gi=0; gi<(refreshData.groups||[]).length; gi++) {
+          var gms = refreshData.groups[gi].matches;
+          for (var mi=0; mi<gms.length; mi++) {
+            var mm = gms[mi];
+            if (mm.actual_score) continue;
+            if (mm.direction && mm.match_time) { window._consoleNeedR.push(mm); }
+            else if (!mm.direction) { window._consoleNeedP.push(mm); }
+          }
+        }
+        if (window._renderPreview) window._renderPreview();
+      } catch(pe) {}
       // Refresh related panels
       if (window.panelLoaded) {
         window.panelLoaded.matches = false;
@@ -467,14 +520,21 @@ function showFetchDataModal() {
     logMsg("暂无待采集比赛", "#d97706");
     return;
   }
+  // Read which matches are checked in the preview area
+  var previewChecked = {};
+  var pChks = document.querySelectorAll(".cp-chk-pend:checked");
+  for (var pi = 0; pi < pChks.length; pi++) {
+    previewChecked[pChks[pi].dataset.mid] = true;
+  }
   var overlay = document.getElementById("fetch-data-modal");
   var tbody = document.getElementById("fetch-data-list");
   var html = "";
-  window._dataCollectedIds = {};
+  if (!window._dataCollectedIds) window._dataCollectedIds = {};
   for (var i = 0; i < window._consoleNeedP.length; i++) {
     var pm = window._consoleNeedP[i];
-    html += '<tr><td><input type="checkbox" class="fd-chk" data-idx="' + i + '" checked></td><td>' + fmt(pm.match_id) + '</td><td>' + fmt(pm.home) + ' vs ' + fmt(pm.away) + '</td></tr>';
-    window._dataCollectedIds[pm.match_id] = true;
+    var isChecked = previewChecked[pm.match_id] ? " checked" : "";
+    if (isChecked) window._dataCollectedIds[pm.match_id] = true;
+    html += '<tr><td><input type="checkbox" class="fd-chk" data-idx="' + i + '"' + isChecked + '></td><td>' + fmt(pm.match_id) + '</td><td>' + fmt(pm.home) + ' vs ' + fmt(pm.away) + '</td></tr>';
   }
   tbody.innerHTML = html;
   overlay.style.display = "flex";

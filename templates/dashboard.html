@@ -63,18 +63,17 @@ main{flex:1;padding:24px 28px;min-width:0;background:#f3f4f6}
 .console-btn.primary{background:#2563eb;color:#fff;border-color:#2563eb}
 .console-btn.primary:hover{background:#1d4ed8}
 .console-log{background:#1e293b;border-radius:6px;padding:12px;font-family:monospace;font-size:12px;color:#e2e8f0;max-height:200px;overflow-y:auto;line-height:1.6}
-.health-bar{display:flex;gap:16px;flex-wrap:wrap;font-size:13px}
+
 .health-bar .ok{color:#16a34a}
 .health-bar .warn{color:#d97706}
-.pred-strip{display:flex;flex-direction:column;gap:6px}
-.pred-item{display:flex;align-items:center;gap:12px;background:#fff;padding:8px 12px;border-radius:6px;border:1px solid #e5e7eb;font-size:14px}
-.pred-item .teams{flex:1;font-weight:500}
+
+
 .dir-badge{font-size:12px;padding:2px 8px;border-radius:4px;font-weight:600}
 .dir-badge.A{background:#dcfce7;color:#16a34a}
 .dir-badge.B{background:#fef3c7;color:#d97706}
 .dir-badge.C{background:#fee2e2;color:#dc2626}
-.pred-item .fit{font-size:12px;color:#6b7280}
-.chart-wrap{background:#fff;border-radius:8px;padding:16px;border:1px solid #e5e7eb;margin-top:12px}
+
+
 .flow-steps{display:flex;flex-direction:column;gap:8px;margin-top:12px}
 .flow-step{display:flex;align-items:center;gap:12px;padding:12px 16px;background:#fff;border-radius:8px;border:1px solid #e5e7eb;cursor:pointer;transition:all .12s}
 .flow-step:hover{box-shadow:0 2px 8px rgba(0,0,0,.06);border-color:#d1d5db}
@@ -135,7 +134,6 @@ main{flex:1;padding:24px 28px;min-width:0;background:#f3f4f6}
 }
 
 
-
 /* === Fundamental Analysis Cards === */
 .fa-date-group{margin-bottom:20px}
 .fa-date-label{font-size:13px;font-weight:600;color:#f59e0b;padding:8px 14px;margin-bottom:10px;background:rgba(245,158,11,.06);border-radius:6px;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none}
@@ -169,15 +167,15 @@ main{flex:1;padding:24px 28px;min-width:0;background:#f3f4f6}
 .fa-c-odds .odds-row .og-sp-h{color:#ef5350}
 .fa-c-odds .odds-row .og-sp-d{color:#2563eb}
 .fa-c-odds .odds-row .og-sp-a{color:#16a34a}
-.fa-c-odds .odds-empty{font-size:10px;color:#9ca3af;font-style:italic}
+.fa-c-odds 
 .fa-c-result{font-size:13px;font-weight:700;color:#374151}
-.fa-c-dir{text-align:center}.fa-c-sp{display:flex;align-items:center;gap:2px;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:11px;font-weight:600}.fa-c-sp span{text-align:center;min-width:28px;padding:0 2px}.fa-c-sp span:first-child{color:#ef5350}.fa-c-sp span:nth-child(2){color:#2563eb}.fa-c-sp span:last-child{color:#16a34a}.fa-c-hh{display:flex;align-items:center;gap:2px;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:10px;font-weight:600}.fa-c-hh span{text-align:center;min-width:24px;padding:0 2px}.fa-c-hh .hcp{color:#f59e0b;min-width:20px}.fa-c-hh span:nth-child(2){color:#ef5350}.fa-c-hh span:nth-child(3){color:#2563eb}.fa-c-hh span:nth-child(4){color:#16a34a}.fa-exp-box{background:#f9fafb;border-radius:6px;padding:10px 14px;margin-top:8px;font-size:12px;line-height:1.6}.fa-exp-box .fa-exp-box-title{font-weight:600;color:#374151;margin-bottom:6px}.fa-exp-box .fa-exp-box-row{display:flex;gap:4px 12px;flex-wrap:wrap;color:#6b7280}.fa-exp-box .fa-exp-box-val{color:#1f2937;font-weight:500}
+.fa-c-dir{text-align:center}
 .fa-dir-badge{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:4px}
 .fa-dir-badge.win{background:#dcfce7;color:#16a34a}
 .fa-dir-badge.loss{background:#fee2e2;color:#dc2626}
-.fa-c-backup{display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px;background:#f3f4f6;color:#6b7280;margin-left:4px}
+
 .fa-c-fit-wrap{display:flex;align-items:center;gap:4px;justify-content:center}
-.fa-c-fit{font-size:13px;font-weight:600;color:#374151;font-family:"SF Mono",Consolas,monospace}
+
 .fa-c-predicting{font-size:12px;font-weight:600;color:#6b7280}
 .fa-c-result{display:flex;align-items:center;gap:5px;justify-content:center;white-space:nowrap;flex-wrap:wrap}
 .fa-c-score{font-size:15px;font-weight:800;color:#d97706;font-family:"SF Mono",Consolas,monospace}
@@ -187,14 +185,8 @@ main{flex:1;padding:24px 28px;min-width:0;background:#f3f4f6}
 .fa-c-hit.miss{background:#fee2e2;color:#dc2626}
 .fa-c-expand{text-align:center;font-size:11px;color:#9ca3af;transition:transform .3s;cursor:pointer}
 .fa-c-sp-missing{font-size:11px;font-weight:600;color:#dc2626;display:flex;align-items:center;gap:3px;justify-content:center;white-space:nowrap}
-.fa-exp-result{display:flex;gap:12px;flex-wrap:wrap;color:#6b7280;font-size:12px;margin-top:4px}
-.fa-exp-result .er-item{display:flex;align-items:center;gap:6px}
-.fa-exp-result .er-label{color:#9ca3af;font-size:11px}
-.fa-exp-result .er-value{font-weight:600;color:#1f2937;font-family:SF Mono,Consolas,monospace}
-.fa-exp-result .er-score{font-size:18px;font-weight:800;color:#d97706;font-family:SF Mono,Consolas,monospace}
-.fa-exp-result .er-hit{font-size:11px;font-weight:600;padding:1px 7px;border-radius:3px}
-.fa-exp-result .er-hit.hit{background:#dcfce7;color:#16a34a}
-.fa-exp-result .er-hit.miss{background:#fee2e2;color:#dc2626}
+
+
 .fa-card.expanded .fa-c-expand{transform:rotate(180deg)}
 .fa-c-wait{grid-column:1/-1;text-align:center;color:#9ca3af;font-size:13px;padding:8px 0}
 .fa-expand{display:none;border-top:1px solid #e5e7eb;padding:10px 14px;background:#f9fafb}
@@ -212,11 +204,8 @@ main{flex:1;padding:24px 28px;min-width:0;background:#f3f4f6}
 .fa-exp-chart .ch-sub .doi{color:#6b7280}
 .chart-svg-wrap{width:100%;overflow:hidden;display:flex;justify-content:center}
 .chart-svg-wrap svg{display:block;width:100%;max-width:260px;height:auto}
-.fa-exp-reasoning{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:10px 12px;margin-top:8px}
-.fa-exp-reasoning .reasoning-head{font-size:12px;font-weight:600;color:#374151;margin-bottom:6px}
-.fa-exp-reasoning .reasoning-body{font-size:12px;color:#6b7280;line-height:1.6}
-.fa-exp-reasoning .reasoning-body p{margin:0}
-.fa-exp-chart .ch-svg{display:flex;justify-content:center;overflow:hidden}
+
+
 .fa-exp-analysis{display:flex;flex-direction:column;gap:5px}
 .fa-analysis-item{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:5px 9px}
 .fa-analysis-item .ai-head{display:flex;align-items:center;gap:5px;margin-bottom:2px}
@@ -229,9 +218,8 @@ main{flex:1;padding:24px 28px;min-width:0;background:#f3f4f6}
 .fa-exp-bg-card .bg-title{font-size:11px;font-weight:600;color:#374151;margin-bottom:4px}
 .fa-exp-bg-card .bg-body{font-size:11px;color:#6b7280;line-height:1.5}
 .fa-exp-bg-card .bg-body .standings-line{display:block;padding:1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.fa-exp-narrative{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:8px 12px}
-.fa-exp-narrative .narr-title{font-size:12px;font-weight:600;color:#1f2937;margin-bottom:4px}
-.fa-exp-narrative .narr-body{font-size:12px;color:#374151;line-height:1.6}
+
+
 .fa-bar-wrap{display:flex;gap:6px;justify-content:center;align-items:flex-end;height:56px}
 .fa-bar{width:36px;text-align:center}
 .fa-bar-fill{border-radius:4px 4px 0 0;transition:height .3s}
@@ -242,8 +230,6 @@ main{flex:1;padding:24px 28px;min-width:0;background:#f3f4f6}
 .fa-bar-legend{display:flex;gap:12px;justify-content:center;font-size:10px;color:#9ca3af;margin-top:6px}
 .fa-bar-legend span{display:flex;align-items:center;gap:4px}
 .fa-bar-legend .sw{width:10px;height:10px;border-radius:2px;display:inline-block}
-
-
 
 
 .cp-col-wide{flex:1}
@@ -307,11 +293,10 @@ main{flex:1;padding:24px 28px;min-width:0;background:#f3f4f6}
 
 
 /* Narrative capsules (renderNarrativeCapsules) */
-.narr-section{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:8px 12px;margin-bottom:6px}
+
 .narr-section:last-child{margin-bottom:0}
-.narr-pills{display:flex;flex-wrap:wrap;gap:4px}
-.narr-pill{display:inline-block;font-size:11px;padding:2px 8px;background:#f3f4f6;border-radius:4px;color:#374151}
-.narr-pill-wide{display:block;font-size:11px;padding:3px 8px;background:#fef3c7;border-radius:4px;color:#92400e;text-align:center}
+
+
 </style>
 </head>
 <body>
@@ -351,7 +336,6 @@ main{flex:1;padding:24px 28px;min-width:0;background:#f3f4f6}
       <div class="console-preview" id="console-preview"></div>
       <div class="console-actions">
         <button class="console-btn primary" id="btn-fetch-results"><i data-lucide="search" width="16" height="16"></i> 一键查询赛果</button>
-        <button class="console-btn" id="btn-manual-entry"><i data-lucide="edit-3" width="16" height="16"></i> 手动录入</button>
         <button class="console-btn" id="btn-fetch-jczq"><i data-lucide="download" width="16" height="16"></i> 获取竞彩网比赛</button>
         <button class="console-btn" id="btn-fetch-data"><i data-lucide="database" width="16" height="16"></i> 获取比赛数据</button>
         <button class="console-btn" id="btn-refresh-odds"><i data-lucide="refresh-cw" width="16" height="16"></i> 更新赔率</button>

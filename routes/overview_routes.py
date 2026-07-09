@@ -12,60 +12,6 @@ def index():
     return render_template("dashboard.html")
 
 
-@bp.route("/api/dashboard/stats")
-def stats():
-    db = db_get()
-    _build_result_cache(db)
-    rid = db.execute("SELECT MAX(run_id) FROM matches").fetchone()[0]
-    
-    # Cross-run: get latest record for each unique match_id
-    all_match_rows = db.execute(
-        "SELECT id, match_id, home, away, match_time, event, direction, rating, fit_score, actual_score, hit FROM matches WHERE id IN (SELECT MAX(id) FROM matches GROUP BY match_id) ORDER BY match_id"
-    ).fetchall()
-    total = len(all_match_rows)
-    match_ids = [r["match_id"] for r in all_match_rows]
-    predicted = sum(1 for r in all_match_rows if r["direction"])
-    
-    scored = 0; hit = 0; miss = 0
-    for mid in match_ids:
-        if mid in _RESULT_CACHE:
-            scored += 1
-            h = _RESULT_CACHE[mid]["hit"]
-            if h == 1: hit += 1
-            elif h == 0: miss += 1
-    
-    need_predict = total - predicted
-    recent = all_match_rows[-20:] if len(all_match_rows) > 20 else all_match_rows
-    recent_list = [enrich_row_with_results({k: r[k] for k in r.keys()}) for r in recent]
-    
-    db.close()
-    
-    analysis = load_json(os.path.join(APP_DATA, "analysis.json"))
-    al = list(analysis.get("AL", {}).keys()) if analysis else []
-    return jsonify({
-        "total": total, "scored": scored, "predicted": predicted,
-        "hit": hit, "miss": miss, "today_need_predict": need_predict,
-        "al_groups": al, "recent": recent_list
-    })
-
-
-@bp.route("/api/dashboard/analysis")
-def analysis():
-    data = load_json(os.path.join(APP_DATA, "analysis.json"))
-    if not data:
-        return jsonify({"error": "no analysis.json"})
-    ratings = data.get("rating", [])
-    return jsonify({
-        "total_ratings": len(ratings),
-        "completed": len([r for r in ratings if r.get("actual_score")]),
-        "predicted": len([r for r in ratings if r.get("direction") and not r.get("actual_score")]),
-        "waiting": len([r for r in ratings if not r.get("direction")]),
-        "al_keys": list(data.get("AL", {}).keys())
-    })
-
-# ==================== New endpoints ====================
-
-
 @bp.route("/api/dashboard/overview")
 def overview():
     db = db_get()

@@ -349,6 +349,24 @@ def save_to_database():
             'jc_sp_home': _sp_home, 'jc_sp_draw': _sp_draw, 'jc_sp_away': _sp_away,
             'jc_hhad_win': _hhad_w, 'jc_hhad_draw': _hhad_d, 'jc_hhad_lose': _hhad_l,
         }
+        # Auto-calculate hit for matches that already have actual_score but no hit
+        if m['actual_score'] and m['hit'] is None and m['direction']:
+            try:
+                score = m['actual_score']
+                if ':' in score:
+                    hg, ag = map(int, score.split(':'))
+                    hcp = m.get('jc_handicap') or 0
+                    adj = hg + hcp - ag
+                    dr = m['direction']
+                    if dr == '让胜':    m['hit'] = 1 if adj > 0 else 0
+                    elif dr == '让平':  m['hit'] = 1 if adj == 0 else 0
+                    elif dr == '让负':  m['hit'] = 1 if adj < 0 else 0
+                    elif dr == '胜':    m['hit'] = 1 if hg > ag else 0
+                    elif dr == '负':    m['hit'] = 1 if hg < ag else 0
+                    elif dr == '平':    m['hit'] = 1 if hg == ag else 0
+                    m['diagnosis'] = '命中' if m['hit'] == 1 else '未命中'
+            except:
+                pass
         insert_match(run_id, m)
     
     print('  [DB] saved %d matches (run_id=%d)' % (len(valid), run_id))

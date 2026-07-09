@@ -922,6 +922,78 @@
       "opponent_reason": "",
       "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
       "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周一093",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好客队，但系统预测主队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考 贴合度低，熔断警告"
+    },
+    {
+      "id": "周一094",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好主队，但系统预测客队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考 贴合度低，熔断警告"
+    },
+    {
+      "id": "周二095",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周二096",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好客队，但系统预测主队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考 贴合度低，熔断警告"
+    },
+    {
+      "id": "周四097",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "无明显诱盘特征，盘口与实力匹配",
+      "key_risk": "贴合度低，熔断警告"
+    },
+    {
+      "id": "周四201",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好客队，但系统预测主队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考 贴合度低，熔断警告"
+    },
+    {
+      "id": "周四202",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好主队，但系统预测客队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考 贴合度低，熔断警告"
+    },
+    {
+      "id": "周四203",
+      "s7_score": 3.0,
+      "s7_reason": "伤停信息缺失；近期战绩数据缺失",
+      "opponent_predictability": 0.5,
+      "opponent_reason": "",
+      "trap_analysis": "盘口看好主队，但系统预测客队方向，存在分歧",
+      "key_risk": "市场与模型方向分歧，谨慎参考 贴合度低，熔断警告"
     }
   ]
 }

@@ -124,6 +124,12 @@ def fundamental_analysis():
             merged["half_full"] = _RESULT_CACHE[mid].get("half_full", merged["half_full"])
             merged["hit"] = _RESULT_CACHE[mid].get("hit")
 
+        # Filter: only show matches with direction or actual_score
+        has_dir = bool(merged.get("direction", ""))
+        has_score = bool(merged.get("actual_score", ""))
+        if not has_dir and not has_score:
+            continue
+
         result.append(merged)
 
     # Sort by time descending

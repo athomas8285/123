@@ -1,6 +1,7 @@
 ﻿import re, json, os, sys
 
-BASE = "D:\\V3.3.3-Core"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE = SCRIPT_DIR
 
 
 def fetch_results(date_str):
@@ -77,6 +78,36 @@ def update_db(results):
             updated += 1
             print(f"  DB: {r['match_id']} {r['home']} vs {r.get('away','?')}  score={r['full_score']}  half={r['half_full']}")
     
+    conn.commit()
+
+    # Auto-calculate hit for updated matches
+    for r in results:
+        if not r["full_score"] or ":" not in r["full_score"]:
+            continue
+        dr_row = conn.execute(
+            "SELECT direction, jc_handicap FROM matches WHERE match_id=? AND (hit IS NULL OR hit='') LIMIT 1",
+            (r["match_id"],)
+        ).fetchone()
+        if not dr_row or not dr_row[0]:
+            continue
+        dr = dr_row[0] or ""
+        hcp = dr_row[1] or 0
+        try:
+            hg, ag = map(int, r["full_score"].split(":"))
+            adj = hg + hcp - ag
+            if dr == "让胜":   h = 1 if adj > 0 else 0
+            elif dr == "让平": h = 1 if adj == 0 else 0
+            elif dr == "让负": h = 1 if adj < 0 else 0
+            elif dr == "胜":   h = 1 if hg > ag else 0
+            elif dr == "负":   h = 1 if hg < ag else 0
+            elif dr == "平":   h = 1 if hg == ag else 0
+            else: h = None
+            if h is not None:
+                conn.execute("UPDATE matches SET hit=? WHERE match_id=?", (h, r["match_id"]))
+                print(f"  hit: {r['match_id']} {'命中' if h else '未命中'}")
+        except:
+            pass
+
     conn.commit()
     conn.close()
     

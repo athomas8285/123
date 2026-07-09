@@ -37,47 +37,6 @@ function fmtHcp(v) {
 function fmt(v, d) { return (v === null || v === undefined || v === '') ? (d || '-') : v; }
 function fmt1(v, d) { if (v === null || v === undefined || v === '') return d || '-'; var n = Number(v); return isNaN(n) ? (d || '-') : n.toFixed(1); }
 
-function renderNarrativeCapsules(narrative) {
-  if (!narrative) return "";
-  var sections = narrative.split(/\n● /);
-  var h = "";
-  for (var i = 0; i < sections.length; i++) {
-    var section = sections[i].trim();
-    if (!section) continue;
-    var lines = section.split("\n").map(function(l) { return l.trim(); }).filter(function(l) { return l; });
-    if (lines.length === 0) continue;
-    var title = lines[0].replace(/^● /, "");
-    if (title === "竞彩赔率" || title === "系统预测") continue;
-    var contentLines = lines.slice(1);
-    h += '<div class="narr-section">';
-    h += '<div class="narr-title">' + enc(title) + '</div>';
-    if (title === "战意背景") {
-      var combined = contentLines.join(" | ");
-      if (combined) h += '<div class="narr-pills"><span class="narr-pill narr-pill-wide">' + enc(combined) + '</span></div>';
-    } else {
-      h += '<div class="narr-pills">';
-      for (var j = 0; j < contentLines.length; j++) {
-        var line = contentLines[j];
-        if (!line) continue;
-        var items = [];
-        if (line.indexOf(" | ") !== -1) {
-          items = line.split(" | ");
-        } else if (line.indexOf(" / ") !== -1) {
-          items = line.split(" / ");
-        } else {
-          items = [line];
-        }
-        for (var k = 0; k < items.length; k++) {
-          var item = items[k].trim();
-          if (item) h += '<span class="narr-pill">' + enc(item) + '</span>';
-        }
-      }
-      h += '</div>';
-    }
-    h += '</div>';
-  }
-  return h;
-}
 function parseNarrativeSection(narrative, sectionName) {
   if (!narrative || !sectionName) return "";
   var idx = narrative.indexOf("\u25cf " + sectionName);
@@ -175,7 +134,7 @@ async function loadFundamental() {
   var groups = {};
   for (var i = 0; i < data.length; i++) {
     var m = data[i];
-    var t = m.time || "";
+    var t = m.display_date || m.time || "";
     var key = t.length >= 10 ? t.substring(0, 10) : "unknown";
     if (!groups[key]) groups[key] = [];
     groups[key].push(m);

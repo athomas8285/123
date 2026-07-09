@@ -199,6 +199,36 @@
       "hit": 0
     },
     {
+      "id": "周一093",
+      "home": "葡萄牙",
+      "away": "西班牙",
+      "event": "世界杯",
+      "time": "2026-07-07 03:00:00",
+      "direction": "让胜",
+      "fit_score": 3.56,
+      "rating": "C",
+      "downgrade_count": 0,
+      "meltdown": true,
+      "scenario_type": "低返还率赛事",
+      "direction_warning": false,
+      "hit": 0
+    },
+    {
+      "id": "周一094",
+      "home": "美国",
+      "away": "比利时",
+      "event": "世界杯",
+      "time": "2026-07-07 08:00:00",
+      "direction": "负",
+      "fit_score": 3.49,
+      "rating": "C",
+      "downgrade_count": 0,
+      "meltdown": true,
+      "scenario_type": "低返还率赛事",
+      "direction_warning": false,
+      "hit": 1
+    },
+    {
       "id": "周三021",
       "home": "葡萄牙",
       "away": "刚果(金)",
@@ -629,6 +659,40 @@
       "actual_score": "2:0",
       "half_full": "胜胜",
       "hit": 0
+    },
+    {
+      "id": "周二095",
+      "home": "阿根廷",
+      "away": "埃及",
+      "event": "世界杯",
+      "time": "2026-07-08 00:00:00",
+      "direction": "胜",
+      "fit_score": 3.23,
+      "rating": "C",
+      "downgrade_count": 0,
+      "meltdown": true,
+      "scenario_type": "低返还率赛事",
+      "direction_warning": false,
+      "actual_score": "3:2",
+      "hit": 1,
+      "jc_handicap": -1
+    },
+    {
+      "id": "周二096",
+      "home": "瑞士",
+      "away": "哥伦比亚",
+      "event": "世界杯",
+      "time": "2026-07-08 04:00:00",
+      "direction": "让胜",
+      "fit_score": 3.56,
+      "rating": "C",
+      "downgrade_count": 0,
+      "meltdown": true,
+      "scenario_type": "低返还率赛事",
+      "direction_warning": false,
+      "actual_score": "0:0",
+      "hit": 0,
+      "jc_handicap": 1
     },
     {
       "id": "周五003",
@@ -1459,6 +1523,62 @@
       "hit": 1
     },
     {
+      "id": "周四097",
+      "home": "法国",
+      "away": "摩洛哥",
+      "event": "世界杯",
+      "time": "2026-07-10 04:00:00",
+      "direction": "胜",
+      "fit_score": 2.6300000000000003,
+      "rating": "C",
+      "downgrade_count": 0,
+      "meltdown": true,
+      "scenario_type": "低返还率赛事",
+      "direction_warning": false
+    },
+    {
+      "id": "周四201",
+      "home": "伏伊伏丁那",
+      "away": "费伦茨瓦罗斯",
+      "event": "欧罗巴联赛",
+      "time": "2026-07-10 02:00:00",
+      "direction": "让胜",
+      "fit_score": 1.01,
+      "rating": "C",
+      "downgrade_count": 0,
+      "meltdown": true,
+      "scenario_type": "低返还率赛事",
+      "direction_warning": false
+    },
+    {
+      "id": "周四202",
+      "home": "索菲亚中央陆军",
+      "away": "德里城",
+      "event": "欧罗巴联赛",
+      "time": "2026-07-10 02:00:00",
+      "direction": "让负",
+      "fit_score": 1.01,
+      "rating": "C",
+      "downgrade_count": 0,
+      "meltdown": true,
+      "scenario_type": "低返还率赛事",
+      "direction_warning": false
+    },
+    {
+      "id": "周四203",
+      "home": "斯普利特海杜克",
+      "away": "日利纳",
+      "event": "欧罗巴联赛",
+      "time": "2026-07-10 02:00:00",
+      "direction": "让负",
+      "fit_score": 1.01,
+      "rating": "C",
+      "downgrade_count": 0,
+      "meltdown": true,
+      "scenario_type": "低返还率赛事",
+      "direction_warning": false
+    },
+    {
       "id": "周日009",
       "home": "德国",
       "away": "库拉索",
@@ -1632,7 +1752,11 @@
       "downgrade_count": 0,
       "meltdown": true,
       "scenario_type": "低返还率赛事",
-      "direction_warning": false
+      "direction_warning": false,
+      "actual_score": "1:2",
+      "half_full": "平负",
+      "hit": 0,
+      "jc_handicap": -1
     },
     {
       "id": "周日092",
@@ -1646,7 +1770,11 @@
       "downgrade_count": 0,
       "meltdown": true,
       "scenario_type": "低返还率赛事",
-      "direction_warning": false
+      "direction_warning": false,
+      "actual_score": "2:3",
+      "half_full": "负负",
+      "hit": 1,
+      "jc_handicap": 1
     }
   ]
 }

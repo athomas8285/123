@@ -18,7 +18,7 @@ def action_fetch_results():
     need = db.execute("""
         SELECT DISTINCT match_id, home, away, match_time FROM matches
         WHERE run_id=? AND match_time < datetime('now', '+8 hours')
-        AND match_time > datetime('now', '-3 days')
+        AND match_time > datetime('now', '-5 days')
         AND (actual_score IS NULL OR actual_score='')
         ORDER BY match_time
     """, (rid,)).fetchall()
@@ -438,7 +438,7 @@ def action_fetch_jczq():
                 continue
             if mid in existing:
                 continue
-            match_time = (m.get("matchDate", "") + " " + m.get("matchTime", "")).strip()
+            match_time = (day.get("businessDate", "") + " " + m.get("matchTime", "")).strip()
             league = m.get("leagueAllName", "")
             event = m.get("tournamentAllName", "") or league
             had = m.get("had", {})
@@ -508,7 +508,7 @@ def action_confirm_jczq_matches():
         m = all_matches[mid]
         home = m.get("homeTeamAllName", "") or m.get("homeTeamName", "") or m.get("home", "")
         away = m.get("awayTeamAllName", "") or m.get("awayTeamName", "") or m.get("away", "")
-        match_time = (m.get("matchDate", "") + " " + m.get("matchTime", "")).strip()
+        match_time = (day.get("businessDate", "") + " " + m.get("matchTime", "")).strip()
         league = m.get("leagueAllName", "")
         event = m.get("tournamentAllName", "") or league
         had = m.get("had", {})
@@ -1018,10 +1018,6 @@ def action_run_predict():
     return jsonify({"ok": True, "msg": msg, "match_count": len(match_ids_arg)})
     
 
-@bp.route('/api/dashboard/action/gen_featured', methods=['GET','POST'])
-def action_gen_featured():
-    import subprocess, threading
-
 @bp.route("/api/dashboard/action/fetch_match_data", methods=["POST"])
 def action_fetch_match_data():
     import flask, threading
@@ -1149,6 +1145,94 @@ def action_gen_plan():
         msg += ", \u5f53\u524d\u9884\u6d4b\u4e2d: " + ", ".join(predicting_dates)
     _console_log(f"\u751f\u6210\u8ba1\u5212\u5355: {msg}")
     return jsonify({"ok": True, "msg": msg, "plan_count": plan_count})
+
+
+@bp.route("/api/dashboard/action/cancel_prediction", methods=["POST"])
+def action_cancel_prediction():
+    """Cancel predictions for selected matches \u2014 clear direction/rating/fit_score fields."""
+    import json, sqlite3
+
+    data = request.get_json(force=True, silent=True)
+    if not data or not data.get("match_ids"):
+        return jsonify({"ok": False, "msg": "Missing match_ids"})
+
+    match_ids = data["match_ids"]
+    db = db_get()
+
+    updated = 0
+    for mid in match_ids:
+        db.execute(
+            "UPDATE matches SET direction=NULL, rating=NULL, fit_score=NULL, direction_warning=0, "
+            "downgrade_count=0, meltdown=0, scenario_type=NULL WHERE match_id=?",
+            (mid,)
+        )
+        if db.total_changes > 0:
+            updated += 1
+    db.commit()
+    db.close()
+
+    # Sync to match_info.json and rating_result.json
+    mi_path = os.path.join(BASE, "data", "match_info.json")
+    rr_path = os.path.join(BASE, "data", "rating_result.json")
+    for path in [mi_path, rr_path]:
+        if os.path.exists(path):
+            with open(path, "r", encoding="utf-8") as f:
+                jd = json.load(f)
+            for m in jd.get("matches", []):
+                if m.get("id") in match_ids or m.get("match_id") in match_ids:
+                    for field in ["direction", "rating", "fit_score", "direction_warning",
+                                  "downgrade_count", "meltdown", "scenario_type"]:
+                        if field in m:
+                            m[field] = None
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(jd, f, ensure_ascii=False, indent=2)
+
+    msg = f"\u5df2\u53d6\u6d88 {updated} \u573a\u6bd4\u8d5b\u7684\u9884\u6d4b"
+    _console_log(f"\u53d6\u6d88\u9884\u6d4b: {msg}")
+    return jsonify({"ok": True, "msg": msg, "updated": updated})
+
+
+@bp.route("/api/dashboard/action/delete_matches", methods=["POST"])
+def action_delete_matches():
+    """Delete selected matches from DB + JSON files (for \u5f85\u9884\u6d4b\u533a)."""
+    import json, sqlite3
+
+    data = request.get_json(force=True, silent=True)
+    if not data or not data.get("match_ids"):
+        return jsonify({"ok": False, "msg": "Missing match_ids"})
+
+    match_ids = set(data["match_ids"])
+    db = db_get()
+
+    deleted = 0
+    for mid in match_ids:
+        db.execute("DELETE FROM matches WHERE match_id=?", (mid,))
+        deleted += db.total_changes
+    db.commit()
+    db.close()
+
+    # Sync to JSON files
+    json_files = ["match_info.json", "locked_data.json", "rating_result.json",
+                  "monte_carlo_result.json", "ddi_result.json", "fit_score_result.json",
+                  "fundamental_analysis.json"]
+    for fname in json_files:
+        path = os.path.join(BASE, "data", fname)
+        if os.path.exists(path):
+            with open(path, "r", encoding="utf-8") as f:
+                jd = json.load(f)
+            # Handle both list and dict formats
+            if isinstance(jd, list):
+                jd = [m for m in jd if m.get("id", m.get("match_id", "")) not in match_ids]
+            elif isinstance(jd, dict) and "matches" in jd:
+                jd["matches"] = [m for m in jd["matches"]
+                               if m.get("id", m.get("match_id", "")) not in match_ids]
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(jd, f, ensure_ascii=False, indent=2)
+
+    msg = f"\u5df2\u5220\u9664 {deleted} \u573a\u6bd4\u8d5b"
+    _console_log(f"\u5220\u9664\u6bd4\u8d5b: {msg}")
+    return jsonify({"ok": True, "msg": msg, "deleted": deleted})
+
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5021, debug=True, threaded=True, use_reloader=False)
